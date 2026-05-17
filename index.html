@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITCチュートリアル — Webマーケティング支援フレーム</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0&family=Noto+Sans+JP:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+     スライドコンテナ — 各チャプターのHTMLフラグメントがここに読み込まれる
+     ============================================================ -->
+  <div id="slide-container"></div>
+
+  <!-- ============================================================
+     チャプター動的読み込みスクリプト
+     ============================================================ -->
+  <script>
+    // 📦 チャプターローダー
+    (function () {
+      const LOG_TAG = "📦[Chapter-Loader]";
+      const logInfo = (msg) => console.log(`[ℹ️INFO] ${LOG_TAG} ${msg}`);
+      const logSuccess = (msg) => console.log(`[✅SUCCESS] ${LOG_TAG} ${msg}`);
+      const logError = (msg, err) => console.error(`[❌ERROR] ${LOG_TAG} ${msg}`, err);
+
+      // 読み込むチャプターファイルの順序定義
+      const CHAPTER_FILES = [
+        'slides/00_intro.html',
+        'slides/01_common_understanding.html',
+        'slides/02_goal_measurement.html',
+        'slides/appendix.html',
+      ];
+
+      async function loadChapter(url) {
+        logInfo(`Loading: ${url}`);
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
+          const html = await response.text();
+          logSuccess(`Loaded: ${url} (${html.length} bytes)`);
+          return html;
+        } catch (err) {
+          logError(`Failed to load ${url}`, err);
+          return `<!-- ERROR: ${url} の読み込みに失敗しました -->`;
+        }
+      }
+
+      async function loadAllChapters() {
+        logInfo("全チャプター読み込み開始...");
+        const container = document.getElementById('slide-container');
+        if (!container) {
+          logError("slide-container が見つかりません");
+          return;
+        }
+
+        // 全チャプターを並列で読み込み
+        const results = await Promise.all(CHAPTER_FILES.map(loadChapter));
+
+        // 順番通りに結合して挿入
+        container.innerHTML = results.join('\n\n');
+
+        logSuccess(`全チャプター読み込み完了 (${CHAPTER_FILES.length} files)`);
+
+        // チャプター読み込み完了後にCSVデータを読み込む
+        loadCSVData();
+      }
+
+      // DOMContentLoaded で実行
+      document.addEventListener("DOMContentLoaded", loadAllChapters);
+    })();
+  </script>
+
+  <!-- ============================================================
+     CSV Dynamic Loader Script
+     ============================================================ -->
+  <script>
+    // 📊 CSVデータ動的読み込み & レンダリングロジック
+    function loadCSVData() {
+      const LOG_TAG = "📊[CSV-Loader]";
+      const logInfo = (msg) => console.log(`[ℹ️INFO] ${LOG_TAG} ${msg}`);
+      const logSuccess = (msg) => console.log(`[✅SUCCESS] ${LOG_TAG} ${msg}`);
+      const logWarn = (msg) => console.warn(`[⚠️WARN] ${LOG_TAG} ${msg}`);
+      const logError = (msg, err) => console.error(`[❌ERROR] ${LOG_TAG} ${msg}`, err);
+
+      // HTML特殊文字のサニタイズ
+      function escapeHtml(str) {
+        if (typeof str !== 'string') return str;
+        return str.replace(/[&<>'"]/g, (tag) => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[tag] || tag));
+      }
+
+      // 簡易CSVパーサー（ダブルクォーテーション対応）
+      function parseCSV(text) {
+        const lines = [];
+        let row = [""];
+        let inQuotes = false;
+
+        for (let i = 0; i < text.length; i++) {
+          const c = text[i];
+          const next = text[i + 1];
+          if (c === '"') {
+            if (inQuotes && next === '"') {
+              row[row.length - 1] += '"';
+              i++;
+            } else {
+              inQuotes = !inQuotes;
+            }
+          } else if (c === ',' && !inQuotes) {
+            row.push("");
+          } else if ((c === '\r' || c === '\n') && !inQuotes) {
+            if (c === '\r' && next === '\n') {
+              i++;
+            }
+            lines.push(row);
+            row = [""];
+          } else {
+            row[row.length - 1] += c;
+          }
+        }
+        if (row.length > 1 || row[0] !== "") {
+          lines.push(row);
+        }
+        return lines;
+      }
+
+      // 経営課題と成果モデルの紐付けテーブル（スライド10）のレンダリング
+      function renderManagementIssues(table, data) {
+        const tbody = table.querySelector('tbody');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+
+        // ヘッダー行をスキップ
+        for (let i = 1; i < data.length; i++) {
+          const row = data[i];
+          if (row.length < 5) continue;
+          const [model, issue, cv, kpi_title, kpi_desc] = row;
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td style="padding-top: 14px; padding-bottom: 14px;">
+              <span class="tag" style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">${escapeHtml(model)}</span>
+              <div style="font-weight: 700;">${escapeHtml(issue)}</div>
+            </td>
+            <td style="vertical-align: middle; font-weight: 700;">${escapeHtml(cv)}</td>
+            <td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
+              <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">${escapeHtml(kpi_title)}</div>
+              <div style="color: var(--muted);">${escapeHtml(kpi_desc)}</div>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        }
+      }
+
+      // 数値テーブル（スライド13, 14）の更新
+      function updateBreakdownTable(table, data) {
+        const rows = table.querySelectorAll('tbody tr');
+
+        for (let i = 1; i < data.length; i++) {
+          const csvRow = data[i];
+          if (csvRow.length <= 1) continue;
+
+          const metricName = csvRow[0].trim();
+          let targetRow = null;
+
+          // 1列目の指標名でマッチングする行を探す
+          for (const tr of rows) {
+            const firstTd = tr.querySelector('td');
+            if (firstTd && firstTd.textContent.includes(metricName)) {
+              targetRow = tr;
+              break;
+            }
+          }
+
+          if (targetRow) {
+            const tds = targetRow.querySelectorAll('td');
+            for (let j = 1; j < csvRow.length; j++) {
+              if (tds[j]) {
+                let val = csvRow[j].trim();
+                let isSignal = false;
+                let isOk = false;
+
+                // 強調マークの処理
+                if (val.endsWith('*')) {
+                  val = val.slice(0, -1);
+                  isSignal = true;
+                } else if (val.endsWith('!')) {
+                  val = val.slice(0, -1);
+                  isOk = true;
+                }
+
+                tds[j].textContent = val;
+
+                // スタイルのリセットと再設定
+                tds[j].style.color = '';
+                tds[j].style.fontWeight = '';
+
+                if (isSignal) {
+                  tds[j].style.color = 'var(--signal)';
+                  tds[j].style.fontWeight = '700';
+                } else if (isOk) {
+                  tds[j].style.color = 'var(--ok)';
+                  tds[j].style.fontWeight = '700';
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // CSV読み込みメイン処理
+      async function loadTable(url, tableId, renderer) {
+        logInfo(`Loading CSV from: ${url}`);
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          const text = await response.text();
+          const data = parseCSV(text);
+
+          const table = document.getElementById(tableId);
+          if (!table) {
+            throw new Error(`Table #${tableId} not found`);
+          }
+
+          renderer(table, data);
+          logSuccess(`Table #${tableId} successfully updated from CSV.`);
+        } catch (err) {
+          logWarn(`Failed to load ${url} for #${tableId}. Using offline fallback static HTML.`);
+          logError(err.message, err);
+        }
+      }
+
+      // CSV読み込み実行
+      loadTable('data/management_issues.csv', 'management-issues-table', renderManagementIssues);
+      loadTable('data/ec_model_breakdown.csv', 'ec-model-table', updateBreakdownTable);
+      loadTable('data/lead_model_breakdown.csv', 'lead-model-table', updateBreakdownTable);
+    }
+  </script>
+
+</body>
+
+</html>
