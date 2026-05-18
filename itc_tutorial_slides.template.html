@@ -1,83 +1,37 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ITCチュートリアル — Webマーケティング支援フレーム</title>
-<link href="data:," rel="icon"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0&amp;family=Noto+Sans+JP:wght@500;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ITCチュートリアル — Webマーケティング支援フレーム</title>
+  <link href="data:," rel="icon" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0&amp;family=Noto+Sans+JP:wght@500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
-<!-- ============================================================
+  <!-- ============================================================
      SLIDE 01 / タイトル
      ============================================================ -->
-<!-- ============================================================
-     SLIDE 02 / 本研修の目的
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 03 / 今日の整理順（全体地図）
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 04 / 自己紹介
-     ============================================================ -->
-<!-- ============================================================
-     CHAPTER 1 扉 / Webマーケの共通理解
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 05 / 伴走支援の合格基準
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 06 / Webマーケティングの全体像
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 07 / 施策への昇華
-     ============================================================ -->
-<!-- ============================================================
-     CHAPTER 2 扉 / 成果地点 → 計測設計 → 顧客仮説
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 09 / 【Chapter 2 俯瞰】支援のスタートラインと3つの問い
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 10 / 経営課題と成果モデルの紐付け
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 11 / 成果までの道のりを「フロー図」で描く
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 12 / フローの「詰まり」とWebの4つの打ち手
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 13 / 成果モデル別の課題分解（ECモデル）
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 14 / 成果モデル別の課題分解（リード獲得モデル）
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 15 / 「どこで止まっているか」を測るためのマイクロCV
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 16 / 顧客仮説 — ペルソナとジャーニー
-     ============================================================ -->
-<!-- ============================================================
-     SLIDE 17 / 競合設定とコミュニケーション戦略
-     ============================================================ -->
-<!-- ============================================================
+
+  <!-- ============================================================
      APPENDIX TITLE / 扉
      ============================================================ -->
-<!-- ============================================================
+  <!-- ============================================================
      APPENDIX / 成果モデル（MELSA）と計測指標の詳細
      ============================================================ -->
-<!-- ============================================================
+  <!-- ============================================================
      CSV Dynamic Loader Script
      ============================================================ -->
-<script>
+  <script>
     // 📊 CSVデータ動的読み込み & レンダリングロジック
-    (function() {
+    (function () {
       const LOG_TAG = "📊[CSV-Loader]";
       const logInfo = (msg) => console.log(`[ℹ️INFO] ${LOG_TAG} ${msg}`);
       const logSuccess = (msg) => console.log(`[✅SUCCESS] ${LOG_TAG} ${msg}`);
@@ -104,7 +58,7 @@
 
         for (let i = 0; i < text.length; i++) {
           const c = text[i];
-          const next = text[i+1];
+          const next = text[i + 1];
           if (c === '"') {
             if (inQuotes && next === '"') {
               row[row.length - 1] += '"';
@@ -135,13 +89,13 @@
         const tbody = table.querySelector('tbody');
         if (!tbody) return;
         tbody.innerHTML = '';
-        
+
         // ヘッダー行をスキップ
         for (let i = 1; i < data.length; i++) {
           const row = data[i];
           if (row.length < 5) continue;
           const [model, issue, cv, kpi_title, kpi_desc] = row;
-          
+
           const tr = document.createElement('tr');
           tr.innerHTML = `
             <td style="padding-top: 14px; padding-bottom: 14px;">
@@ -161,14 +115,14 @@
       // 数値テーブル（スライド13, 14）の更新
       function updateBreakdownTable(table, data) {
         const rows = table.querySelectorAll('tbody tr');
-        
+
         for (let i = 1; i < data.length; i++) {
           const csvRow = data[i];
           if (csvRow.length <= 1) continue;
-          
+
           const metricName = csvRow[0].trim();
           let targetRow = null;
-          
+
           // 1列目の指標名でマッチングする行を探す
           for (const tr of rows) {
             const firstTd = tr.querySelector('td');
@@ -177,7 +131,7 @@
               break;
             }
           }
-          
+
           if (targetRow) {
             const tds = targetRow.querySelectorAll('td');
             for (let j = 1; j < csvRow.length; j++) {
@@ -185,7 +139,7 @@
                 let val = csvRow[j].trim();
                 let isSignal = false;
                 let isOk = false;
-                
+
                 // 強調マークの処理
                 if (val.endsWith('*')) {
                   val = val.slice(0, -1);
@@ -194,13 +148,13 @@
                   val = val.slice(0, -1);
                   isOk = true;
                 }
-                
+
                 tds[j].textContent = val;
-                
+
                 // スタイルのリセットと再設定
                 tds[j].style.color = '';
                 tds[j].style.fontWeight = '';
-                
+
                 if (isSignal) {
                   tds[j].style.color = 'var(--signal)';
                   tds[j].style.fontWeight = '700';
@@ -224,12 +178,12 @@
           }
           const text = await response.text();
           const data = parseCSV(text);
-          
+
           const table = document.getElementById(tableId);
           if (!table) {
             throw new Error(`Table #${tableId} not found`);
           }
-          
+
           renderer(table, data);
           logSuccess(`Table #${tableId} successfully updated from CSV.`);
         } catch (err) {
@@ -246,318 +200,368 @@
       });
     })();
   </script>
-<div class="template-block">
-<div class="label">Template: v-cover</div>
-<section aria-label="タイトルページ" class="slide v-cover">
-<div class="top-bar"></div>
-<main class="cover-stage">
-<div class="cover-copy">
-<div class="eyebrow">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
-<h1 class="cover-title">ダミーテキストですこの<br/>ダミーテキストですこの</h1>
-<p class="cover-subtitle">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-<div class="cover-meta">
-<span class="tag">ダミーテキストですこの</span>
-<span class="tag">ダミーテキストですこの</span>
-<span class="tag">ダミー</span>
-</div>
-</div>
-<aside aria-label="資料概要" class="cover-mark">
-<div class="cover-mark-number">ダミー</div>
-<p class="cover-mark-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-<div class="divider-line"></div>
-<p class="meta-line">ダミーテキストですこの</p>
-</aside>
-</main>
-<span class="page-num">01 / 26</span>
-</section>
-</div><div class="template-block">
-<div class="label">Template: v-summary</div>
-<section aria-label="自己紹介" class="slide v-summary">
-<div class="top-bar"></div>
-<header class="slide-header">
-<span class="section-badge">ダミー</span>
-<h1 class="slide-heading">ダミーテキストですこの</h1>
-</header>
-<main class="content-area">
-<article class="card summary-main">
-<div class="eyebrow">ダミー</div>
-<p class="summary-claim">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</article>
-<div class="summary-points">
-<article class="card summary-point">
-<div class="num">01</div>
-<div>
-<h2 class="item-title">ダミーテキストですこの</h2>
-<p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
-</div>
-</article>
-<article class="card summary-point">
-<div class="num">02</div>
-<div>
-<h2 class="item-title">ダミーテキストですこの</h2>
-<p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</div>
-</article>
-<article class="card summary-point">
-<div class="num">03</div>
-<div>
-<h2 class="item-title">ダミーテキストですこの</h2>
-<p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</div>
-</article>
-</div>
-</main>
-<footer class="slide-footer">
-<div class="conclusion">
-<span aria-label="要点" class="icon-symbol">handshake</span>
-<p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</div>
-<span class="page-num">04 / 26</span>
-</footer>
-</section>
-</div><div class="template-block">
-<div class="label">Template: v-chapter</div>
-<section aria-label="チャプター1" class="slide v-chapter">
-<div class="top-bar"></div>
-<main class="chapter-stage">
-<div>
-<div class="eyebrow">ダミーテキストですこの</div>
-<div class="chapter-number">01</div>
-</div>
-<div class="chapter-copy">
-<h1 class="chapter-title">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
-<p class="chapter-body">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-<div class="cover-meta">
-<span class="tag">ダミー</span>
-<span class="tag">ダミーテキストですこの</span>
-</div>
-</div>
-</main>
-<span class="page-num">04 / 26</span>
-</section>
-</div><div class="template-block">
-<div class="label">Template: v-list</div>
-<section aria-label="支援のスタートラインと3つの問い" class="slide v-list">
-<div class="top-bar"></div>
-<header class="slide-header">
-<span class="section-badge">ダミーテキストですこの</span>
-<h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
-</header>
-<main class="content-area">
-<article class="card list-row" style="border-left: 4px solid var(--accent);">
-<div class="num">01</div>
-<div>
-<h2 class="item-title" style="margin-bottom: 4px;">ダミーテキストですこの</h2>
-<p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
-</div>
-<div class="list-meta">ダミー</div>
-</article>
-<article class="card list-row" style="border-left: 4px solid var(--accent);">
-<div class="num">02</div>
-<div>
-<h2 class="item-title" style="margin-bottom: 4px;">ダミーテキストですこの</h2>
-<p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
-</div>
-<div class="list-meta" style="background: rgba(50, 30, 134, 0.03); color: var(--subtle);">ダミー</div>
-</article>
-<article class="card list-row" style="border-left: 4px solid var(--accent);">
-<div class="num">03</div>
-<div>
-<h2 class="item-title" style="margin-bottom: 4px;">ダミーテキストですこの</h2>
-<p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
-</div>
-<div class="list-meta" style="background: rgba(50, 30, 134, 0.03); color: var(--subtle);">ダミーテキストですこの</div>
-</article>
-</main>
-<footer class="slide-footer">
-<div class="conclusion">
-<span aria-label="要点" class="icon-symbol">flag</span>
-<p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</div>
-<span class="page-num">09 / 26</span>
-</footer>
-</section>
-</div><div class="template-block">
-<div class="label">Template: v-model-table</div>
-<section aria-label="経営課題と成果モデルの紐付け" class="slide v-model-table">
-<div class="top-bar"></div>
-<header class="slide-header">
-<span class="section-badge">ダミーテキストですこの</span>
-<h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
-</header>
-<main class="content-area">
-<table class="data-table" id="management-issues-table" style="height: auto;">
-<thead>
-<tr>
-<th style="width: 28% !important;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</th>
-<th style="width: 22%;">ダミーテキストですこの</th>
-<th>ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="padding-top: 14px; padding-bottom: 14px;">
-<span class="tag" style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
-<div style="font-weight: 700;">ダミーテキストですこの</div>
-</td>
-<td style="vertical-align: middle; font-weight: 700;">ダミーテキストですこの</td>
-<td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
-<div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
-<div style="color: var(--muted);">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
-</td>
-</tr>
-<tr>
-<td style="padding-top: 14px; padding-bottom: 14px;">
-<span class="tag" style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
-<div style="font-weight: 700;">ダミーテキストですこの</div>
-</td>
-<td style="vertical-align: middle; font-weight: 700;">ダミー</td>
-<td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
-<div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
-<div style="color: var(--muted);">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
-</td>
-</tr>
-<tr>
-<td style="padding-top: 14px; padding-bottom: 14px;">
-<span class="tag" style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
-<div style="font-weight: 700;">ダミーテキストですこの</div>
-</td>
-<td style="vertical-align: middle; font-weight: 700;">ダミーテキストですこの</td>
-<td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
-<div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
-<div style="color: var(--muted);">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
-</td>
-</tr>
-<tr>
-<td style="padding-top: 14px; padding-bottom: 14px;">
-<span class="tag" style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
-<div style="font-weight: 700;">ダミーテキストですこの</div>
-</td>
-<td style="vertical-align: middle; font-weight: 700;">ダミー</td>
-<td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
-<div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
-<div style="color: var(--muted);">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
-</td>
-</tr>
-<tr>
-<td style="padding-top: 14px; padding-bottom: 14px;">
-<span class="tag" style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
-<div style="font-weight: 700;">ダミーテキストですこの</div>
-</td>
-<td style="vertical-align: middle; font-weight: 700;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</td>
-<td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
-<div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの</div>
-<div style="color: var(--muted);">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
-</td>
-</tr>
-</tbody>
-</table>
-</main>
-<footer class="slide-footer">
-<span class="page-num">10 / 26</span>
-</footer>
-</section>
-</div><div class="template-block">
-<div class="label">Template: v-normal</div>
-<section aria-label="「どこで止まっているか」を測るためのマイクロCV" class="slide">
-<div class="top-bar"></div>
-<header class="slide-header">
-<span class="section-badge">ダミーテキストですこの</span>
-<h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
-</header>
-<main class="content-area">
-<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; height:100%;">
-ダミーテキストですこの文章はデザインやレイアウトを確認するため
-<div style="display: flex; flex-direction: column; gap: 16px;">
-<article class="card" style="padding: 24px; border: 1px solid var(--accent); flex-grow: 1;">
-<div class="eyebrow" style="color: var(--accent); margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
-<h3 style="font-size: 16px; color: var(--signal); margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h3>
-<p class="body-text" style="margin-bottom: 20px;">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-<h3 style="font-size: 16px; color: var(--ok); margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h3>
-<p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ<strong>ダミーテキストですこの</strong>ダミーテキストですこの<br/><br/>ダミーテキストですこの<strong>ダミーテキストですこの</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</article>
-</div>
-ダミーテキストですこの
-<div style="display: grid; grid-template-rows: auto auto; gap: 16px;">
-<article class="card" style="padding: 20px; border: 1px solid var(--line);">
-<h3 style="font-size: 14px; color: var(--ink); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
-<span class="icon-symbol" style="font-size: 18px; color: var(--accent);">ads_click</span>ダミーテキストですこの</h3>
-<ul class="split-list">
-<li><span class="icon-symbol">edit_square</span><span>ダミーテキストですこの</span></li>
-<li><span class="icon-symbol">call</span><span>ダミーテキストですこの</span></li>
-<li><span class="icon-symbol">menu_book</span><span>ダミーテキストですこの</span></li>
-</ul>
-</article>
-<article class="card note-card" style="padding: 20px; border: 1px solid var(--signal); background: var(--panel);">
-<div class="eyebrow" style="color: var(--signal); margin-bottom: 4px;">ダミーテキストですこの</div>
-<h2 class="item-title" style="font-size: 14px; margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h2>
-<p class="body-text" style="font-size: 12.5px; line-height: 1.5;">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-<div style="margin-top: 12px; padding: 10px; background: var(--signal-soft); border-radius: 6px; font-weight: 700; color: var(--ink); font-size: 12px;">
-<span style="font-weight: normal; margin-top: 2px; display: block;">ダミーテキストですこの<br/>ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</span>
-</div>
-</article>
-</div>
-</div>
-</main>
-<footer class="slide-footer">
-<div class="conclusion">
-<span aria-label="要点" class="icon-symbol">troubleshoot</span>
-<p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</div>
-<span class="page-num">15 / 27</span>
-</footer>
-</section>
-</div><div class="template-block">
-<div class="label">Template: v-compare</div>
-<section aria-label="競合設定とコミュニケーション戦略" class="slide v-compare">
-<div class="top-bar"></div>
-<header class="slide-header">
-<span class="section-badge">ダミーテキストですこの</span>
-<h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
-</header>
-<main class="content-area">
-<div style="grid-column: 1 / -1; padding: 12px 18px; background: #fff; border-radius: 8px; border: 1px solid var(--line); font-size: 13px; color: var(--ink);">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
-<article class="card compare-card">
-<div class="compare-head">
-<div>
-<div class="eyebrow" style="color: var(--signal);">ダミーテキストですこの</div>
-<h2 class="item-title">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h2>
-</div>
-<span class="icon-symbol" style="color: var(--signal); font-size: 28px;">sentiment_dissatisfied</span>
-</div>
-<div style="padding-top: 14px; font-size: 12.5px; color: var(--ink); line-height: 1.6;">
-<p style="margin-bottom: 8px;"><strong>ダミー</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-<p style="margin-bottom: 8px;"><strong>ダミー</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
-<p style="color: var(--signal); font-weight: 700;">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</div>
-<div style="margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--muted); font-weight: 700;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
-</article>
-<article class="card compare-card is-selected">
-<div class="compare-head">
-<div>
-<div class="eyebrow" style="color: var(--ok);">ダミーテキストですこの</div>
-<h2 class="item-title" style="color: var(--ok);">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h2>
-</div>
-<span class="icon-symbol" style="color: var(--ok); font-size: 28px;">sentiment_satisfied</span>
-</div>
-<div style="padding-top: 14px; font-size: 12.5px; color: var(--ink); line-height: 1.6;">
-<p style="margin-bottom: 8px;"><strong>ダミー</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
-<ul class="split-list" style="margin-bottom: 8px; gap: 6px;">
-<li style="font-size: 12px;"><span class="icon-symbol" style="color: var(--ok);">check</span><span>ダミーテキストですこの文章はデザインやレイアウトを確認するため</span></li>
-<li style="font-size: 12px;"><span class="icon-symbol" style="color: var(--ok);">check</span><span>ダミーテキストですこの文章はデザインやレイアウトを確認するため</span></li>
-</ul>
-<p style="color: var(--ok); font-weight: 700;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
-</div>
-<div style="margin-top: auto; padding-top: 12px; border-top: 1px dashed rgba(31, 118, 103, 0.3); font-size: 11px; color: var(--ok); font-weight: 700;">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
-</article>
-</main>
-<footer class="slide-footer">
-<div class="conclusion">
-<span aria-label="要点" class="icon-symbol">balance</span>
-<p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
-</div>
-<span class="page-num">17 / 27</span>
-</footer>
-</section>
-</div></body>
+  <div class="template-block">
+    <div class="label">Template: v-cover</div>
+    <section aria-label="タイトルページ" class="slide v-cover">
+      <div class="top-bar"></div>
+      <main class="cover-stage">
+        <div class="cover-copy">
+          <div class="eyebrow">ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
+          <h1 class="cover-title">ダミーテキストですこの<br />ダミーテキストですこの</h1>
+          <p class="cover-subtitle">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+          </p>
+          <div class="cover-meta">
+            <span class="tag">ダミーテキストですこの</span>
+            <span class="tag">ダミーテキストですこの</span>
+            <span class="tag">ダミー</span>
+          </div>
+        </div>
+        <aside aria-label="資料概要" class="cover-mark">
+          <div class="cover-mark-number">ダミー</div>
+          <p class="cover-mark-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+          </p>
+          <div class="divider-line"></div>
+          <p class="meta-line">ダミーテキストですこの</p>
+        </aside>
+      </main>
+      <span class="page-num">01 / 26</span>
+    </section>
+  </div>
+  <div class="template-block">
+    <div class="label">Template: v-summary</div>
+    <section aria-label="自己紹介" class="slide v-summary">
+      <div class="top-bar"></div>
+      <header class="slide-header">
+        <span class="section-badge">ダミー</span>
+        <h1 class="slide-heading">ダミーテキストですこの</h1>
+      </header>
+      <main class="content-area">
+        <article class="card summary-main">
+          <div class="eyebrow">ダミー</div>
+          <p class="summary-claim">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+          </p>
+        </article>
+        <div class="summary-points">
+          <article class="card summary-point">
+            <div class="num">01</div>
+            <div>
+              <h2 class="item-title">ダミーテキストですこの</h2>
+              <p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
+            </div>
+          </article>
+          <article class="card summary-point">
+            <div class="num">02</div>
+            <div>
+              <h2 class="item-title">ダミーテキストですこの</h2>
+              <p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+              </p>
+            </div>
+          </article>
+          <article class="card summary-point">
+            <div class="num">03</div>
+            <div>
+              <h2 class="item-title">ダミーテキストですこの</h2>
+              <p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+              </p>
+            </div>
+          </article>
+        </div>
+      </main>
+      <footer class="slide-footer">
+        <div class="conclusion">
+          <span aria-label="要点" class="icon-symbol">handshake</span>
+          <p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
+        </div>
+        <span class="page-num">04 / 26</span>
+      </footer>
+    </section>
+  </div>
+  <div class="template-block">
+    <div class="label">Template: v-chapter</div>
+    <section aria-label="チャプター1" class="slide v-chapter">
+      <div class="top-bar"></div>
+      <main class="chapter-stage">
+        <div>
+          <div class="eyebrow">ダミーテキストですこの</div>
+          <div class="chapter-number">01</div>
+        </div>
+        <div class="chapter-copy">
+          <h1 class="chapter-title">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
+          <p class="chapter-body">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+          </p>
+          <div class="cover-meta">
+            <span class="tag">ダミー</span>
+            <span class="tag">ダミーテキストですこの</span>
+          </div>
+        </div>
+      </main>
+      <span class="page-num">04 / 26</span>
+    </section>
+  </div>
+  <div class="template-block">
+    <div class="label">Template: v-list</div>
+    <section aria-label="支援のスタートラインと3つの問い" class="slide v-list">
+      <div class="top-bar"></div>
+      <header class="slide-header">
+        <span class="section-badge">ダミーテキストですこの</span>
+        <h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
+      </header>
+      <main class="content-area">
+        <article class="card list-row" style="border-left: 4px solid var(--accent);">
+          <div class="num">01</div>
+          <div>
+            <h2 class="item-title" style="margin-bottom: 4px;">ダミーテキストですこの</h2>
+            <p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
+          </div>
+          <div class="list-meta">ダミー</div>
+        </article>
+        <article class="card list-row" style="border-left: 4px solid var(--accent);">
+          <div class="num">02</div>
+          <div>
+            <h2 class="item-title" style="margin-bottom: 4px;">ダミーテキストですこの</h2>
+            <p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
+          </div>
+          <div class="list-meta" style="background: rgba(50, 30, 134, 0.03); color: var(--subtle);">ダミー</div>
+        </article>
+        <article class="card list-row" style="border-left: 4px solid var(--accent);">
+          <div class="num">03</div>
+          <div>
+            <h2 class="item-title" style="margin-bottom: 4px;">ダミーテキストですこの</h2>
+            <p class="body-text">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
+          </div>
+          <div class="list-meta" style="background: rgba(50, 30, 134, 0.03); color: var(--subtle);">ダミーテキストですこの</div>
+        </article>
+      </main>
+      <footer class="slide-footer">
+        <div class="conclusion">
+          <span aria-label="要点" class="icon-symbol">flag</span>
+          <p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
+        </div>
+        <span class="page-num">09 / 26</span>
+      </footer>
+    </section>
+  </div>
+  <div class="template-block">
+    <div class="label">Template: v-model-table</div>
+    <section aria-label="経営課題と成果モデルの紐付け" class="slide v-model-table">
+      <div class="top-bar"></div>
+      <header class="slide-header">
+        <span class="section-badge">ダミーテキストですこの</span>
+        <h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
+      </header>
+      <main class="content-area">
+        <table class="data-table" id="management-issues-table" style="height: auto;">
+          <thead>
+            <tr>
+              <th style="width: 28% !important;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</th>
+              <th style="width: 22%;">ダミーテキストですこの</th>
+              <th>ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding-top: 14px; padding-bottom: 14px;">
+                <span class="tag"
+                  style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
+                <div style="font-weight: 700;">ダミーテキストですこの</div>
+              </td>
+              <td style="vertical-align: middle; font-weight: 700;">ダミーテキストですこの</td>
+              <td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
+                <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため
+                </div>
+                <div style="color: var(--muted);">
+                  ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 14px; padding-bottom: 14px;">
+                <span class="tag"
+                  style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
+                <div style="font-weight: 700;">ダミーテキストですこの</div>
+              </td>
+              <td style="vertical-align: middle; font-weight: 700;">ダミー</td>
+              <td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
+                <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため
+                </div>
+                <div style="color: var(--muted);">
+                  ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 14px; padding-bottom: 14px;">
+                <span class="tag"
+                  style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
+                <div style="font-weight: 700;">ダミーテキストですこの</div>
+              </td>
+              <td style="vertical-align: middle; font-weight: 700;">ダミーテキストですこの</td>
+              <td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
+                <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため
+                </div>
+                <div style="color: var(--muted);">
+                  ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 14px; padding-bottom: 14px;">
+                <span class="tag"
+                  style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
+                <div style="font-weight: 700;">ダミーテキストですこの</div>
+              </td>
+              <td style="vertical-align: middle; font-weight: 700;">ダミー</td>
+              <td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
+                <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため
+                </div>
+                <div style="color: var(--muted);">
+                  ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top: 14px; padding-bottom: 14px;">
+                <span class="tag"
+                  style="font-size: 10px; padding: 2px 8px; background: var(--signal-soft); color: var(--signal); display: inline-block; margin-bottom: 6px;">ダミー</span>
+                <div style="font-weight: 700;">ダミーテキストですこの</div>
+              </td>
+              <td style="vertical-align: middle; font-weight: 700;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</td>
+              <td style="vertical-align: middle; font-size: 11px; line-height: 1.5; color: var(--ink);">
+                <div style="font-weight: 700; color: var(--accent); margin-bottom: 4px;">ダミーテキストですこの</div>
+                <div style="color: var(--muted);">
+                  ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+      <footer class="slide-footer">
+        <span class="page-num">10 / 26</span>
+      </footer>
+    </section>
+  </div>
+  <div class="template-block">
+    <div class="label">Template: v-normal</div>
+    <section aria-label="「どこで止まっているか」を測るためのマイクロCV" class="slide">
+      <div class="top-bar"></div>
+      <header class="slide-header">
+        <span class="section-badge">ダミーテキストですこの</span>
+        <h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
+      </header>
+      <main class="content-area">
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; height:100%;">
+          ダミーテキストですこの文章はデザインやレイアウトを確認するため
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <article class="card" style="padding: 24px; border: 1px solid var(--accent); flex-grow: 1;">
+              <div class="eyebrow" style="color: var(--accent); margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため
+              </div>
+              <h3 style="font-size: 16px; color: var(--signal); margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため
+              </h3>
+              <p class="body-text" style="margin-bottom: 20px;">
+                ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
+              <h3 style="font-size: 16px; color: var(--ok); margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h3>
+              <p class="body-text">
+                ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ<strong>ダミーテキストですこの</strong>ダミーテキストですこの<br /><br />ダミーテキストですこの<strong>ダミーテキストですこの</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+              </p>
+            </article>
+          </div>
+          ダミーテキストですこの
+          <div style="display: grid; grid-template-rows: auto auto; gap: 16px;">
+            <article class="card" style="padding: 20px; border: 1px solid var(--line);">
+              <h3
+                style="font-size: 14px; color: var(--ink); margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                <span class="icon-symbol" style="font-size: 18px; color: var(--accent);">ads_click</span>ダミーテキストですこの
+              </h3>
+              <ul class="split-list">
+                <li><span class="icon-symbol">edit_square</span><span>ダミーテキストですこの</span></li>
+                <li><span class="icon-symbol">call</span><span>ダミーテキストですこの</span></li>
+                <li><span class="icon-symbol">menu_book</span><span>ダミーテキストですこの</span></li>
+              </ul>
+            </article>
+            <article class="card note-card"
+              style="padding: 20px; border: 1px solid var(--signal); background: var(--panel);">
+              <div class="eyebrow" style="color: var(--signal); margin-bottom: 4px;">ダミーテキストですこの</div>
+              <h2 class="item-title" style="font-size: 14px; margin-bottom: 8px;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h2>
+              <p class="body-text" style="font-size: 12.5px; line-height: 1.5;">
+                ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
+              <div
+                style="margin-top: 12px; padding: 10px; background: var(--signal-soft); border-radius: 6px; font-weight: 700; color: var(--ink); font-size: 12px;">
+                <span
+                  style="font-weight: normal; margin-top: 2px; display: block;">ダミーテキストですこの<br />ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+      <footer class="slide-footer">
+        <div class="conclusion">
+          <span aria-label="要点" class="icon-symbol">troubleshoot</span>
+          <p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
+        </div>
+        <span class="page-num">15 / 27</span>
+      </footer>
+    </section>
+  </div>
+  <div class="template-block">
+    <div class="label">Template: v-compare</div>
+    <section aria-label="競合設定とコミュニケーション戦略" class="slide v-compare">
+      <div class="top-bar"></div>
+      <header class="slide-header">
+        <span class="section-badge">ダミーテキストですこの</span>
+        <h1 class="slide-heading">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h1>
+      </header>
+      <main class="content-area">
+        <div
+          style="grid-column: 1 / -1; padding: 12px 18px; background: #fff; border-radius: 8px; border: 1px solid var(--line); font-size: 13px; color: var(--ink);">
+          ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
+        <article class="card compare-card">
+          <div class="compare-head">
+            <div>
+              <div class="eyebrow" style="color: var(--signal);">ダミーテキストですこの</div>
+              <h2 class="item-title">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h2>
+            </div>
+            <span class="icon-symbol" style="color: var(--signal); font-size: 28px;">sentiment_dissatisfied</span>
+          </div>
+          <div style="padding-top: 14px; font-size: 12.5px; color: var(--ink); line-height: 1.6;">
+            <p style="margin-bottom: 8px;">
+              <strong>ダミー</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ
+            </p>
+            <p style="margin-bottom: 8px;"><strong>ダミー</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
+            <p style="color: var(--signal); font-weight: 700;">
+              ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
+          </div>
+          <div
+            style="margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--muted); font-weight: 700;">
+            ダミーテキストですこの文章はデザインやレイアウトを確認するため</div>
+        </article>
+        <article class="card compare-card is-selected">
+          <div class="compare-head">
+            <div>
+              <div class="eyebrow" style="color: var(--ok);">ダミーテキストですこの</div>
+              <h2 class="item-title" style="color: var(--ok);">ダミーテキストですこの文章はデザインやレイアウトを確認するため</h2>
+            </div>
+            <span class="icon-symbol" style="color: var(--ok); font-size: 28px;">sentiment_satisfied</span>
+          </div>
+          <div style="padding-top: 14px; font-size: 12.5px; color: var(--ink); line-height: 1.6;">
+            <p style="margin-bottom: 8px;"><strong>ダミー</strong>ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
+            <ul class="split-list" style="margin-bottom: 8px; gap: 6px;">
+              <li style="font-size: 12px;"><span class="icon-symbol"
+                  style="color: var(--ok);">check</span><span>ダミーテキストですこの文章はデザインやレイアウトを確認するため</span></li>
+              <li style="font-size: 12px;"><span class="icon-symbol"
+                  style="color: var(--ok);">check</span><span>ダミーテキストですこの文章はデザインやレイアウトを確認するため</span></li>
+            </ul>
+            <p style="color: var(--ok); font-weight: 700;">ダミーテキストですこの文章はデザインやレイアウトを確認するため</p>
+          </div>
+          <div
+            style="margin-top: auto; padding-top: 12px; border-top: 1px dashed rgba(31, 118, 103, 0.3); font-size: 11px; color: var(--ok); font-weight: 700;">
+            ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</div>
+        </article>
+      </main>
+      <footer class="slide-footer">
+        <div class="conclusion">
+          <span aria-label="要点" class="icon-symbol">balance</span>
+          <p class="conc-text">ダミーテキストですこの文章はデザインやレイアウトを確認するための文字量チェック用ダミーです適宜本番のテキストに置き換えて使用してください。あいうえおかきくけこさしすせ</p>
+        </div>
+        <span class="page-num">17 / 27</span>
+      </footer>
+    </section>
+  </div>
+</body>
+
 </html>
