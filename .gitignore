@@ -1,0 +1,25 @@
+# GitHub Pages公開に不要なファイルをすべて除外
+
+# フォルダ
+docs/
+scratch/
+slides/
+data/
+
+# スライドのソースHTMLファイル
+introduction.html
+chapter1.html
+chapter2.html
+itc_tutorial_slides.template.html
+
+# スクリプト・設定ファイル
+build_presentation.py
+update_design.py
+
+# ドキュメント・メモ
+AGENTS.md
+構成(決定).md
+時間配分.md
+
+# OS系の一時ファイル
+.DS_Store

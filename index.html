@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ITCチュートリアル — Webマーケティング支援フレーム</title>
+  <link href="data:," rel="icon" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0&amp;family=Noto+Sans+JP:wght@500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="style.css?v=4" rel="stylesheet" />
+  <style>
+    /* 全スライドを縦に並べて表示 */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f5f7;
+    }
+
+    .slides-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px;
+      align-items: center;
+    }
+
+    .slide {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="slides-container" class="slides-container">
+    <section aria-label="タイトルページ" class="slide v-cover">
+      <div class="top-bar"></div>
+      <main class="cover-stage">
+        <div class="cover-copy">
+          <div class="eyebrow">ITCチュートリアル</div>
+          <h1 class="cover-title">Webマーケティング<br />支援フレーム</h1>
+          <p class="cover-subtitle">ITCの課題整理力に、Webマーケのナレッジを装着する。<br />皆さんのスキルに、整理の道具を足すだけ。</p>
+          <div class="cover-meta">
+            <span class="tag">課題特定</span>
+            <span class="tag">施策一致</span>
+            <span class="tag">測定設計</span>
+          </div>
+        </div>
+        <aside aria-label="資料概要" class="cover-mark">
+          <div class="cover-mark-number">WEB</div>
+          <p class="cover-mark-text">本資料は、ITコーディネータの皆様がクライアントのWebマーケティングを伴走支援するための実践的なフレームワークを提供します。</p>
+          <div class="divider-line"></div>
+          <p class="meta-line">2026 Edition</p>
+        </aside>
+      </main>
+      <span class="page-num">01</span>
+    </section>
+
+<section aria-label="導入" class="slide v-chapter">
+  <div class="top-bar"></div>
+  <main class="chapter-stage">
+    <div>
+      <div class="eyebrow">Introduction</div>
+      <div class="chapter-number">00</div>
+    </div>
+    <div class="chapter-copy">
+      <h1 class="chapter-title">導入・オリエンテーション</h1>
+      <p class="chapter-body">
+        本日のチュートリアルを進めるにあたっての目的と、<br/>
+        皆様に持ち帰っていただく「伴走支援のOKライン」を共有します。
+      </p>
+      <div class="chapter-agenda-map">
+        <div class="chapter-agenda-step active">
+          <span class="step-num">00</span>
+          <span class="step-name">導入</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">01</span>
+          <span class="step-name">課題を掴む</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">02</span>
+          <span class="step-name">施策を整理する</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">03</span>
+          <span class="step-name">測れるようにする</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">04</span>
+          <span class="step-name">演習＋まとめ</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <span class="page-num">02</span>
+</section>
+
+<section aria-label="イントロダクション" class="slide v-normal">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">導入</span>
+    <h1 class="slide-heading">イントロダクション</h1>
+  </header>
+  <main class="content-area">
+    <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+      <article class="card" style="padding: 40px; text-align: center; border: 2px dashed var(--line); width: 80%;">
+        <span class="icon-symbol" style="font-size: 48px; color: var(--muted); margin-bottom: 16px;">edit_document</span>
+        <h2 style="color: var(--muted);">（イントロダクション：後で自分で書く）</h2>
+        <p class="body-text" style="color: var(--muted); margin-top: 16px;">
+          ここに当日のアイスブレイクや、参加者への期待値調整などを記載します。
+        </p>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">03</span>
+  </footer>
+</section>
+
+<section aria-label="自己紹介" class="slide v-normal">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">導入</span>
+    <h1 class="slide-heading">自己紹介</h1>
+  </header>
+  <main class="content-area">
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 24px; height: 100%; align-items: center;">
+      <div style="background: #e0e0e0; border-radius: 12px; height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed var(--line);">
+        <span class="icon-symbol" style="font-size: 64px; color: var(--muted);">account_circle</span>
+        <p style="color: var(--muted); margin-top: 8px; font-weight: bold;">(ここに画像を置く)</p>
+      </div>
+      <div>
+        <article class="card" style="padding: 32px; border: 2px dashed var(--line);">
+          <h2 style="color: var(--muted); margin-bottom: 16px;">（自己紹介：後で自分で書く）</h2>
+          <ul class="split-list" style="color: var(--muted);">
+            <li><span class="icon-symbol">check</span><span>経歴</span></li>
+            <li><span class="icon-symbol">check</span><span>専門領域</span></li>
+            <li><span class="icon-symbol">check</span><span>本日の意気込み</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">04</span>
+  </footer>
+</section>
+
+<section aria-label="この3つが揃えば伴走支援は「OK」" class="slide v-list">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">導入</span>
+    <h1 class="slide-heading">この3つが揃えば伴走支援は「OK」</h1>
+  </header>
+  <main class="content-area" style="display: flex; flex-direction: column; gap: 16px;">
+    <div style="font-weight: 700; color: var(--ink);">
+      今日は皆さんのスキルに<span style="color: var(--accent);">Webマーケの整理フレーム</span>をプラスし、「こう整理すると解決策が見つけやすい」状態を目指します。
+    </div>
+    <article class="card list-row" style="flex: 1; grid-template-columns: 44px 1.35fr 1.15fr 48px; gap: 14px; padding: 0 16px; align-items: center;">
+      <div class="num">01</div>
+      <div style="padding-right: 8px;">
+        <h2 class="item-title" style="margin-bottom: 2px; font-size: 16px;"><span class="text-highlight">課題</span>を掴めている</h2>
+        <p class="body-text" style="font-size: 11px; line-height: 1.4; margin: 0;">「お客さんは何がしたくて、どこで詰まってるか」を的確に把握する</p>
+      </div>
+      <div class="expert-bubble" style="position: relative; background: #f0eef9; border: 1px solid rgba(50, 30, 134, 0.16); border-radius: 8px; padding: 8px 12px; font-size: 10px; line-height: 1.4; color: var(--ink); display: flex; align-items: center; min-height: 44px;">
+        <div style="position: absolute; left: -5px; top: 50%; transform: translateY(-50%) rotate(45deg); width: 8px; height: 8px; background: #f0eef9; border-left: 1px solid rgba(50, 30, 134, 0.16); border-bottom: 1px solid rgba(50, 30, 134, 0.16); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; font-weight: 500;">
+          💬 「なるほど、やりたいことはコレで、今はここで詰まっているんですね」
+        </div>
+      </div>
+      <div class="list-meta" style="justify-self: center; width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: rgba(50, 30, 134, 0.04);"><span class="icon-symbol" style="font-size: 20px; color: var(--accent);">search</span></div>
+    </article>
+    <article class="card list-row" style="flex: 1; grid-template-columns: 44px 1.35fr 1.15fr 48px; gap: 14px; padding: 0 16px; align-items: center;">
+      <div class="num" style="color: var(--signal);">02</div>
+      <div style="padding-right: 8px;">
+        <h2 class="item-title" style="margin-bottom: 2px; font-size: 16px;">課題と<span class="text-highlight">施策</span>が一致している</h2>
+        <p class="body-text" style="font-size: 11px; line-height: 1.4; margin: 0;">特定した詰まりに対して、適切な解決策（打ち手）を当てはめる</p>
+      </div>
+      <div class="expert-bubble" style="position: relative; background: #f7eff1; border: 1px solid rgba(159, 52, 82, 0.18); border-radius: 8px; padding: 8px 12px; font-size: 10px; line-height: 1.4; color: var(--ink); display: flex; align-items: center; min-height: 44px;">
+        <div style="position: absolute; left: -5px; top: 50%; transform: translateY(-50%) rotate(45deg); width: 8px; height: 8px; background: #f7eff1; border-left: 1px solid rgba(159, 52, 82, 0.18); border-bottom: 1px solid rgba(159, 52, 82, 0.18); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; font-weight: 500;">
+          💬 「それならこの施策がぴったりです！こっちの方が効果的ですよ」
+        </div>
+      </div>
+      <div class="list-meta" style="justify-self: center; width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: rgba(159, 52, 82, 0.04);"><span class="icon-symbol" style="font-size: 20px; color: var(--signal);">extension</span></div>
+    </article>
+    <article class="card list-row" style="flex: 1; grid-template-columns: 44px 1.35fr 1.15fr 48px; gap: 14px; padding: 0 16px; align-items: center;">
+      <div class="num" style="color: var(--ok);">03</div>
+      <div style="padding-right: 8px;">
+        <h2 class="item-title" style="margin-bottom: 2px; font-size: 16px;"><span class="text-highlight">測れる</span>状態にしている</h2>
+        <p class="body-text" style="font-size: 11px; line-height: 1.4; margin: 0;">施策が効いているか、客観的な数字で検証できる仕組みを作る</p>
+      </div>
+      <div class="expert-bubble" style="position: relative; background: #eef6f5; border: 1px solid rgba(21, 99, 86, 0.2); border-radius: 8px; padding: 8px 12px; font-size: 10px; line-height: 1.4; color: var(--ink); display: flex; align-items: center; min-height: 44px;">
+        <div style="position: absolute; left: -5px; top: 50%; transform: translateY(-50%) rotate(45deg); width: 8px; height: 8px; background: #eef6f5; border-left: 1px solid rgba(21, 99, 86, 0.2); border-bottom: 1px solid rgba(21, 99, 86, 0.2); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; font-weight: 500;">
+          💬 「まずはここを数字で可視化して、状況を評価できるようにしましょう！」
+        </div>
+      </div>
+      <div class="list-meta" style="justify-self: center; width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: rgba(21, 99, 86, 0.04);"><span class="icon-symbol" style="font-size: 20px; color: var(--ok);">monitoring</span></div>
+    </article>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-blue">
+      <span aria-label="要点" class="icon-symbol">flag</span>
+      <p class="callout-text">この3つの条件を満たしていれば、クライアントを正しい方向へ導く伴走支援が可能です。</p>
+    </div>
+    <span class="page-num">05</span>
+  </footer>
+</section>
+
+<section aria-label="本日のアジェンダ" class="slide v-normal">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">導入</span>
+    <h1 class="slide-heading">本日のアジェンダ</h1>
+  </header>
+  <main class="content-area" style="display: flex; flex-direction: column; gap: 12px;">
+    <!-- 01 -->
+    <article class="card" style="display: flex; align-items: center; padding: 14px 20px; gap: 20px; box-shadow: var(--shadow);">
+      <div style="font-size: 32px; font-weight: 900; color: rgba(50, 30, 134, 0.2); font-family: 'Outfit', sans-serif; min-width: 40px; text-align: center;">01</div>
+      <div style="flex: 1;">
+        <h2 style="font-size: 14px; font-weight: 700; margin: 0 0 2px 0; color: var(--ink);">Ch1：課題を掴む</h2>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+          <span style="font-size: 11px; color: var(--accent); background: rgba(50, 30, 134, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">成果モデル（MELSA）の整理</span>
+          <span style="font-size: 11px; color: var(--accent); background: rgba(50, 30, 134, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">ボトルネック3分類</span>
+          <span style="font-size: 11px; color: var(--accent); background: rgba(50, 30, 134, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">数字で見る</span>
+        </div>
+      </div>
+      <div style="width: 32px; height: 32px; background: rgba(50, 30, 134, 0.05); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+        <span class="icon-symbol" style="color: var(--accent); font-size: 18px;">search</span>
+      </div>
+    </article>
+    <!-- 02 -->
+    <article class="card" style="display: flex; align-items: center; padding: 14px 20px; gap: 20px; box-shadow: var(--shadow);">
+      <div style="font-size: 32px; font-weight: 900; color: rgba(159, 52, 82, 0.2); font-family: 'Outfit', sans-serif; min-width: 40px; text-align: center;">02</div>
+      <div style="flex: 1;">
+        <h2 style="font-size: 14px; font-weight: 700; margin: 0 0 2px 0; color: var(--ink);">Ch2：施策を整理する</h2>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+          <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">広告の基本</span>
+          <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">顧客仮説とLP改善</span>
+          <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">CVR改善</span>
+          <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">マイクロCV</span>
+        </div>
+      </div>
+      <div style="width: 32px; height: 32px; background: rgba(159, 52, 82, 0.05); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+        <span class="icon-symbol" style="color: var(--signal); font-size: 18px;">construction</span>
+      </div>
+    </article>
+    <!-- 03 -->
+    <article class="card" style="display: flex; align-items: center; padding: 14px 20px; gap: 20px; box-shadow: var(--shadow);">
+      <div style="font-size: 32px; font-weight: 900; color: rgba(21, 99, 86, 0.2); font-family: 'Outfit', sans-serif; min-width: 40px; text-align: center;">03</div>
+      <div style="flex: 1;">
+        <h2 style="font-size: 14px; font-weight: 700; margin: 0 0 2px 0; color: var(--ink);">Ch3：測れるようにする</h2>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+          <span style="font-size: 11px; color: var(--ok); background: rgba(21, 99, 86, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">最終CV</span>
+          <span style="font-size: 11px; color: var(--ok); background: rgba(21, 99, 86, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">マイクロCV</span>
+          <span style="font-size: 11px; color: var(--ok); background: rgba(21, 99, 86, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">流入元</span>
+          <span style="font-size: 11px; color: var(--ok); background: rgba(21, 99, 86, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">月次比較の測定設計</span>
+        </div>
+      </div>
+      <div style="width: 32px; height: 32px; background: rgba(21, 99, 86, 0.05); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+        <span class="icon-symbol" style="color: var(--ok); font-size: 18px;">monitoring</span>
+      </div>
+    </article>
+    <!-- 04 -->
+    <article class="card" style="display: flex; align-items: center; padding: 14px 20px; gap: 20px; box-shadow: var(--shadow);">
+      <div style="font-size: 32px; font-weight: 900; color: rgba(113, 128, 150, 0.2); font-family: 'Outfit', sans-serif; min-width: 40px; text-align: center;">04</div>
+      <div style="flex: 1;">
+        <h2 style="font-size: 14px; font-weight: 700; margin: 0 0 2px 0; color: var(--ink);">演習 ＋ まとめ</h2>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px;">
+          <span style="font-size: 11px; color: #718096; background: rgba(113, 128, 150, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">架空企業でフレームを実践</span>
+          <span style="font-size: 11px; color: #718096; background: rgba(113, 128, 150, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">迷ったらこの順番に戻る</span>
+        </div>
+      </div>
+      <div style="width: 32px; height: 32px; background: rgba(113, 128, 150, 0.05); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
+        <span class="icon-symbol" style="color: #718096; font-size: 18px;">school</span>
+      </div>
+    </article>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-blue">
+      <span aria-label="要点" class="icon-symbol">schema</span>
+      <p class="callout-text">成果モデル → ボトルネック → 施策 → 測定設計 の順番で整理していきます</p>
+    </div>
+    <span class="page-num">06</span>
+  </footer>
+</section>
+
+<section aria-label="Ch1：詰まりを特定する" class="slide v-chapter">
+  <div class="top-bar"></div>
+  <main class="chapter-stage">
+    <div>
+      <div class="eyebrow">Chapter</div>
+      <div class="chapter-number">01</div>
+    </div>
+    <div class="chapter-copy">
+      <h1 class="chapter-title">詰まりを特定する</h1>
+      <p class="chapter-body">
+        「お客さんは何がしたくて、どこで詰まってるか」を整理する。<br />
+        数字を分解し、感覚ではなく根拠に基づいて課題を特定します。
+      </p>
+      <div class="cover-meta">
+        <span class="tag">成果モデル</span>
+        <span class="tag">ボトルネック</span>
+        <span class="tag">KPI分解</span>
+      </div>
+      <div class="chapter-agenda-map">
+        <div class="chapter-agenda-step">
+          <span class="step-num">00</span>
+          <span class="step-name">導入</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step active">
+          <span class="step-num">01</span>
+          <span class="step-name">課題を掴む</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">02</span>
+          <span class="step-name">施策を整理する</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">03</span>
+          <span class="step-name">測れるようにする</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">04</span>
+          <span class="step-name">演習＋まとめ</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <span class="page-num">07</span>
+</section>
+
+<section aria-label="まず成果モデルを決める" class="slide v-normal">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">まず成果モデルを決める</h1>
+  </header>
+  <main class="content-area" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- 上部の情報ブロック -->
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">info</span>
+      <p class="callout-text"><strong>Webの成果は5つに大別できる。「何を増やすか」の前に「どのモデルの話か」を決める。</strong></p>
+    </div>
+
+    <!-- 5つのカード -->
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 14px;">
+      <!-- M -->
+      <article class="card"
+        style="padding: 22px 10px; text-align: center; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: var(--shadow);">
+        <span class="icon-symbol" style="font-size: 34px; color: #321e86;">storefront</span>
+        <div
+          style="font-size: 21px; font-weight: 900; color: #321e86; line-height: 1; font-family: 'Outfit', sans-serif;">
+          M</div>
+        <h3 style="font-size: 14.5px; font-weight: 700; margin: 0; color: var(--ink);">来店モデル</h3>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.45; margin: 0;">実店舗への<br />来店を促す</p>
+      </article>
+      <!-- E -->
+      <article class="card"
+        style="padding: 22px 10px; text-align: center; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: var(--shadow);">
+        <span class="icon-symbol" style="font-size: 34px; color: #9f3452;">shopping_cart</span>
+        <div
+          style="font-size: 21px; font-weight: 900; color: #9f3452; line-height: 1; font-family: 'Outfit', sans-serif;">
+          E</div>
+        <h3 style="font-size: 14.5px; font-weight: 700; margin: 0; color: var(--ink);">ECモデル</h3>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.45; margin: 0;">オンラインで<br />商品を販売</p>
+      </article>
+      <!-- L -->
+      <article class="card"
+        style="padding: 22px 10px; text-align: center; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: var(--shadow);">
+        <span class="icon-symbol" style="font-size: 34px; color: #156356;">contact_mail</span>
+        <div
+          style="font-size: 21px; font-weight: 900; color: #156356; line-height: 1; font-family: 'Outfit', sans-serif;">
+          L</div>
+        <h3 style="font-size: 14.5px; font-weight: 700; margin: 0; color: var(--ink);">リードモデル</h3>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.45; margin: 0;">見込み顧客の<br />獲得</p>
+      </article>
+      <!-- S -->
+      <article class="card"
+        style="padding: 22px 10px; text-align: center; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: var(--shadow);">
+        <span class="icon-symbol" style="font-size: 34px; color: #d97706;">badge</span>
+        <div
+          style="font-size: 21px; font-weight: 900; color: #d97706; line-height: 1; font-family: 'Outfit', sans-serif;">
+          S</div>
+        <h3 style="font-size: 14.5px; font-weight: 700; margin: 0; color: var(--ink);">採用モデル</h3>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.45; margin: 0;">人材の<br />応募獲得</p>
+      </article>
+      <!-- A -->
+      <article class="card"
+        style="padding: 22px 10px; text-align: center; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: var(--shadow);">
+        <span class="icon-symbol" style="font-size: 34px; color: #7c3aed;">campaign</span>
+        <div
+          style="font-size: 21px; font-weight: 900; color: #7c3aed; line-height: 1; font-family: 'Outfit', sans-serif;">
+          A</div>
+        <h3 style="font-size: 14.5px; font-weight: 700; margin: 0; color: var(--ink);">認知モデル</h3>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.45; margin: 0;">ブランド認知の<br />拡大</p>
+      </article>
+    </div>
+
+    <!-- 下部のポイントブロック -->
+    <div class="callout callout-conclusion is-blue callout-gap-md">
+      <span class="icon-symbol">tips_and_updates</span>
+      <p class="callout-text">
+        <strong>ポイント：</strong>クライアントの事業が「どのモデルの話か」を最初に確認する。モデルが違えば、見るべき数字も打ち手も変わる。複数モデルが混在する場合は優先順位をつける。
+      </p>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">08</span>
+  </footer>
+</section>
+
+<section aria-label="詰まりどころを3つに分ける" class="slide v-normal">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">詰まりどころを3つに分ける</h1>
+  </header>
+  <main class="content-area" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <!-- 上部の情報ブロック -->
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">info</span>
+      <p class="callout-text">この3つのどこが詰まっているかで、選ぶべき打ち手が明確に変わります。</p>
+    </div>
+
+    <!-- 3つのカード -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px;">
+      <!-- 01 集客 -->
+      <article class="card bottleneck-card"
+        style="padding: 22px 18px; border-radius: var(--radius); display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="num"
+            style="color: var(--signal); opacity: 0.3; font-weight: 900; font-family: 'Outfit', sans-serif; font-size: 22px;">
+            01</div>
+          <span class="icon-symbol" style="font-size: 30px; color: var(--signal);">groups</span>
+        </div>
+        <h3 style="font-size: 15.5px; font-weight: 700; margin: 0; color: var(--ink);">集客：そもそも来てない</h3>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.5; margin: 0; flex-grow: 1;">
+          ユーザーがサイトにアクセスしていない状態。[PVの課題]</p>
+        <div
+          style="margin-top: auto; padding: 8px 12px; background: var(--signal-soft); border-radius: 6px; font-weight: 700; color: var(--signal); font-size: 13px; text-align: center;">
+          → 広告・SEO・SNS
+        </div>
+      </article>
+
+      <!-- 02 理解・信頼 -->
+      <article class="card bottleneck-card"
+        style="padding: 22px 18px; border-radius: var(--radius); display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="num"
+            style="color: var(--ok); opacity: 0.3; font-weight: 900; font-family: 'Outfit', sans-serif; font-size: 22px;">
+            02</div>
+          <span class="icon-symbol" style="font-size: 30px; color: var(--ok);">psychology</span>
+        </div>
+        <h3 style="font-size: 15.5px; font-weight: 700; margin: 0; color: var(--ink);">理解・信頼：来てるけど離脱</h3>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.5; margin: 0; flex-grow: 1;">
+          アクセスはあるが、求めている情報がなく即離脱する状態。[PV→CVの課題]</p>
+        <div
+          style="margin-top: auto; padding: 8px 12px; background: var(--ok-soft); border-radius: 6px; font-weight: 700; color: var(--ok); font-size: 13px; text-align: center;">
+          → LP・サイトの改修（事例、FAQなど）
+        </div>
+      </article>
+
+      <!-- 03 行動 -->
+      <article class="card bottleneck-card"
+        style="padding: 22px 18px; border-radius: var(--radius); display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="num"
+            style="color: var(--accent); opacity: 0.3; font-weight: 900; font-family: 'Outfit', sans-serif; font-size: 22px;">
+            03</div>
+          <span class="icon-symbol" style="font-size: 30px; color: var(--accent);">touch_app</span>
+        </div>
+        <h3 style="font-size: 15.5px; font-weight: 700; margin: 0; color: var(--ink);">行動：あと一歩で逃げる</h3>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.5; margin: 0; flex-grow: 1;">
+          検討はしたが、入力フォームが面倒などで最後の行動に至らない。[CVRの課題]</p>
+        <div
+          style="margin-top: auto; padding: 8px 12px; background: var(--accent-soft); border-radius: 6px; font-weight: 700; color: var(--accent); font-size: 13px; text-align: center;">
+          → EFO・CTA・改修
+        </div>
+      </article>
+    </div>
+
+    <!-- 下部のポイントブロック -->
+    <div class="callout callout-conclusion is-yellow callout-gap-md">
+      <span class="icon-symbol">warning</span>
+      <p class="callout-text"><strong>その他:</strong> 測定基盤がない、体制が揃っていないなどの課題もあります。また、ボトルネックと解決策は1対1ではなく、複数が絡み合うのが普通です。</p>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">09</span>
+  </footer>
+</section>
+
+<section aria-label="同じ課題でも打ち手は変わる" class="slide v-normal">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">同じ課題でも打ち手は変わる</h1>
+  </header>
+  <main class="content-area"
+    style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 14px;">
+
+    <!-- ミニマムな掛け合わせマップ -->
+    <div
+      style="display: flex; flex-direction: column; gap: 12px; background: rgba(5, 5, 16, 0.03); padding: 16px 20px; border-radius: var(--radius); border: 1px solid var(--line);">
+      <!-- 1行目: MELSAミニカード -->
+      <div style="display: grid; grid-template-columns: auto repeat(5, 1fr); gap: 10px; align-items: center;">
+        <span style="font-size: 13px; font-weight: 700; color: var(--muted); width: 85px;">成果モデル :</span>
+        <!-- M -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: #fff; border: 1px solid var(--line); border-radius: 6px; font-size: 12.5px; color: var(--muted); opacity: 0.45;">
+          <span class="icon-symbol" style="font-size: 16px;">storefront</span>
+          <span style="font-weight: 700;">M 来店</span>
+        </div>
+        <!-- E (ハイライト) -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(159, 52, 82, 0.08); border: 1.5px solid #9f3452; border-radius: 6px; font-size: 12.5px; color: #9f3452; box-shadow: 0 2px 6px rgba(159, 52, 82, 0.15);">
+          <span class="icon-symbol" style="font-size: 16px;">shopping_cart</span>
+          <span style="font-weight: 700;">E EC</span>
+        </div>
+        <!-- L (ハイライト) -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(21, 99, 86, 0.11); border: 1.5px solid #156356; border-radius: 6px; font-size: 12.5px; color: #156356; box-shadow: 0 2px 6px rgba(21, 99, 86, 0.15);">
+          <span class="icon-symbol" style="font-size: 16px;">contact_mail</span>
+          <span style="font-weight: 700;">L リード</span>
+        </div>
+        <!-- S -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: #fff; border: 1px solid var(--line); border-radius: 6px; font-size: 12.5px; color: var(--muted); opacity: 0.45;">
+          <span class="icon-symbol" style="font-size: 16px;">badge</span>
+          <span style="font-weight: 700;">S 採用</span>
+        </div>
+        <!-- A -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: #fff; border: 1px solid var(--line); border-radius: 6px; font-size: 12.5px; color: var(--muted); opacity: 0.45;">
+          <span class="icon-symbol" style="font-size: 16px;">campaign</span>
+          <span style="font-weight: 700;">A 認知</span>
+        </div>
+      </div>
+
+      <!-- 2行目: ボトルネックミニカード -->
+      <div
+        style="display: grid; grid-template-columns: auto repeat(3, 1fr); gap: 10px; align-items: center; padding-top: 8px; border-top: 1px dashed var(--line);">
+        <span style="font-size: 13px; font-weight: 700; color: var(--muted); width: 85px;">ボトルネック :</span>
+        <!-- 01 集客 (ハイライト) -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(159, 52, 82, 0.08); border: 1.5px solid #9f3452; border-radius: 6px; font-size: 12.5px; color: #9f3452; box-shadow: 0 2px 6px rgba(159, 52, 82, 0.15);">
+          <span class="icon-symbol" style="font-size: 16px;">groups</span>
+          <span style="font-weight: 700;">01 集客</span>
+        </div>
+        <!-- 02 理解・信頼 (ハイライト) -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: rgba(21, 99, 86, 0.11); border: 1.5px solid #156356; border-radius: 6px; font-size: 12.5px; color: #156356; box-shadow: 0 2px 6px rgba(21, 99, 86, 0.15);">
+          <span class="icon-symbol" style="font-size: 16px;">psychology</span>
+          <span style="font-weight: 700;">02 理解・信頼</span>
+        </div>
+        <!-- 03 行動 -->
+        <div
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 6px 12px; background: #fff; border: 1px solid var(--line); border-radius: 6px; font-size: 12.5px; color: var(--muted); opacity: 0.45;">
+          <span class="icon-symbol" style="font-size: 16px;">touch_app</span>
+          <span style="font-weight: 700;">03 行動</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3行目: 掛け合わせによる打ち手の具体例 -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <!-- 例1: EC × 集客 -->
+      <article class="card"
+        style="border: 1.5px solid rgba(159, 52, 82, 0.4); padding: 20px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+            <span class="tag"
+              style="background: rgba(159, 52, 82, 0.1); color: #9f3452; font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 4px;">ECモデル
+              × 集客 [PV課題]</span>
+          </div>
+          <div style="font-size: 13.5px; color: var(--muted); line-height: 1.6;">
+            <strong>状況：</strong>「おしゃれな自社ECを開設したが、月間訪問者が100人しかいない。商品は素晴らしいのに売れない...」
+          </div>
+        </div>
+        <div
+          style="padding: 12px 16px; background: rgba(159, 52, 82, 0.04); border-radius: 6px; border: 1.5px solid rgba(159, 52, 82, 0.15);">
+          <div
+            style="font-weight: 700; color: #9f3452; font-size: 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 4px;">
+            <span class="icon-symbol" style="font-size: 16px; color: #9f3452;">track_changes</span>
+            最適な打ち手：
+          </div>
+          <div style="font-size: 13.5px; color: var(--ink); line-height: 1.55;">
+            自発的検索が少ない段階なので、<strong>Instagram広告</strong>（ビジュアル訴求）や<strong>Googleショッピング広告</strong>で、購買意欲の高い層を直接集客する。
+          </div>
+        </div>
+      </article>
+
+      <!-- 例2: リードモデル × 理解・信頼 -->
+      <article class="card"
+        style="border: 1.5px solid rgba(21, 99, 86, 0.4); padding: 20px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; gap: 12px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 8px;">
+            <span class="tag"
+              style="background: rgba(21, 99, 86, 0.12); color: #156356; font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 4px;">リードモデル
+              × 理解・信頼 [PV→CV課題]</span>
+          </div>
+          <div style="font-size: 13.5px; color: var(--muted); line-height: 1.6;">
+            <strong>状況：</strong>「BtoBサービスで広告からアクセスはある（月1,000回）が、問い合わせがゼロ。売り込み色が強すぎるのかも...」
+          </div>
+        </div>
+        <div
+          style="padding: 12px 16px; background: rgba(21, 99, 86, 0.04); border-radius: 6px; border: 1.5px solid rgba(21, 99, 86, 0.18);">
+          <div
+            style="font-weight: 700; color: #156356; font-size: 14px; margin-bottom: 4px; display: flex; align-items: center; gap: 4px;">
+            <span class="icon-symbol" style="font-size: 16px; color: #156356;">track_changes</span>
+            最適な打ち手：
+          </div>
+          <div style="font-size: 13.5px; color: var(--ink); line-height: 1.55;">
+            ユーザーは不安を抱えている状態なので、<strong>「具体的な導入事例（Before/After）」</strong>や<strong>「よくある懸念に答えるFAQ」</strong>をサイトに充実させて信頼を獲得する。
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- ボトム注記 -->
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">10</span>
+  </footer>
+</section>
+
+<section aria-label="止まる場所を数字で見る" class="slide v-normal v-flow-examples">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">止まる場所を数字で見る</h1>
+  </header>
+  <main class="content-area" style="display: flex; flex-direction: column; gap: 18px;">
+    <div class="flow-examples-main" style="display: flex; flex-direction: column; gap: 14px;">
+      <p class="body-text" style="font-size: 15px; line-height: 1.55; margin: 0; color: var(--ink);">
+        ステップごとの「歩留まり（通過率）」を可視化することで、感覚ではなく根拠をもって課題を特定できます。
+      </p>
+
+      <div class="flow-examples-grid" style="display: flex; flex-direction: column; gap: 14px;">
+        <!-- リードモデルのフロー -->
+        <article class="card"
+          style="padding: 20px; border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+          <div class="eyebrow" style="color: var(--accent); margin-bottom: 0; font-size: 14.5px; font-weight: 700;">
+            リードモデルのフロー例</div>
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; text-align: center; font-size: 15px; font-weight: 700;">
+            <div style="flex: 1; padding: 12px; background: rgba(50,30,134,0.05); border-radius: 8px;">LP訪問<br /><span
+                style="font-size: 11px; color: var(--muted); font-weight: normal;">(集客)</span></div>
+            <span class="icon-symbol" style="color: var(--line);">arrow_forward</span>
+            <div style="flex: 1; padding: 12px; background: rgba(50,30,134,0.1); border-radius: 8px;">フォーム到達<br /><span
+                style="font-size: 11px; color: var(--muted); font-weight: normal;">(理解・信頼)</span></div>
+            <span class="icon-symbol" style="color: var(--line);">arrow_forward</span>
+            <div style="flex: 1; padding: 12px; background: rgba(50,30,134,0.15); border-radius: 8px;">入力完了<br /><span
+                style="font-size: 11px; color: var(--muted); font-weight: normal;">(行動)</span></div>
+            <span class="icon-symbol" style="color: var(--line);">arrow_forward</span>
+            <div
+              style="flex: 1; padding: 12px; background: rgba(50,30,134,0.2); border-radius: 8px; color: var(--accent);">
+              商談</div>
+          </div>
+        </article>
+
+        <!-- ECモデルのフロー -->
+        <article class="card"
+          style="padding: 20px; border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+          <div class="eyebrow" style="color: var(--ok); margin-bottom: 0; font-size: 14.5px; font-weight: 700;">
+            ECモデルのフロー例</div>
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; text-align: center; font-size: 15px; font-weight: 700;">
+            <div style="flex: 1; padding: 12px; background: rgba(31,118,103,0.05); border-radius: 8px;">
+              LP/トップ<br /><span style="font-size: 11px; color: var(--muted); font-weight: normal;">(集客)</span></div>
+            <span class="icon-symbol" style="color: var(--line);">arrow_forward</span>
+            <div style="flex: 1; padding: 12px; background: rgba(31,118,103,0.1); border-radius: 8px;">商品一覧<br /><span
+                style="font-size: 11px; color: var(--muted); font-weight: normal;">(集客/理解)</span></div>
+            <span class="icon-symbol" style="color: var(--line);">arrow_forward</span>
+            <div style="flex: 1; padding: 12px; background: rgba(31,118,103,0.15); border-radius: 8px;">
+              詳細・カート<br /><span style="font-size: 11px; color: var(--muted); font-weight: normal;">(理解/行動)</span></div>
+            <span class="icon-symbol" style="color: var(--line);">arrow_forward</span>
+            <div
+              style="flex: 1; padding: 12px; background: rgba(31,118,103,0.2); border-radius: 8px; color: var(--ok);">購入
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- 導入ブロック文（次ページへのブリッジ） -->
+    <div class="callout callout-conclusion callout-bridge is-yellow">
+      <span class="icon-symbol">person_search</span>
+      <p class="callout-text">
+        「なるほど。でも支援先は、<strong>こんな細かい数値以前の問題（HPすらない等）</strong>のお客さんが多いんだよな…」<br>
+        <span class="callout-subtext">—— そう感じた方は、次のページへ 👉</span>
+      </p>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">11</span>
+  </footer>
+</section>
+
+<section aria-label="数字はITCのコンパス" class="slide v-normal">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">数字はITCのコンパス</h1>
+  </header>
+  <main class="content-area" style="display: flex; flex-direction: column; gap: 16px;">
+
+    <!-- モヤモヤ vs プロの視点 -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <!-- 左側：モヤモヤ（Before） -->
+      <article
+        style="background: rgba(5, 5, 16, 0.02); border: 1px dashed var(--line); border-radius: var(--radius); padding: 15px 18px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; position: relative;">
+        <span class="icon-symbol" style="font-size: 36px; color: var(--muted); opacity: 0.5;">person_search</span>
+        <div style="font-size: 13.5px; font-weight: 700; color: var(--muted);">現場のリアルな疑問 🤔</div>
+        <div
+          style="font-size: 12.5px; color: var(--ink); line-height: 1.55; background: #fff; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--line); position: relative;">
+          「ぶっちゃけ、支援先は<br>まだHPすらないレベルなんだけど…<br><strong style="color: var(--signal);">こんな細かい数字、意味あるの？</strong>」
+          <!-- 吹き出しのしっぽ -->
+          <div
+            style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 16px; height: 16px; background: #fff; border-top: 1px solid var(--line); border-left: 1px solid var(--line);">
+          </div>
+        </div>
+      </article>
+
+      <!-- 右側：プロの視点（After） -->
+      <article
+        style="background: var(--accent-soft); border: 1px solid rgba(50, 30, 134, 0.15); border-radius: var(--radius); padding: 18px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;">
+        <span class="icon-symbol" style="font-size: 38px; color: var(--accent);">tips_and_updates</span>
+        <div style="font-size: 14.5px; font-weight: 700; color: var(--accent);">ITC（プロ）としての視点 💡</div>
+        <div style="font-size: 15.5px; font-weight: 700; color: var(--ink); line-height: 1.5;">
+          結論：お客さんには見せなくてOK！<br>
+          これは<strong
+            style="color: var(--accent); font-size: 18px; border-bottom: 2px solid var(--accent);">「ITCが持つべきコンパス」</strong>です。
+        </div>
+        <div style="font-size: 13px; color: var(--muted); line-height: 1.5;">
+          旅行客（顧客）が地図を読めなくても、<br>ガイド（ITC）は遭難を防ぐ「コンパス」を持つ必要があります。
+        </div>
+      </article>
+    </div>
+
+    <!-- 3つの理由 -->
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: auto;">
+      <div style="font-size: 14.5px; font-weight: 700; color: var(--muted); margin-bottom: 4px;">
+        ITCがこの「数字の地図」を持つべき3つの理由：
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+        <div
+          style="background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="icon-symbol" style="color: var(--signal); font-size: 20px;">health_and_safety</span>
+            <span style="font-weight: 700; font-size: 13.5px; color: var(--ink);">期待値のコントロール</span>
+          </div>
+          <p style="font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5;">
+            「サイトを作ればすぐ売れる」という幻想を、数字（業界平均など）でスッと現実に戻すため。</p>
+        </div>
+
+        <div
+          style="background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="icon-symbol" style="color: var(--ok); font-size: 20px;">map</span>
+            <span style="font-weight: 700; font-size: 13.5px; color: var(--ink);">思いつき施策の防止</span>
+          </div>
+          <p style="font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5;">
+            「とりあえずHP刷新」といった思いつきや、手段の目的化に振り回されない。全体設計から逆算し、本当に効果のある手段を選ぶため。</p>
+        </div>
+
+        <div
+          style="background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span class="icon-symbol" style="color: var(--accent); font-size: 20px;">route</span>
+            <span style="font-weight: 700; font-size: 13.5px; color: var(--ink);">小さな目標への翻訳</span>
+          </div>
+          <p style="font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5;">
+            クライアントには「まずは月100人に見てもらいましょう」と、目の前の一歩に翻訳して伝えるため。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">12</span>
+  </footer>
+</section>
+
+<section aria-label="リードはフォーム前後を分ける" class="slide v-model-table v-compact-kpi">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">リードはフォーム前後を分ける <span
+        style="font-size: 14px; font-weight: normal; color: var(--muted); display: block; margin-top: 4px;">(仮想企業：BtoB向け勤怠管理SaaSツール販売X社の事例)</span>
+    </h1>
+  </header>
+  <main class="content-area"
+    style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-rows: minmax(0, 1fr) auto; gap: 14px 24px; align-items: stretch; height: 100%;">
+    <div style="overflow-x: auto; min-height: 0; height: 100%;">
+      <table class="data-table" style="font-size: 11.5px; height: 100%; margin: 0; width: 100%;">
+        <thead>
+          <tr>
+            <th>指標</th>
+            <th>マッチングA</th>
+            <th>パートナーB</th>
+            <th>自社サイト</th>
+            <th>全体</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>リーチ<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(公称値等)</span></td>
+            <td>8,000<br /><span style="font-size: 9px; color: var(--muted);">(公称値)</span></td>
+            <td>非公開<br /><span style="font-size: 9px; color: var(--muted);">(-)</span></td>
+            <td>800<br /><span style="font-size: 9px; color: var(--muted);">(想定)</span></td>
+            <td>-<br /><span style="font-size: 9px; color: var(--muted);">(-)</span></td>
+          </tr>
+          <tr>
+            <td>訪問者<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(リーチ→訪問)</span></td>
+            <td>500<br /><strong style="color: var(--signal); font-size: 10px;">(6.25%※)</strong></td>
+            <td>500<br /><span style="font-size: 10px; color: var(--muted);">(-)</span></td>
+            <td>200<br /><span style="font-size: 10px; color: var(--muted);">(-)</span></td>
+            <td>1,200<br /><span style="font-size: 10px; color: var(--muted);">(-)</span></td>
+          </tr>
+          <tr>
+            <td>フォーム<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(訪問→到達)</span></td>
+            <td>125<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+            <td>50<br /><strong style="color: var(--signal); font-size: 10px;">(10.0%)</strong></td>
+            <td>50<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+            <td>225<br /><span style="font-size: 10px; color: var(--muted);">(18.8%)</span></td>
+          </tr>
+          <tr>
+            <td>CV（問い合わせ）<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(フォーム→CV)</span>
+            </td>
+            <td>100<br /><span style="font-size: 10px; color: var(--muted);">(80.0%)</span></td>
+            <td>20<br /><strong style="color: var(--signal); font-size: 10px;">(40.0%)</strong></td>
+            <td>40<br /><span style="font-size: 10px; color: var(--muted);">(80.0%)</span></td>
+            <td>160<br /><span style="font-size: 10px; color: var(--muted);">(71.1%)</span></td>
+          </tr>
+          <tr>
+            <td>商談<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(CV→商談)</span></td>
+            <td>20<br /><span style="font-size: 10px; color: var(--muted);">(20.0%)</span></td>
+            <td>8<br /><strong style="color: var(--ok); font-size: 10px;">(40.0%)</strong></td>
+            <td>8<br /><span style="font-size: 10px; color: var(--muted);">(20.0%)</span></td>
+            <td>36<br /><span style="font-size: 10px; color: var(--muted);">(22.5%)</span></td>
+          </tr>
+          <tr>
+            <td>成約 / 受注<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(商談→受注)</span>
+            </td>
+            <td>5<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+            <td>4<br /><strong style="color: var(--ok); font-size: 10px;">(50.0%)</strong></td>
+            <td>2<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+            <td>11<br /><span style="font-size: 10px; color: var(--muted);">(30.6%)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kpi-insight-stack">
+      <ul class="split-list" style="flex-direction: column;">
+        <li><span class="icon-symbol" style="color: var(--accent); font-size: 18px;">insights</span>
+          <span><strong>マッチングA:</strong> CVR(20%)は良好。課題は流入の質ではなく、8,000人規模から500訪問に留まる<strong
+              style="color: var(--signal);">送客量・クリック導線</strong></span>
+        </li>
+        <li><span class="icon-symbol" style="color: var(--accent); font-size: 18px;">insights</span>
+          <span><strong>パートナーB:</strong> フォーム到達率(10%)・入力完了率(40%)で落ちるが、商談化率(40%)・受注率(50%)は高い。<strong
+              style="color: var(--signal);">CTAとフォーム前後の不安解消</strong>が伸びしろ</span>
+        </li>
+        <li><span class="icon-symbol" style="color: var(--muted); font-size: 18px;">info</span>
+          <span><strong>自社サイト:</strong> フォーム到達・入力完了は安定。ただし訪問200件と母数が小さいため、同じ受け皿で集客量を増やす余地があります。</span>
+        </li>
+      </ul>
+    </div>
+    <div class="callout callout-conclusion is-green kpi-conclusion">
+      <span aria-label="要点" class="icon-symbol">explore</span>
+      <p class="callout-text">
+        リードモデルは、<strong>フォーム前後</strong>と<strong>商談以降</strong>を分けて見ると、集客・受け皿・営業品質のどこに打ち手があるかを誤りにくくなります。</p>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">13</span>
+  </footer>
+</section>
+
+<section aria-label="ECは購買手前を細かく見る" class="slide v-model-table v-compact-kpi">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">ECは購買手前を細かく見る <span
+        style="font-size: 14px; font-weight: normal; color: var(--muted); display: block; margin-top: 4px;">(仮想企業：オリジナルアロマ製造・販売Y社の事例)</span>
+    </h1>
+  </header>
+  <main class="content-area"
+    style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-rows: minmax(0, 1fr) auto; gap: 14px 24px; align-items: stretch; height: 100%;">
+    <div style="overflow-x: auto; min-height: 0; height: 100%;">
+      <table class="data-table" style="font-size: 11.5px; height: 100%; margin: 0; width: 100%;">
+        <thead>
+          <tr>
+            <th>指標</th>
+            <th>モールA</th>
+            <th>フリマB</th>
+            <th>自社サイト</th>
+            <th>全体</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>リーチ<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(公称値等)</span>
+            </td>
+            <td>40,000<br /><span style="font-size: 9px; color: var(--muted);">(公称値)</span></td>
+            <td>30,000<br /><span style="font-size: 9px; color: var(--muted);">(公称値)</span></td>
+            <td>6,000<br /><span style="font-size: 9px; color: var(--muted);">(想定)</span></td>
+            <td>-<br /><span style="font-size: 9px; color: var(--muted);">(-)</span></td>
+          </tr>
+          <tr>
+            <td>商品一覧<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(リーチ→一覧)</span></td>
+            <td>3,000<br /><strong style="color: var(--signal); font-size: 10px;">(7.5%)</strong></td>
+            <td>15,000<br /><span style="font-size: 10px; color: var(--muted);">(50.0%)</span></td>
+            <td>3,000<br /><span style="font-size: 10px; color: var(--muted);">(50.0%)</span></td>
+            <td>21,000<br /><span style="font-size: 10px; color: var(--muted);">(27.6%)</span></td>
+          </tr>
+          <tr>
+            <td>商品詳細<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(一覧→詳細)</span></td>
+            <td>300<br /><span style="font-size: 10px; color: var(--muted);">(10.0%)</span></td>
+            <td>300<br /><strong style="color: var(--signal); font-size: 10px;">(2.0%)</strong></td>
+            <td>300<br /><span style="font-size: 10px; color: var(--muted);">(10.0%)</span></td>
+            <td>900<br /><span style="font-size: 10px; color: var(--muted);">(4.3%)</span></td>
+          </tr>
+          <tr>
+            <td>カート<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(詳細→カート)</span></td>
+            <td>30<br /><span style="font-size: 10px; color: var(--muted);">(10.0%)</span></td>
+            <td>30<br /><span style="font-size: 10px; color: var(--muted);">(10.0%)</span></td>
+            <td>30<br /><span style="font-size: 10px; color: var(--muted);">(10.0%)</span></td>
+            <td>90<br /><span style="font-size: 10px; color: var(--muted);">(10.0%)</span></td>
+          </tr>
+          <tr>
+            <td>手続き<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(カート→手続き)</span></td>
+            <td>24<br /><span style="font-size: 10px; color: var(--muted);">(80.0%)</span></td>
+            <td>24<br /><span style="font-size: 10px; color: var(--muted);">(80.0%)</span></td>
+            <td>24<br /><span style="font-size: 10px; color: var(--muted);">(80.0%)</span></td>
+            <td>72<br /><span style="font-size: 10px; color: var(--muted);">(80.0%)</span></td>
+          </tr>
+          <tr>
+            <td>CV（購入）<br /><span style="font-size: 10px; color: var(--muted); font-weight: normal;">(手続き→購入)</span>
+            </td>
+            <td>6<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+            <td>6<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+            <td>6<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+            <td>18<br /><span style="font-size: 10px; color: var(--muted);">(25.0%)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kpi-insight-stack">
+      <ul class="split-list" style="flex-direction: column;">
+        <li><span class="icon-symbol" style="color: var(--accent); font-size: 18px;">insights</span>
+          <span><strong>モールA:</strong> 詳細以降は標準的。課題は商品一覧到達率7.5%に出ている<strong
+              style="color: var(--signal);">露出・検索面の送客量</strong></span>
+        </li>
+        <li><span class="icon-symbol" style="color: var(--accent); font-size: 18px;">insights</span>
+          <span><strong>フリマB:</strong> 一覧は十分に見られているが、詳細到達率2.0%。<strong
+              style="color: var(--signal);">サムネ・商品名・価格の第一印象</strong>が詰まりどころ</span>
+        </li>
+        <li><span class="icon-symbol" style="color: var(--muted); font-size: 18px;">lightbulb</span>
+          <span><strong>自社サイト:</strong> 一覧到達率50%・手続き到達率80%で大きな詰まりはない。次は広告・SEO・リピート導線で母数を増やす検討。</span>
+        </li>
+      </ul>
+    </div>
+    <div class="callout callout-conclusion is-green kpi-conclusion">
+      <span aria-label="要点" class="icon-symbol">explore</span>
+      <p class="callout-text">ECモデルは、<strong>一覧・詳細・カート・購入手続き</strong>を分けることで、商品訴求の問題と決済前後の摩擦を切り分けられます。</p>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">14</span>
+  </footer>
+</section>
+
+<section aria-label="平均ではなく流入別に見る" class="slide v-model-table v-compact-kpi">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch1. 課題を掴む</span>
+    <h1 class="slide-heading">平均ではなく流入別に見る</h1>
+  </header>
+  <main class="content-area"
+    style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-rows: minmax(0, 1fr) auto; gap: 14px 24px; align-items: stretch; height: 100%;">
+    <div style="overflow-x: auto; min-height: 0; height: 100%;">
+      <table class="data-table" style="font-size: 11.5px; height: 100%; margin: 0; width: 100%;">
+        <thead>
+          <tr>
+            <th>指標</th>
+            <th>自然検索</th>
+            <th>広告</th>
+            <th>SNS経由</th>
+            <th>全体</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>訪問者</td>
+            <td>1,000</td>
+            <td>500</td>
+            <td>1,500</td>
+            <td style="font-weight: 700;">3,000</td>
+          </tr>
+          <tr>
+            <td>CV（問い合わせ）</td>
+            <td>20</td>
+            <td>25</td>
+            <td>3</td>
+            <td style="font-weight: 700;">48</td>
+          </tr>
+          <tr>
+            <td>CVR</td>
+            <td>2.0%</td>
+            <td style="color: var(--ok); font-weight: 700;">5.0%</td>
+            <td style="color: var(--signal); font-weight: 700;">0.2%</td>
+            <td style="font-weight: 700;">1.6%</td>
+          </tr>
+          <tr>
+            <td>読み取り</td>
+            <td>標準的</td>
+            <td style="color: var(--ok); font-weight: 700;">少数だが濃い</td>
+            <td style="color: var(--signal); font-weight: 700;">多いが薄い</td>
+            <td>平均に埋もれる</td>
+          </tr>
+          <tr>
+            <td>次の打ち手</td>
+            <td>事例・FAQ強化</td>
+            <td>予算増を検証</td>
+            <td>認知目的に整理</td>
+            <td>全体改修だけで判断しない</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kpi-insight-stack">
+      <ul class="split-list" style="flex-direction: column;">
+        <li><span class="icon-symbol" style="color: var(--signal);">warning</span>
+          <span><strong>全体CVR1.6%</strong>だけ見ると「サイト全体を直す」判断になりがちですが、中身はチャネルごとに違います。</span>
+        </li>
+        <li><span class="icon-symbol" style="color: var(--accent);">trending_down</span>
+          <span><strong>SNS経由:</strong> 訪問者は多いがCVR0.2%。問い合わせを急がせるより、認知・比較前の接触として設計します。</span>
+        </li>
+        <li><span class="icon-symbol" style="color: var(--accent);">trending_up</span>
+          <span><strong>広告:</strong> CVR5.0%と優秀。受け皿が大きく崩れていなければ、まず流入量を増やす検証が自然です。</span>
+        </li>
+      </ul>
+    </div>
+    <div class="callout callout-conclusion is-green kpi-conclusion">
+      <span aria-label="要点" class="icon-symbol">explore</span>
+      <p class="callout-text">チャネル別分解はモデル共通の補助線です。<strong>平均値で判断せず、「どの流入元の、どのステップが弱いか」</strong>まで分けて打ち手を選びます。</p>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">15</span>
+  </footer>
+</section>
+
+<section aria-label="Ch1まとめ：詰まりを特定する" class="slide v-summary">
+  <div class="top-bar"></div>
+  <header class="slide-header"
+    style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+    <div>
+      <span class="section-badge">Ch1. 課題を掴む</span>
+      <h1 class="slide-heading">Ch1まとめ：詰まりを特定する</h1>
+    </div>
+
+    <!-- 右端：極小アジェンダ進行度バー -->
+    <div
+      style="display: flex; align-items: center; gap: 8px; background: rgba(5,5,16,0.02); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--line);">
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--accent); font-weight: 700;">
+        <span class="icon-symbol" style="font-size: 12px;">check_circle</span>
+        <span>Ch1</span>
+      </div>
+      <span class="icon-symbol" style="color: var(--line); font-size: 12px;">chevron_right</span>
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--signal); font-weight: 700; background: rgba(159,52,82,0.08); padding: 2px 8px; border-radius: 12px;">
+        <span
+          style="font-size: 8px; background: var(--signal); color: #fff; padding: 1px 4px; border-radius: 4px;">NEXT</span>
+        <span>Ch2</span>
+      </div>
+      <span class="icon-symbol" style="color: var(--line); font-size: 12px;">chevron_right</span>
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--muted); font-weight: 700; opacity: 0.5;">
+        <span>Ch3</span>
+      </div>
+      <span class="icon-symbol" style="color: var(--line); font-size: 12px;">chevron_right</span>
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--muted); font-weight: 700; opacity: 0.5;">
+        <span>演習</span>
+      </div>
+    </div>
+  </header>
+  <main class="content-area">
+    <article class="card summary-main"
+      style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 20px 24px;">
+      <div class="expert-bubble"
+        style="position: relative; background: #f0eef9; border: 1px solid rgba(50, 30, 134, 0.16); border-radius: 8px; padding: 6px 14px; font-size: 11.5px; line-height: 1.4; color: var(--ink); display: flex; align-items: center; justify-content: center; width: fit-content; box-shadow: 0 2px 6px rgba(0,0,0,0.02); margin-bottom: 6px;">
+        <div style="font-weight: 700;">
+          💬 「なるほど、やりたいことはコレで、今はここで詰まっているんですね」
+        </div>
+      </div>
+      <div style="text-align: center; width: 100%;">
+        <div class="eyebrow">Key Takeaway</div>
+        <p class="summary-claim" style="margin-bottom: 0; line-height: 1.5;">
+          Webマーケティングの伴走支援における第一歩は、<br />
+          <strong>「どのモデルで、どのプロセスに詰まりが生じているか」</strong>を客観的な数字で特定することです。
+        </p>
+      </div>
+    </article>
+    <div class="summary-points">
+      <article class="card summary-point">
+        <div class="num">01</div>
+        <div>
+          <h2 class="item-title">成果モデルを決める</h2>
+          <p class="body-text">EC、リード獲得など、ビジネスモデルの定義から始める。</p>
+        </div>
+      </article>
+      <article class="card summary-point">
+        <div class="num">02</div>
+        <div>
+          <h2 class="item-title">ボトルネックを3分類する</h2>
+          <p class="body-text">「集客 / 理解・信頼 / 行動」のどこでユーザーが離脱しているかを見極める。</p>
+        </div>
+      </article>
+      <article class="card summary-point">
+        <div class="num">03</div>
+        <div>
+          <h2 class="item-title">数字を「知っておく」</h2>
+          <p class="body-text">感覚ではなく根拠に基づいて課題と数値をリンクさせる。</p>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-blue">
+      <span aria-label="要点" class="icon-symbol">arrow_forward</span>
+      <p class="callout-text">課題の特定が完了したら、次は「その詰まりに何をぶつけるか（打ち手）」の選定に進みます。</p>
+    </div>
+    <span class="page-num">16</span>
+  </footer>
+</section>
+
+<section aria-label="Ch2：打ち手を選べる形にする" class="slide v-chapter">
+  <div class="top-bar"></div>
+  <main class="chapter-stage">
+    <div>
+      <div class="eyebrow">Chapter</div>
+      <div class="chapter-number">02</div>
+    </div>
+    <div class="chapter-copy">
+      <h1 class="chapter-title">打ち手を選べる形にする</h1>
+      <p class="chapter-body">
+        Ch1で見つけた「詰まり」に対して、<br />
+        どの施策をぶつけるかを発注・申請の言葉に翻訳します。
+      </p>
+      <div class="cover-meta">
+        <span class="tag">施策マップ</span>
+        <span class="tag">広告の基本</span>
+        <span class="tag">受け皿改善</span>
+      </div>
+      <div class="chapter-agenda-map">
+        <div class="chapter-agenda-step">
+          <span class="step-num">00</span>
+          <span class="step-name">導入</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">01</span>
+          <span class="step-name">詰まりを特定</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step active">
+          <span class="step-num">02</span>
+          <span class="step-name">打ち手を選ぶ</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">03</span>
+          <span class="step-name">測れる化</span>
+        </div>
+        <span class="icon-symbol chapter-agenda-arrow">chevron_right</span>
+        <div class="chapter-agenda-step">
+          <span class="step-num">04</span>
+          <span class="step-name">演習＋まとめ</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <span class="page-num">17</span>
+</section>
+
+<section aria-label="詰まりごとに施策を一覧する" class="slide v-normal v-model-table v-ch2 ch2-topic-overview">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 施策を整理する</span>
+    <h1 class="slide-heading">詰まりごとに施策を一覧する</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview active">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">inventory_2</span>
+      <p class="callout-text">課題に対応する施策は概ね下記のように整理できます。</p>
+    </div>
+    <table class="data-table ch2-compact-table">
+      <thead>
+        <tr>
+          <th>詰まり</th>
+          <th>主な施策</th>
+          <th>役割</th>
+          <th>予算の受け皿</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>集客不足</td>
+          <td>検索広告、SNS広告、ディスプレイ広告、MEO、SEO内部対策</td>
+          <td>サイトや店舗への流入を増やす</td>
+          <td>
+            <strong>オ. 広告宣伝費</strong> (媒体費・運用費)<br />
+            <strong>イ. Webサイト構築費</strong> (SEO内部)<br />
+            <strong>ア. 市場調査費</strong> (市場・需要調査)
+          </td>
+        </tr>
+        <tr>
+          <td>理解・信頼不足</td>
+          <td>LP制作・改修、写真・動画素材撮影、事例・FAQ追加、商品マスタ整備</td>
+          <td>選ばれる理由と不安解消の材料を増やす</td>
+          <td>
+            <strong>イ. Webサイト構築費</strong> (LP・サイト改修)<br />
+            <strong>ウ. コンテンツ制作費</strong> (事例・写真動画)<br />
+            <strong>ア. 市場調査費</strong> (ペルソナ・競合調査)
+          </td>
+        </tr>
+        <tr>
+          <td>行動不足</td>
+          <td>フォーム改善(EFO)、CTA改修、電話・LINE導線、リターゲティング</td>
+          <td>問い合わせ・予約・購入の最後の行動を促す</td>
+          <td>
+            <strong>イ. Webサイト構築費</strong> (フォーム・導線改修)<br />
+            <strong>オ. 広告宣伝費</strong> (再接触広告)
+          </td>
+        </tr>
+        <tr>
+          <td>測定不足</td>
+          <td>GA4設定、タグ・アクセス解析設定、コンバージョン(CV)計測設定</td>
+          <td>施策後に、効いた理由と止まった場所を追えるようにする</td>
+          <td>
+            <strong>エ. データ計測構築費</strong> (GA4・CV設定)
+          </td>
+        </tr>
+        <tr>
+          <td>運用の定着不足</td>
+          <td>CMS操作指導、更新手順書・問い合わせ対応マニュアル整備</td>
+          <td>支援終了後も自力で改善運用サイクルを回す</td>
+          <td>
+            <strong>カ. 自走化・内製化支援費</strong> (操作指導・手順書作成)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="slide-footer">
+
+    <span class="page-num">18</span>
+  </footer>
+</section>
+
+<section aria-label="まずは探している人を取りにいく" class="slide v-normal v-ch2 ch2-topic-overview">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 施策を整理する</span>
+    <h1 class="slide-heading">まずは探している人を取りにいく</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview active">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">manage_search</span>
+      <p class="callout-text">目的を持った人を探すか、こちらから出会いに行くかで施策が分かれます。</p>
+    </div>
+    <div class="ch2-grid-3">
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head">
+          <span class="tag">優先</span>
+          <span class="icon-symbol">search</span>
+        </div>
+        <h2 class="ch2-card-title">検索広告・MEO・SEO</h2>
+        <p class="ch2-card-body">困りごとや欲求が「検索語句」に出ている人へ届ける。</p>
+        <div class="ch2-ad-mock-mini">
+          <div class="ch2-search-bar-mini">
+            <span class="icon-symbol">search</span> 広島 リフォーム
+          </div>
+        </div>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>短期成果を狙いやすい</span></li>
+          <li><span class="icon-symbol">check</span><span>問い合わせ・予約に直結する</span></li>
+        </ul>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head">
+          <span class="tag">補完</span>
+          <span class="icon-symbol">campaign</span>
+        </div>
+        <h2 class="ch2-card-title">SNS・ディスプレイ</h2>
+        <p class="ch2-card-body">まだ検索していない人に出会わせ、認知・関心を作る。</p>
+        <div class="ch2-ad-mock-mini">
+          <div class="ch2-banner-mock-mini">
+            <span class="icon-symbol">image</span>
+          </div>
+        </div>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>母数づくりや指名検索の前段</span></li>
+          <li><span class="icon-symbol">check</span><span>短期CVだけで評価しない</span></li>
+        </ul>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">前提</span>
+          <span class="icon-symbol">person</span>
+        </div>
+        <h2 class="ch2-card-title">ターゲット状態の違い</h2>
+        <p class="ch2-card-body">「探している人」と「探す前」では響く言葉も選ぶ施策も違う。</p>
+        <div class="ch2-ad-mock-mini is-text">
+          <div class="ch2-target-mock">
+            <span class="icon-symbol">person_search</span> 誰にどう届けるか？
+          </div>
+        </div>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>ターゲット起点で施策を組む</span></li>
+          <li><span class="icon-symbol">check</span><span>手法ありきで予算化しない</span></li>
+        </ul>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span class="icon-symbol">priority_high</span>
+      <p class="callout-text">短期成果を狙うなら、まずは需要が表れている「検索」から取りにいく。</p>
+    </div>
+    <span class="page-num">19</span>
+  </footer>
+</section>
+
+<section aria-label="検索広告は探している瞬間に出る広告" class="slide v-normal v-ch2 ch2-topic-ads">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">検索広告は「探している瞬間」に出る広告</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads active">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-ad-visual-layout">
+    <article class="card ch2-search-mock" aria-label="検索広告の表示例">
+      <div class="ch2-search-bar">
+        <span class="icon-symbol">search</span>
+        <span>リフォーム 広島</span>
+      </div>
+      <div class="ch2-search-result is-ad">
+        <div class="ch2-ad-label">スポンサー</div>
+        <h2>広島の水回りリフォーム｜無料見積り受付中</h2>
+        <p>キッチン・浴室・トイレの施工事例を掲載。地域密着で相談できます。</p>
+      </div>
+      <div class="ch2-search-result">
+        <div class="ch2-ad-label">通常の検索結果</div>
+        <h2>広島市のリフォーム会社一覧</h2>
+        <p>口コミ、施工事例、対応エリアを比較できます。</p>
+      </div>
+    </article>
+    <div class="ch2-stack">
+      <div class="callout callout-lead is-blue">
+        <span class="icon-symbol">ads_click</span>
+        <p class="callout-text">検索語句に反応して、検索結果の上部などに表示されます。</p>
+      </div>
+      <div class="ch2-grid-2">
+        <article class="card ch2-card is-ok">
+          <div class="ch2-card-head">
+            <span class="tag">特徴</span>
+            <span class="icon-symbol">manage_search</span>
+          </div>
+          <h2 class="ch2-card-title">需要が見えている人に届く</h2>
+          <ul class="ch2-mini-list">
+            <li><span class="icon-symbol">check</span><span>語句に悩み・地域・商品名が出ている</span></li>
+            <li><span class="icon-symbol">check</span><span>問い合わせや予約に近い人を集めやすい</span></li>
+          </ul>
+        </article>
+        <article class="card ch2-card is-accent">
+          <div class="ch2-card-head">
+            <span class="tag">仕組み</span>
+            <span class="icon-symbol">query_stats</span>
+          </div>
+          <h2 class="ch2-card-title">広告スコアが順位を決める</h2>
+          <ul class="ch2-mini-list">
+            <li><span class="icon-symbol">check</span><span>入札額×広告スコアで順位が決定</span></li>
+            <li><span class="icon-symbol">check</span><span>クリック率やLPの関連性が影響する</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">資金力だけでなく、広告文と受け皿（LP）の関連性が上位表示を左右します。</p>
+    </div>
+    <span class="page-num">20</span>
+  </footer>
+</section>
+
+<section aria-label="検索意図に応じてアプローチの幅を変える" class="slide v-normal v-ch2 ch2-topic-ads">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">検索意図に応じてアプローチの幅を変える</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads active">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">tune</span>
+      <p class="callout-text">「マッチタイプ」を使い分けることで、検索語句の拾い方を調整できます。</p>
+    </div>
+    <div class="ch2-grid-3">
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head">
+          <span class="tag">完全一致</span>
+          <span class="icon-symbol">center_focus_strong</span>
+        </div>
+        <h2 class="ch2-card-title">狙った語句だけ</h2>
+        <p class="ch2-card-body">指定キーワードと同じ、または極めて近い語句のみ。</p>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>無駄な出費が少ない</span></li>
+        </ul>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head">
+          <span class="tag">フレーズ一致</span>
+          <span class="icon-symbol">format_quote</span>
+        </div>
+        <h2 class="ch2-card-title">語順を含め拡張</h2>
+        <p class="ch2-card-body">キーワードの意味を含む検索語句。前後に別の単語がついても表示。</p>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">部分一致</span>
+          <span class="icon-symbol">scatter_plot</span>
+        </div>
+        <h2 class="ch2-card-title">関連語句まで広く</h2>
+        <p class="ch2-card-body">予想外の語句も拾うが、関係ない語句も出やすく<span class="text-highlight">不満の原因</span>になりがち。</p>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span class="icon-symbol">warning</span>
+      <p class="callout-text">他社のブランドワードでの出稿はCVRが高い反面、<span class="text-highlight">出稿主同士のトラブル</span>になりやすいです。</p>
+    </div>
+    <span class="page-num">21</span>
+  </footer>
+</section>
+
+<section aria-label="SNSとディスプレイは探す前に出会わせる広告" class="slide v-normal v-model-table v-ch2 ch2-topic-ads">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">SNS・ディスプレイは「探す前」に出会わせる広告</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads active">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">campaign</span>
+      <p class="callout-text">広告の種類名ではなく、「誰のどの状態に出る広告か」で見ます。</p>
+    </div>
+    <table class="data-table ch2-compact-table">
+      <thead>
+        <tr>
+          <th>種類</th>
+          <th>どこに出るか</th>
+          <th>得意なこと</th>
+          <th>見るべき状態</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SNS広告</td>
+          <td>Instagram、Facebook、Xなど</td>
+          <td>属性・興味関心で届ける</td>
+          <td>まだ検索していないが、関心は近い</td>
+        </tr>
+        <tr>
+          <td>ディスプレイ広告</td>
+          <td>Webサイトやアプリの広告枠</td>
+          <td>認知・再接触を増やす</td>
+          <td>比較検討前、または一度接触済み</td>
+        </tr>
+        <tr>
+          <td>動画広告</td>
+          <td>YouTubeなど</td>
+          <td>雰囲気や体験を伝える</td>
+          <td>文章より映像で伝えたい</td>
+        </tr>
+        <tr>
+          <td>リターゲティング</td>
+          <td>一度来た人の別画面</td>
+          <td>検討中の人を呼び戻す</td>
+          <td>サイト訪問後、まだCVしていない</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-blue">
+      <span class="icon-symbol">info</span>
+      <p class="callout-text">検索広告は需要の回収、SNS・ディスプレイは認知や再接触の役割で見る。</p>
+    </div>
+    <span class="page-num">22</span>
+  </footer>
+</section>
+
+<section aria-label="ディスプレイ広告は複数クリエイティブで試す" class="slide v-normal v-ch2 ch2-topic-ads ch2-creative-test">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">広告素材は複数案で試す</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads active">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">dashboard_customize</span>
+      <p class="callout-text">ディスプレイ広告は一案固定ではなく、反応で差し替えます。</p>
+    </div>
+    <div class="ch2-creative-layout">
+      <div class="card ch2-creative-variants" role="group" aria-label="クリエイティブの複数パターン例">
+        <div class="ch2-variant-block">
+          <div class="ch2-variant-title">
+            <span class="icon-symbol">image</span>
+            <span>ビジュアル3パターン</span>
+          </div>
+          <div class="ch2-visual-grid">
+            <div class="ch2-visual-sample is-product">
+              <span class="icon-symbol">inventory_2</span>
+              <span>商品</span>
+            </div>
+            <div class="ch2-visual-sample is-scene">
+              <span class="icon-symbol">groups</span>
+              <span>利用シーン</span>
+            </div>
+            <div class="ch2-visual-sample is-proof">
+              <span class="icon-symbol">workspace_premium</span>
+              <span>実績</span>
+            </div>
+          </div>
+        </div>
+        <div class="ch2-combine-mark">
+          <span class="icon-symbol">add</span>
+        </div>
+        <div class="ch2-variant-block">
+          <div class="ch2-variant-title">
+            <span class="icon-symbol">short_text</span>
+            <span>キャッチ3パターン</span>
+          </div>
+          <div class="ch2-copy-grid">
+            <div class="ch2-copy-sample">悩みに直球</div>
+            <div class="ch2-copy-sample">強みを訴求</div>
+            <div class="ch2-copy-sample">行動を促す</div>
+          </div>
+        </div>
+      </div>
+      <div class="ch2-creative-side" role="group" aria-label="検証と差し替えの流れ">
+        <div class="ch2-creative-flow">
+          <article class="card ch2-creative-step">
+            <span class="ch2-flow-label">STEP 1</span>
+            <h2 class="ch2-flow-title"><span class="icon-symbol">campaign</span>複数案を配信</h2>
+            <p class="ch2-flow-body">画像とコピーの組み合わせを試す。</p>
+          </article>
+          <article class="card ch2-creative-step">
+            <span class="ch2-flow-label">STEP 2</span>
+            <h2 class="ch2-flow-title"><span class="icon-symbol">ads_click</span>クリックを見る</h2>
+            <p class="ch2-flow-body">どれが反応されたかを比べる。</p>
+          </article>
+          <article class="card ch2-creative-step">
+            <span class="ch2-flow-label">STEP 3</span>
+            <h2 class="ch2-flow-title"><span class="icon-symbol">published_with_changes</span>定期的に差し替え</h2>
+            <p class="ch2-flow-body">弱い案と見飽きられた案を入れ替える。</p>
+          </article>
+        </div>
+        <aside class="ch2-frequency-note">
+          <span class="icon-symbol">sentiment_dissatisfied</span>
+          <div>
+            <strong>フリークエンシーに注意</strong>
+            <p>同じ人に何度も出ると、広告疲れで嫌われやすい。</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">複数案で試し、クリック実績と頻度を見て定期的に差し替える。</p>
+    </div>
+    <span class="page-num">23</span>
+  </footer>
+</section>
+
+<section aria-label="広告は目的を説明できればよい" class="slide v-normal v-ch2 ch2-topic-ads">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">広告は目的を説明できればよい</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">ads_click</span>
+      <p class="callout-text">ゴールは広告運用者になることではなく、広告費の目的を説明できることです。</p>
+    </div>
+    <div class="ch2-grid-3">
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head">
+          <span class="tag">検索広告</span>
+          <span class="icon-symbol">manage_search</span>
+        </div>
+        <h2 class="ch2-card-title">需要を回収する</h2>
+        <p class="ch2-card-body">「リフォーム 広島」のように、今探している人へ出す。まず検討しやすい施策。</p>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head">
+          <span class="tag">ディスプレイ・動画</span>
+          <span class="icon-symbol">web_stories</span>
+        </div>
+        <h2 class="ch2-card-title">認知と再接触を担う</h2>
+        <p class="ch2-card-body">まだ検索していない人に知ってもらう。一度来た人への再表示にも使う。</p>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">SNS広告</span>
+          <span class="icon-symbol">share</span>
+        </div>
+        <h2 class="ch2-card-title">属性や興味で届ける</h2>
+        <p class="ch2-card-body">年齢、趣味、役職などで届ける相手を絞る。媒体選びは「誰に届けたいか」から考える。</p>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">tips_and_updates</span>
+      <p class="callout-text">ITCが見るべきは、配信面、成果地点、広告費と受け皿改善費の関係です。</p>
+    </div>
+    <span class="page-num">24</span>
+  </footer>
+</section>
+
+<section aria-label="広告費は4点に分解して説明する" class="slide v-normal v-model-table v-ch2 ch2-topic-ads">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">広告費は4点に分解して説明する</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">fact_check</span>
+      <p class="callout-text">申請・発注では「広告を出す」だけでなく、成果と検証まで書けると強い。</p>
+    </div>
+    <table class="data-table ch2-compact-table">
+      <thead>
+        <tr>
+          <th>決めること</th>
+          <th>申請・発注上の見え方</th>
+          <th>確認したい観点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>どこに出すか</td>
+          <td>検索広告、ディスプレイ広告、SNS広告など</td>
+          <td>顕在層向きか、潜在層向きか</td>
+        </tr>
+        <tr>
+          <td>何を成果とするか</td>
+          <td>問い合わせ、資料請求、予約、購入など</td>
+          <td>CV定義が事業目的と合っているか</td>
+        </tr>
+        <tr>
+          <td>どこへ誘導するか</td>
+          <td>LP制作、サイト改修、商品ページ改善など</td>
+          <td>広告の期待値と受け皿が一致しているか</td>
+        </tr>
+        <tr>
+          <td>どう検証するか</td>
+          <td>GA4、タグ設定、月次レポートなど</td>
+          <td>成果が出ない時に原因を追えるか</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span class="icon-symbol">warning</span>
+      <p class="callout-text">広告だけ発注しても、誘導先と測定が弱ければ判断できない施策になります。</p>
+    </div>
+    <span class="page-num">25</span>
+  </footer>
+</section>
+
+<section aria-label="配信面ごとの落とし穴を押さえる" class="slide v-normal v-ch2 ch2-topic-ads">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">配信面ごとの落とし穴を押さえる</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-grid-3">
+    <article class="card ch2-card is-ok">
+      <div class="ch2-card-head">
+        <span class="tag">検索広告</span>
+        <span class="icon-symbol">travel_explore</span>
+      </div>
+      <h2 class="ch2-card-title">地図面も同時に考える</h2>
+      <p class="ch2-card-body">地域密着型はGoogleビジネスプロフィール連携も重要。検索と地図を別物として予算化しすぎない。</p>
+    </article>
+    <article class="card ch2-card is-signal">
+      <div class="ch2-card-head">
+        <span class="tag">ディスプレイ</span>
+        <span class="icon-symbol">image</span>
+      </div>
+      <h2 class="ch2-card-title">バナー制作費を見極める</h2>
+      <p class="ch2-card-body">現在はレスポンシブ広告が主流。全サイズ手作り前提の見積りは、必要性を確認する。</p>
+    </article>
+    <article class="card ch2-card is-accent">
+      <div class="ch2-card-head">
+        <span class="tag">リターゲティング</span>
+        <span class="icon-symbol">history</span>
+      </div>
+      <h2 class="ch2-card-title">小規模サイトでは効かないことも</h2>
+      <p class="ch2-card-body">一定のアクセス数がないと配信できない場合がある。月間PVが少ない場合は過信しない。</p>
+    </article>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-blue">
+      <span class="icon-symbol">info</span>
+      <p class="callout-text">配信手法の細かな運用論はAPPENDIXへ。本編では判断軸を押さえます。</p>
+    </div>
+    <span class="page-num">26</span>
+  </footer>
+</section>
+
+<section aria-label="来てるのに離脱する理由を分ける" class="slide v-normal v-ch2 ch2-topic-lp">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">来てるのに離脱する理由を分ける</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-diagnosis">
+    <article class="card ch2-diagnosis-row">
+      <div class="num">01</div>
+      <div>
+        <h2 class="item-title">流入が意図と違う</h2>
+        <p class="body-text">商圏外、興味関心のミスマッチ、広告キーワードのズレ。</p>
+      </div>
+      <div class="ch2-pill">集客の質を見直す</div>
+    </article>
+    <article class="card ch2-diagnosis-row">
+      <div class="num">02</div>
+      <div>
+        <h2 class="item-title">受け皿がその人に合っていない</h2>
+        <p class="body-text">ペルソナ、競合文脈、言葉・写真・訴求のズレ。</p>
+      </div>
+      <div class="ch2-pill">LP改善で扱う</div>
+    </article>
+    <article class="card ch2-diagnosis-row">
+      <div class="num">03</div>
+      <div>
+        <h2 class="item-title">誰にとっても使いづらい</h2>
+        <p class="body-text">フォーム、CTA、電話導線、速度、スマホ対応の問題。</p>
+      </div>
+      <div class="ch2-pill">CVR改善で扱う</div>
+    </article>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">route</span>
+      <p class="callout-text">まずは「受け皿がその人に合っていない」問題から整理します。</p>
+    </div>
+    <span class="page-num">27</span>
+  </footer>
+</section>
+
+<section aria-label="誰にも刺さっていないサインを探す" class="slide v-normal v-ch2 ch2-topic-lp">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">誰にも刺さっていないサインを探す</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">person_alert</span>
+      <p class="callout-text">正解のペルソナを当てるより、明らかなズレを見つけるのが現実的です。</p>
+    </div>
+    <div class="ch2-grid-4">
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head"><span class="tag">前提</span><span class="icon-symbol">target</span></div>
+        <h2 class="ch2-card-title">ターゲット不在</h2>
+        <p class="ch2-card-body">そもそも誰に来てほしいかを決めていない。</p>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head"><span class="tag">定量</span><span class="icon-symbol">query_stats</span></div>
+        <h2 class="ch2-card-title">数字に出る</h2>
+        <p class="ch2-card-body">直帰率が高い、滞在時間が短い、広告クリックは多いのにCVがない。</p>
+      </article>
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head"><span class="tag">FV</span><span class="icon-symbol">web_asset</span></div>
+        <h2 class="ch2-card-title">最初の答えがない</h2>
+        <p class="ch2-card-body">検索キーワードの答えがファーストビューに見当たらない。</p>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head"><span class="tag">定性</span><span class="icon-symbol">format_quote</span></div>
+        <h2 class="ch2-card-title">言葉がふわっとする</h2>
+        <p class="ch2-card-body">「地域No.1」「高品質」など、誰にでも言える表現が並ぶ。</p>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span class="icon-symbol">warning</span>
+      <p class="callout-text">このサインを潰すために、「本当は誰に来てほしいのか」を整理します。</p>
+    </div>
+    <span class="page-num">28</span>
+  </footer>
+</section>
+
+<section aria-label="誰にどう見られるかを決める" class="slide v-normal v-ch2 ch2-topic-lp">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">誰にどう見られるかを決める</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="ch2-flow">
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">STEP 1</div>
+        <h2 class="ch2-flow-title">ペルソナ</h2>
+        <p class="ch2-flow-body">どんな人の、どんな状況と不安に応えるのか。</p>
+      </article>
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">STEP 2</div>
+        <h2 class="ch2-flow-title">ジャーニー</h2>
+        <p class="ch2-flow-body">その人が、いつ、どんな情報を求めるのか。</p>
+      </article>
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">STEP 3</div>
+        <h2 class="ch2-flow-title">競合文脈</h2>
+        <p class="ch2-flow-body">ユーザーが業界・商圏で期待している見え方を確認する。</p>
+      </article>
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">STEP 4</div>
+        <h2 class="ch2-flow-title">表現設計</h2>
+        <p class="ch2-flow-body">写真、言葉、トーンで自社の見え方を決める。</p>
+      </article>
+    </div>
+    <div class="ch2-bottom-note">
+      ペルソナ設計は、ITCが短時間で「正解」を当てる作業ではありません。経営者の意思決定を支えるために、顧客像・競合文脈・自社らしさを整理する作業です。
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">万人受けではなく、決めた相手に自社がどう映るべきかを設計します。</p>
+    </div>
+    <span class="page-num">29</span>
+  </footer>
+</section>
+
+<section aria-label="同じサービスでも刺さる相手は変えられる" class="slide v-normal v-compare v-ch2 ch2-topic-lp">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">同じサービスでも刺さる相手は変えられる</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area">
+    <article class="card compare-card">
+      <div class="compare-head">
+        <h2 class="item-title">A社：若くておしゃれ</h2>
+        <span class="tag">一人暮らし</span>
+      </div>
+      <ul class="compare-list">
+        <li>写真は明るく、生活感を抑えた印象。</li>
+        <li>言葉は軽く、予約のしやすさを前面に出す。</li>
+        <li>若年層・女性の一人暮らしに安心感を出す。</li>
+      </ul>
+    </article>
+    <article class="card compare-card is-selected">
+      <div class="compare-head">
+        <h2 class="item-title">B社：誠実で頼れる</h2>
+        <span class="tag">ファミリー・年配層</span>
+      </div>
+      <ul class="compare-list">
+        <li>代表やスタッフの顔が見える。</li>
+        <li>作業の流れ、料金、保証を丁寧に説明する。</li>
+        <li>知らない人を家に入れる不安を先回りして消す。</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">tips_and_updates</span>
+      <p class="callout-text">機能差が小さくても、コミュニケーションで選ばれる理由は作れます。</p>
+    </div>
+    <span class="page-num">30</span>
+  </footer>
+</section>
+
+<section aria-label="差別化は文脈から外しすぎない" class="slide v-normal v-do-dont v-ch2 ch2-topic-lp">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">差別化は文脈から外しすぎない</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area">
+    <article class="card card-do">
+      <h2 class="item-title">よい差別化</h2>
+      <ul class="split-list">
+        <li><span class="icon-symbol">check_circle</span><span>業界・商圏でユーザーが期待する情報は満たす。</span></li>
+        <li><span class="icon-symbol">check_circle</span><span>そのうえで、写真・言葉・トーンで違いを出す。</span></li>
+        <li><span class="icon-symbol">check_circle</span><span>違いが「安心」「納得」「行動しやすさ」に接続している。</span></li>
+      </ul>
+    </article>
+    <article class="card card-dont">
+      <h2 class="item-title">危ない差別化</h2>
+      <ul class="split-list">
+        <li><span class="icon-symbol">cancel</span><span>整体院なのに、整体院らしい安心材料がない。</span></li>
+        <li><span class="icon-symbol">cancel</span><span>おしゃれだが、症状・料金・流れがすぐ分からない。</span></li>
+        <li><span class="icon-symbol">cancel</span><span>業界の文脈から外れすぎて、かえって不安になる。</span></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span class="icon-symbol">warning</span>
+      <p class="callout-text">差別化は必要。ただし、ユーザーが期待する文脈を外しすぎると逆効果です。</p>
+    </div>
+    <span class="page-num">31</span>
+  </footer>
+</section>
+
+<section aria-label="不安を消すコンテンツを確認する" class="slide v-normal v-model-table v-ch2 ch2-topic-lp">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">不安を消すコンテンツを確認する</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">playlist_add_check</span>
+      <p class="callout-text">載せること自体ではなく、離脱する言い訳を消せているかを見ます。</p>
+    </div>
+    <table class="data-table ch2-wide-table">
+      <thead>
+        <tr>
+          <th>確認項目</th>
+          <th>消したい不安</th>
+          <th>弱い載せ方</th>
+          <th>質の高い載せ方</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>料金</td>
+          <td>高すぎないか、追加請求はないか</td>
+          <td>詳細はお問い合わせください</td>
+          <td>目安金額や追加費用の有無がある</td>
+        </tr>
+        <tr>
+          <td>導入事例</td>
+          <td>自分の悩みも解決できるか</td>
+          <td>ロゴや実績名だけ</td>
+          <td>Before / After のストーリーがある</td>
+        </tr>
+        <tr>
+          <td>提供の流れ</td>
+          <td>しつこく営業されないか</td>
+          <td>作業手順だけ</td>
+          <td>相談だけでもOKなど行動ハードルを下げる</td>
+        </tr>
+        <tr>
+          <td>FAQ</td>
+          <td>直接聞きにくい疑問がある</td>
+          <td>サイトを見れば分かる質問だけ</td>
+          <td>本音の懸念に先回りして答える</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">不安要素を一つずつ潰すと、LP改善は発注仕様に落としやすくなります。</p>
+    </div>
+    <span class="page-num">32</span>
+  </footer>
+</section>
+
+<section aria-label="信頼材料は質まで確認する" class="slide v-normal v-model-table v-ch2 ch2-topic-lp">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">信頼材料は質まで確認する</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">verified_user</span>
+      <p class="callout-text">「とりあえず載せるだけ」はノイズになるため、信頼の根拠になっているかを見ます。</p>
+    </div>
+    <table class="data-table ch2-compact-table">
+      <thead>
+        <tr>
+          <th>確認項目</th>
+          <th>消したい不安</th>
+          <th>質の高い載せ方</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>保証・約束</td>
+          <td>失敗して損をしたらどうしよう</td>
+          <td>無理な営業をしない、返金保証、対応範囲の明示</td>
+        </tr>
+        <tr>
+          <td>第三者評価</td>
+          <td>自称しているだけではないか</td>
+          <td>口コミ、メディア掲載、資格、根拠ある実績</td>
+        </tr>
+        <tr>
+          <td>会社・スタッフ</td>
+          <td>誰が対応するのか、騙されないか</td>
+          <td>代表の顔、実店舗、スタッフ、現場の雰囲気が分かる</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span class="icon-symbol">warning</span>
+      <p class="callout-text">「地域No.1」など根拠の弱い自称は、信頼ではなく不安を増やす場合があります。</p>
+    </div>
+    <span class="page-num">33</span>
+  </footer>
+</section>
+
+<section aria-label="行動導線は抜け漏れを潰す" class="slide v-normal v-ch2 ch2-topic-cvr">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. CVR改善</span>
+    <h1 class="slide-heading">行動導線は抜け漏れを潰す</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-grid-2">
+    <article class="card ch2-card is-accent">
+      <div class="ch2-card-head">
+        <span class="tag">考え方</span>
+        <span class="icon-symbol">touch_app</span>
+      </div>
+      <h2 class="ch2-card-title">ペルソナではなく機能・導線の問題</h2>
+      <p class="ch2-card-body">ターゲットが合っていても、フォームが面倒、ボタンが分かりにくい、スマホで使いづらいと離脱します。</p>
+      <div class="ch2-bottom-note">CVR改善は絶対の正解を当てるより、「ここは問題ない」を一つずつ潰すほうが実務的です。</div>
+    </article>
+    <article class="card ch2-card is-ok">
+      <div class="ch2-card-head">
+        <span class="tag">発注物</span>
+        <span class="icon-symbol">request_quote</span>
+      </div>
+      <h2 class="ch2-card-title">行動面の施策に翻訳する</h2>
+      <ul class="ch2-mini-list">
+        <li><span class="icon-symbol">check</span><span>サイト改修：EFO、CTA、電話導線、スマホ対応</span></li>
+        <li><span class="icon-symbol">check</span><span>リターゲティング広告：一度来た人へ再接触</span></li>
+        <li><span class="icon-symbol">check</span><span>チャットボット・LINE連携：問い合わせハードルを下げる</span></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">ペルソナのズレは方針の問題、導線のズレは実装の問題として分けます。</p>
+    </div>
+    <span class="page-num">34</span>
+  </footer>
+</section>
+
+<section aria-label="サイト改修に入れる観点を決める" class="slide v-normal v-ch2 ch2-topic-cvr">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. CVR改善</span>
+    <h1 class="slide-heading">サイト改修に入れる観点を決める</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">build</span>
+      <p class="callout-text">ターゲットに関係なく、誰が来ても困らない状態を仕様に入れます。</p>
+    </div>
+    <div class="ch2-grid-3">
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head"><span class="tag">フォーム</span><span class="icon-symbol">edit_note</span></div>
+        <h2 class="ch2-card-title">入力しやすいか</h2>
+        <p class="ch2-card-body">項目が多すぎないか。スマホで入力しやすいか。</p>
+      </article>
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head"><span class="tag">CTA</span><span class="icon-symbol">ads_click</span></div>
+        <h2 class="ch2-card-title">次の行動が明確か</h2>
+        <p class="ch2-card-body">ボタンが目立つか。何をすればよいか分かるか。</p>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head"><span class="tag">電話導線</span><span class="icon-symbol">call</span></div>
+        <h2 class="ch2-card-title">ワンタップで動けるか</h2>
+        <p class="ch2-card-body">スマホから電話できるか。番号が画像になっていないか。</p>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head"><span class="tag">速度</span><span class="icon-symbol">speed</span></div>
+        <h2 class="ch2-card-title">待たせていないか</h2>
+        <p class="ch2-card-body">表示が遅すぎないか。特にスマホで確認する。</p>
+      </article>
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head"><span class="tag">スマホ</span><span class="icon-symbol">smartphone</span></div>
+        <h2 class="ch2-card-title">縮小版になっていないか</h2>
+        <p class="ch2-card-body">PC版の単純縮小で、読みにくい・押しにくい状態を避ける。</p>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head"><span class="tag">確認方針</span><span class="icon-symbol">rule</span></div>
+        <h2 class="ch2-card-title">問題ない箇所を潰す</h2>
+        <p class="ch2-card-body">原因を当てにいくより、消去法で絞るだけでも価値があります。</p>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-blue">
+      <span class="icon-symbol">arrow_forward</span>
+      <p class="callout-text">施策を打った後は、最終CVだけでなく途中行動も見ます。</p>
+    </div>
+    <span class="page-num">35</span>
+  </footer>
+</section>
+
+<section aria-label="途中行動を見れば判断が早くなる" class="slide v-normal v-ch2 ch2-topic-micro">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. Ch3への橋渡し</span>
+    <h1 class="slide-heading">途中行動を見れば判断が早くなる</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack ch2-micro">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">timeline</span>
+      <p class="callout-text">中小企業ほど最終CVが少ないため、手前の行動を見ないと改善判断が遅れます。</p>
+    </div>
+    <div class="ch2-flow">
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">VISIT</div>
+        <h2 class="ch2-flow-title">LP訪問</h2>
+        <p class="ch2-flow-body">広告、自然検索、SNS別に、まず来ているか。</p>
+      </article>
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">MICRO CV</div>
+        <h2 class="ch2-flow-title">フォーム到達</h2>
+        <p class="ch2-flow-body">FVやCTAから、受け皿に進めているか。</p>
+      </article>
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">MICRO CV</div>
+        <h2 class="ch2-flow-title">入力開始</h2>
+        <p class="ch2-flow-body">項目数や入力負荷を越えて、行動する気になっているか。</p>
+      </article>
+      <article class="card ch2-flow-step">
+        <div class="ch2-flow-label">FINAL CV</div>
+        <h2 class="ch2-flow-title">問い合わせ</h2>
+        <p class="ch2-flow-body">最終成果に至ったか。少数なら手前の数字も見る。</p>
+      </article>
+    </div>
+    <div class="ch2-micro-examples">
+      <div class="ch2-micro-example">
+        <strong>リード獲得</strong>
+        フォーム到達、入力開始、電話タップ、資料DLを見る。
+      </div>
+      <div class="ch2-micro-example">
+        <strong>EC</strong>
+        商品詳細閲覧、カート投入、購入手続き到達を見る。
+      </div>
+      <div class="ch2-micro-example">
+        <strong>来店</strong>
+        地図クリック、電話タップ、予約ページ到達を見る。
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion callout-bridge is-yellow">
+      <span class="icon-symbol">arrow_forward</span>
+      <p class="callout-text">具体的に何を測るか、どう月次で見るかはCh3で扱います。</p>
+    </div>
+    <span class="page-num">36</span>
+  </footer>
+</section>
+
+<section aria-label="Ch2まとめ：施策が効かない時の点検順" class="slide v-summary v-ch2 ch2-topic-overview">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 施策を整理する</span>
+    <h1 class="slide-heading">Ch2まとめ：施策が効かない時の点検順</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item topic-overview">全体像</span>
+      <span class="ch2-context-item topic-ads">広告の基本</span>
+      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
+      <span class="ch2-context-item topic-cvr">CVR改善</span>
+      <span class="ch2-context-item topic-micro">マイクロCV</span>
+    </div>
+  </header>
+  <main class="content-area">
+    <article class="card summary-main">
+      <div class="eyebrow">Key Takeaway</div>
+      <p class="summary-claim">
+        施策選びは、<strong>ボトルネックとの一致</strong>を確認し、<br />
+        その後に実装・受け皿・集客の質へ戻って点検します。
+      </p>
+    </article>
+    <div class="ch2-summary-path">
+      <article class="card summary-point">
+        <div class="num">01</div>
+        <div>
+          <h2 class="item-title">ボトルネックと施策を見る</h2>
+          <p class="body-text">集客、理解・信頼、行動のどこに打ち手を当てているか。</p>
+        </div>
+      </article>
+      <article class="card summary-point">
+        <div class="num">02</div>
+        <div>
+          <h2 class="item-title">実装面の抜けを潰す</h2>
+          <p class="body-text">フォーム、CTA、電話導線、速度、スマホ対応を確認する。</p>
+        </div>
+      </article>
+      <article class="card summary-point">
+        <div class="num">03</div>
+        <div>
+          <h2 class="item-title">受け皿と集客の質へ戻る</h2>
+          <p class="body-text">ペルソナに合うか。そもそも正しい人を連れてきているか。</p>
+        </div>
+      </article>
+      <article class="card summary-point">
+        <div class="num">04</div>
+        <div>
+          <h2 class="item-title">期待値を調整する</h2>
+          <p class="body-text">全部確認して妥当なら、根拠を持って「この数字は妥当」と伝える。</p>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-blue">
+      <span class="icon-symbol">arrow_forward</span>
+      <p class="callout-text">次は、施策をやりっぱなしにしないための測定設計に進みます。</p>
+    </div>
+    <span class="page-num">37</span>
+  </footer>
+</section>
+  </div>
+
+  <script>
+    /* 🐍[Build-Slides] によって全スライドが静的結合されたため、動的フェッチは不要になりました。
+       これによりサーバーなしでダブルクリックするだけでローカルプレビュー可能です！ */
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log("📊 [CSV-Loader] All slides statically loaded via python build script.");
+    });
+  </script>
+</body>
+
+</html>
