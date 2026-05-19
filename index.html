@@ -11,7 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0&amp;family=Noto+Sans+JP:wght@500;700&amp;display=swap"
     rel="stylesheet" />
-  <link href="style.css?v=5" rel="stylesheet" />
+  <link href="style.css?v=6" rel="stylesheet" />
   <style>
     /* 全スライドを縦に並べて表示 */
     body {
@@ -1384,52 +1384,44 @@
       <span class="ch2-context-item topic-micro">マイクロCV</span>
     </div>
   </header>
-  <main class="content-area ch2-ad-visual-layout">
-    <article class="card ch2-search-mock" aria-label="検索広告の表示例">
-      <div class="ch2-search-bar">
-        <span class="icon-symbol">search</span>
-        <span>リフォーム 広島</span>
-      </div>
-      <div class="ch2-search-result is-ad">
-        <div class="ch2-ad-label">スポンサー</div>
-        <h2>広島の水回りリフォーム｜無料見積り受付中</h2>
-        <p>キッチン・浴室・トイレの施工事例を掲載。地域密着で相談できます。</p>
-      </div>
-      <div class="ch2-search-result">
-        <div class="ch2-ad-label">通常の検索結果</div>
-        <h2>広島市のリフォーム会社一覧</h2>
-        <p>口コミ、施工事例、対応エリアを比較できます。</p>
-      </div>
-    </article>
-    <div class="ch2-stack">
+  <main class="content-area ch2-search-screenshot-layout">
+    <div class="ch2-search-screenshot-grid" aria-label="検索広告と地図広告の実例">
+      <article class="card ch2-search-shot-card">
+        <span class="ch2-search-shot-label">検索結果面</span>
+        <img class="ch2-search-shot-image" src="assets/search-ad-mobile-result.png" alt="スマートフォンのGoogle検索結果に表示されたエアコンクリーニングの検索広告" />
+      </article>
+      <article class="card ch2-search-shot-card">
+        <span class="ch2-search-shot-label">地図面</span>
+        <img class="ch2-search-shot-image" src="assets/search-ad-map-result.png" alt="Googleマップで広島のエアコンクリーニングを検索した際のスポンサー表示" />
+      </article>
+    </div>
+    <div class="ch2-search-notes">
       <div class="callout callout-lead is-blue">
         <span class="icon-symbol">ads_click</span>
-        <p class="callout-text">検索語句に反応して、検索結果の上部などに表示されます。</p>
+        <p class="callout-text">検索や地図で探している瞬間に、候補として表示されます。</p>
       </div>
-      <div class="ch2-grid-2">
-        <article class="card ch2-card is-ok">
-          <div class="ch2-card-head">
-            <span class="tag">特徴</span>
-            <span class="icon-symbol">manage_search</span>
-          </div>
-          <h2 class="ch2-card-title">需要が見えている人に届く</h2>
-          <ul class="ch2-mini-list">
-            <li><span class="icon-symbol">check</span><span>語句に悩み・地域・商品名が出ている</span></li>
-            <li><span class="icon-symbol">check</span><span>問い合わせや予約に近い人を集めやすい</span></li>
-          </ul>
-        </article>
-        <article class="card ch2-card is-accent">
-          <div class="ch2-card-head">
-            <span class="tag">課金</span>
-            <span class="icon-symbol">paid</span>
-          </div>
-          <h2 class="ch2-card-title">クリックされた分だけ費用が出る</h2>
-          <ul class="ch2-mini-list">
-            <li><span class="icon-symbol">check</span><span>表示だけでは基本的に費用が発生しない</span></li>
-            <li><span class="icon-symbol">check</span><span>予算と地域を絞って小さく始めやすい</span></li>
-          </ul>
-        </article>
-      </div>
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head">
+          <span class="tag">特徴</span>
+          <span class="icon-symbol">manage_search</span>
+        </div>
+        <h2 class="ch2-card-title">需要が見えている人に届く</h2>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>語句に悩み・地域・商品名が出ている</span></li>
+          <li><span class="icon-symbol">check</span><span>問い合わせや予約に近い人を集めやすい</span></li>
+        </ul>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">見る所</span>
+          <span class="icon-symbol">travel_explore</span>
+        </div>
+        <h2 class="ch2-card-title">検索面と地図面を分ける</h2>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>地域商圏ではマップ面も重要</span></li>
+          <li><span class="icon-symbol">check</span><span>表示先と受け皿の整合性を見る</span></li>
+        </ul>
+      </article>
     </div>
   </main>
   <footer class="slide-footer">
@@ -1496,11 +1488,11 @@
   </footer>
 </section>
 
-<section aria-label="検索意図に応じてアプローチの幅を変える" class="slide v-normal v-ch2 ch2-topic-ads">
+<section aria-label="刈り取りは濃い検索語句から狙う" class="slide v-normal v-ch2 ch2-topic-ads">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 広告の基本</span>
-    <h1 class="slide-heading">検索意図に応じてアプローチの幅を変える</h1>
+    <h1 class="slide-heading">刈り取りは濃い検索語句から狙う</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
       <span class="ch2-context-item topic-overview">全体像</span>
       <span class="ch2-context-item topic-ads active">広告の基本</span>
@@ -1512,7 +1504,7 @@
   <main class="content-area ch2-stack">
     <div class="callout callout-lead is-blue">
       <span class="icon-symbol">tune</span>
-      <p class="callout-text">「マッチタイプ」を使い分けることで、検索語句の拾い方を調整できます。</p>
+      <p class="callout-text">認知は他媒体も使えるため、検索広告は刈り取り寄りに設計します。</p>
     </div>
     <div class="ch2-grid-3">
       <article class="card ch2-card is-ok">
@@ -1520,10 +1512,13 @@
           <span class="tag">完全一致</span>
           <span class="icon-symbol">center_focus_strong</span>
         </div>
-        <h2 class="ch2-card-title">狙った語句だけ</h2>
-        <p class="ch2-card-body">指定キーワードと同じ、または極めて近い語句のみ。</p>
+        <h2 class="ch2-card-title">CVに近い語句へ絞る</h2>
+        <p class="ch2-card-body">入札キーワードと近い検索語句に出す。指名・商品名などに向く。</p>
         <ul class="ch2-mini-list">
-          <li><span class="icon-symbol">check</span><span>無駄な出費が少ない</span></li>
+          <li><span class="icon-symbol">check</span><span>目的: すでに探している人の回収</span></li>
+          <li><span class="icon-symbol">check</span><span>入札: [ニュータック エアコン掃除]</span></li>
+          <li><span class="icon-symbol">check</span><span>検索語句: ニュータック エアコン掃除</span></li>
+          <li><span class="icon-symbol">check</span><span>自社ブランド名は守りやすい</span></li>
         </ul>
       </article>
       <article class="card ch2-card is-signal">
@@ -1531,23 +1526,35 @@
           <span class="tag">フレーズ一致</span>
           <span class="icon-symbol">format_quote</span>
         </div>
-        <h2 class="ch2-card-title">語順を含め拡張</h2>
-        <p class="ch2-card-body">キーワードの意味を含む検索語句。前後に別の単語がついても表示。</p>
+        <h2 class="ch2-card-title">条件付きの検討層まで拾う</h2>
+        <p class="ch2-card-body">語句の意味を含む検索へ広げ、地域・料金・比較なども拾う。</p>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>目的: 条件が合う検討層の回収</span></li>
+          <li><span class="icon-symbol">check</span><span>入札: "エアコン クリーニング"</span></li>
+          <li><span class="icon-symbol">check</span><span>検索語句: 広島 エアコン クリーニング</span></li>
+          <li><span class="icon-symbol">check</span><span>地域・料金・業者などを拾う</span></li>
+        </ul>
       </article>
       <article class="card ch2-card is-accent">
         <div class="ch2-card-head">
-          <span class="tag">部分一致</span>
+          <span class="tag">インテントマッチ</span>
           <span class="icon-symbol">scatter_plot</span>
         </div>
-        <h2 class="ch2-card-title">関連語句まで広く</h2>
-        <p class="ch2-card-body">予想外の語句も拾うが、関係ない語句も出やすく<span class="text-highlight">不満の原因</span>になりがち。</p>
+        <h2 class="ch2-card-title">悩みや検討前まで広げる</h2>
+        <p class="ch2-card-body">同じ語句でなくても、近い意図の検索に出る。認知寄りになりやすい。</p>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>目的: 需要の手前にも接点を作る</span></li>
+          <li><span class="icon-symbol">check</span><span>入札: エアコン クリーニング</span></li>
+          <li><span class="icon-symbol">check</span><span>検索語句: エアコン カビ 臭い 対策</span></li>
+          <li><span class="icon-symbol">check</span><span>認知目的ならSNS等も候補</span></li>
+        </ul>
       </article>
     </div>
   </main>
   <footer class="slide-footer">
-    <div class="callout callout-conclusion is-yellow">
+    <div class="callout callout-conclusion is-yellow callout-bridge">
       <span class="icon-symbol">warning</span>
-      <p class="callout-text">他社のブランドワードでの出稿はCVRが高い反面、<span class="text-highlight">出稿主同士のトラブル</span>になりやすいです。</p>
+      <p class="callout-text">自社名は守る。競合名への出稿は誤認・商標・関係悪化に注意。</p>
     </div>
     <span class="page-num">22</span>
   </footer>
@@ -1636,40 +1643,24 @@
       <p class="callout-text">ディスプレイ広告は一案固定ではなく、反応で差し替えます。</p>
     </div>
     <div class="ch2-creative-layout">
-      <div class="card ch2-creative-variants" role="group" aria-label="クリエイティブの複数パターン例">
-        <div class="ch2-variant-block">
-          <div class="ch2-variant-title">
-            <span class="icon-symbol">image</span>
-            <span>ビジュアル3パターン</span>
-          </div>
-          <div class="ch2-visual-grid">
-            <div class="ch2-visual-sample is-product">
-              <span class="icon-symbol">inventory_2</span>
-              <span>商品</span>
-            </div>
-            <div class="ch2-visual-sample is-scene">
-              <span class="icon-symbol">groups</span>
-              <span>利用シーン</span>
-            </div>
-            <div class="ch2-visual-sample is-proof">
-              <span class="icon-symbol">workspace_premium</span>
-              <span>実績</span>
-            </div>
-          </div>
+      <div class="card ch2-creative-gallery" role="group" aria-label="画像とキャッチが異なる広告クリエイティブ3案">
+        <div class="ch2-variant-title">
+          <span class="icon-symbol">dashboard_customize</span>
+          <span>画像違い・キャッチ違いの3案</span>
         </div>
-        <div class="ch2-combine-mark">
-          <span class="icon-symbol">add</span>
-        </div>
-        <div class="ch2-variant-block">
-          <div class="ch2-variant-title">
-            <span class="icon-symbol">short_text</span>
-            <span>キャッチ3パターン</span>
-          </div>
-          <div class="ch2-copy-grid">
-            <div class="ch2-copy-sample">悩みに直球</div>
-            <div class="ch2-copy-sample">強みを訴求</div>
-            <div class="ch2-copy-sample">行動を促す</div>
-          </div>
+        <div class="ch2-ad-grid">
+          <figure class="ch2-ad-sample">
+            <img alt="風水講座の広告案。室内のグリーンと窓辺の画像に、絶対寝てはいけない場所というキャッチ。" src="assets/image.png" />
+            <figcaption>悩み直球型</figcaption>
+          </figure>
+          <figure class="ch2-ad-sample">
+            <img alt="風水講座の広告案。明るい窓辺で笑顔の人物が写り、自分を知ることを訴求するキャッチ。" src="assets/image copy.png" />
+            <figcaption>共感・自己理解型</figcaption>
+          </figure>
+          <figure class="ch2-ad-sample">
+            <img alt="風水講座の広告案。命式盤の画像に、23歳、38歳、58歳で運命が変わるというキャッチ。" src="assets/image copy 2.png" />
+            <figcaption>転機訴求型</figcaption>
+          </figure>
         </div>
       </div>
       <div class="ch2-creative-side" role="group" aria-label="検証と差し替えの流れ">
@@ -1703,68 +1694,9 @@
   <footer class="slide-footer">
     <div class="callout callout-conclusion is-green">
       <span class="icon-symbol">check_circle</span>
-      <p class="callout-text">複数案で試し、クリック実績と頻度を見て定期的に差し替える。</p>
+      <p class="callout-text">画像・キャッチ違いの3案を試し、反応で勝ち筋を残す。</p>
     </div>
     <span class="page-num">24</span>
-  </footer>
-</section>
-
-<section aria-label="広告費は4点に分解して説明する" class="slide v-normal v-model-table v-ch2 ch2-topic-ads">
-  <div class="top-bar"></div>
-  <header class="slide-header">
-    <span class="section-badge">Ch2. 広告の基本</span>
-    <h1 class="slide-heading">広告費は4点に分解して説明する</h1>
-    <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
-    </div>
-  </header>
-  <main class="content-area ch2-stack">
-    <div class="callout callout-lead is-blue">
-      <span class="icon-symbol">fact_check</span>
-      <p class="callout-text">申請・発注では「広告を出す」だけでなく、成果と検証まで書けると強い。</p>
-    </div>
-    <table class="data-table ch2-compact-table">
-      <thead>
-        <tr>
-          <th>決めること</th>
-          <th>申請・発注上の見え方</th>
-          <th>確認したい観点</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>どこに出すか</td>
-          <td>検索広告、ディスプレイ広告、SNS広告など</td>
-          <td>顕在層向きか、潜在層向きか</td>
-        </tr>
-        <tr>
-          <td>何を成果とするか</td>
-          <td>問い合わせ、資料請求、予約、購入など</td>
-          <td>CV定義が事業目的と合っているか</td>
-        </tr>
-        <tr>
-          <td>どこへ誘導するか</td>
-          <td>LP制作、サイト改修、商品ページ改善など</td>
-          <td>広告の期待値と受け皿が一致しているか</td>
-        </tr>
-        <tr>
-          <td>どう検証するか</td>
-          <td>GA4、タグ設定、月次レポートなど</td>
-          <td>成果が出ない時に原因を追えるか</td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
-  <footer class="slide-footer">
-    <div class="callout callout-conclusion is-yellow">
-      <span class="icon-symbol">warning</span>
-      <p class="callout-text">広告だけ発注しても、誘導先と測定が弱ければ判断できない施策になります。</p>
-    </div>
-    <span class="page-num">25</span>
   </footer>
 </section>
 
@@ -1814,7 +1746,7 @@
       <span class="icon-symbol">warning</span>
       <p class="callout-text">このサインを潰すために、「本当は誰に来てほしいのか」を整理します。</p>
     </div>
-    <span class="page-num">26</span>
+    <span class="page-num">25</span>
   </footer>
 </section>
 
@@ -1863,7 +1795,7 @@
       <span class="icon-symbol">check_circle</span>
       <p class="callout-text">万人受けではなく、決めた相手に自社がどう映るべきかを設計します。</p>
     </div>
-    <span class="page-num">27</span>
+    <span class="page-num">26</span>
   </footer>
 </section>
 
@@ -1909,7 +1841,7 @@
       <span class="icon-symbol">tips_and_updates</span>
       <p class="callout-text">機能差が小さくても、コミュニケーションで選ばれる理由は作れます。</p>
     </div>
-    <span class="page-num">28</span>
+    <span class="page-num">27</span>
   </footer>
 </section>
 
@@ -1949,7 +1881,7 @@
       <span class="icon-symbol">warning</span>
       <p class="callout-text">差別化は必要。ただし、ユーザーが期待する文脈を外しすぎると逆効果です。</p>
     </div>
-    <span class="page-num">29</span>
+    <span class="page-num">28</span>
   </footer>
 </section>
 
@@ -2013,7 +1945,7 @@
       <span class="icon-symbol">check_circle</span>
       <p class="callout-text">不安要素を一つずつ潰すと、LP改善は発注仕様に落としやすくなります。</p>
     </div>
-    <span class="page-num">30</span>
+    <span class="page-num">29</span>
   </footer>
 </section>
 
@@ -2067,7 +1999,7 @@
       <span class="icon-symbol">warning</span>
       <p class="callout-text">「地域No.1」など根拠の弱い自称は、信頼ではなく不安を増やす場合があります。</p>
     </div>
-    <span class="page-num">31</span>
+    <span class="page-num">30</span>
   </footer>
 </section>
 
@@ -2112,7 +2044,7 @@
       <span class="icon-symbol">check_circle</span>
       <p class="callout-text">ペルソナのズレは方針の問題、導線のズレは実装の問題として分けます。</p>
     </div>
-    <span class="page-num">32</span>
+    <span class="page-num">31</span>
   </footer>
 </section>
 
@@ -2172,7 +2104,7 @@
       <span class="icon-symbol">arrow_forward</span>
       <p class="callout-text">施策を打った後は、最終CVだけでなく途中行動も見ます。</p>
     </div>
-    <span class="page-num">33</span>
+    <span class="page-num">32</span>
   </footer>
 </section>
 
@@ -2236,7 +2168,7 @@
       <span class="icon-symbol">arrow_forward</span>
       <p class="callout-text">具体的に何を測るか、どう月次で見るかはCh3で扱います。</p>
     </div>
-    <span class="page-num">34</span>
+    <span class="page-num">33</span>
   </footer>
 </section>
 
@@ -2297,7 +2229,7 @@
       <span class="icon-symbol">arrow_forward</span>
       <p class="callout-text">次は、施策をやりっぱなしにしないための測定設計に進みます。</p>
     </div>
-    <span class="page-num">35</span>
+    <span class="page-num">34</span>
   </footer>
 </section>
   </div>
