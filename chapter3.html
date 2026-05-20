@@ -70,7 +70,7 @@
   <main class="content-area ch3-stack">
     <div class="callout callout-lead is-blue">
       <span class="icon-symbol">compass_calibration</span>
-      <p class="callout-text">測定設計の実装はベンダに依頼して問題ありません。毎月どの数字を見て、次の判断（意思決定）につなげるかは専門家のアドバイスが重要です。</p>
+      <p class="callout-text">測定設計の実装や操作はベンダに依頼して問題ありません。<br>一方、毎月どの数字を見て、次の判断（意思決定）につなげるかは専門家のアドバイスが重要です。</p>
     </div>
     <div class="ch3-grid-3">
       <article class="card ch3-card is-accent">
@@ -79,7 +79,7 @@
           <span class="icon-symbol">flag</span>
         </div>
         <h2 class="ch3-card-title">最終コンバージョン (最終CV)</h2>
-        <p class="ch3-card-body">問い合わせ、購入、予約、応募など、「何が増えたらビジネス上の成功か」を明確に定義します。</p>
+        <p class="ch3-card-body">MELSAモデルに従って、問い合わせ、購入、予約、応募など、「何が増えたらビジネス上の成功か」を明確に定義します。</p>
       </article>
       <article class="card ch3-card is-signal">
         <div class="ch3-card-head">
@@ -126,7 +126,8 @@
       <span class="icon-symbol">construction</span>
       <p class="callout-text">「GA4を設定しておきました」だけでは、ただアクセス数を数えているだけです。ビジネスに合わせたカスタム設定が必要です。</p>
     </div>
-    <div class="ch3-grid-3">
+    <div class="ch3-grid-2">
+      <!-- 左：測定概念の図表 -->
       <article class="card ch3-card is-signal">
         <div class="ch3-card-head">
           <span class="tag">GA4の現実</span>
@@ -134,36 +135,83 @@
         </div>
         <h2 class="ch3-card-title">設定しないと何も取れない</h2>
         <p class="ch3-card-body">
-          デフォルトのGA4は最低限のPV程度しか測れません。タグ、トリガー、イベント、コンバージョンの設定を正しく行って、初めて「測れる状態」になります。
+          デフォルトのGA4は標準のPVやスクロールしか測れません。ビジネスに重要な顧客行動を可視化するにはカスタム設計が必要です。
         </p>
+        <div class="ga4-concept-flow">
+          <div class="flow-step">
+            <span class="flow-label">① デフォルト</span>
+            <div class="flow-box is-bad">
+              <span class="flow-bad-title">標準イベントのみ自動計測</span>
+              <span class="flow-bad-example">例: PV、スクロール、離脱クリック等</span>
+            </div>
+          </div>
+          <div class="flow-arrow">
+            <span class="icon-symbol">add</span>
+          </div>
+          <div class="flow-step">
+            <span class="flow-label">② カスタム設計</span>
+            <div class="flow-box-group">
+              <div class="flow-sub-box">
+                <span class="flow-sub-title">トリガー</span>
+                <span class="flow-sub-cond">（動作条件）</span>
+                <div class="flow-sub-list">
+                  <span>ボタン押下時など</span>
+                </div>
+              </div>
+              <span class="sub-arrow">➔</span>
+              <div class="flow-sub-box">
+                <span class="flow-sub-title">タグ</span>
+                <span class="flow-sub-cond">（計測実行）</span>
+                <div class="flow-sub-list">
+                  <span>GA4イベント配信</span>
+                </div>
+              </div>
+              <span class="sub-arrow">➔</span>
+              <div class="flow-sub-box is-good">
+                <span class="flow-sub-title">イベント</span>
+                <span class="flow-sub-cond">（行動可視化）</span>
+                <div class="flow-sub-list">
+                  <span>クリック数可視化</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </article>
+      <!-- 右：役割分担の図表 -->
       <article class="card ch3-card is-accent">
         <div class="ch3-card-head">
-          <span class="tag">ベンダの動き</span>
+          <span class="tag">ベンダ協業・ITCの役割</span>
           <span class="icon-symbol">groups</span>
         </div>
-        <h2 class="ch3-card-title">指示がないとベンダは動かない</h2>
+        <h2 class="ch3-card-title">要件を定義してベンダを動かす</h2>
         <p class="ch3-card-body">
-          詳しい実装自体はWeb制作・開発ベンダに任せて大丈夫です。しかし、こちらから「何をカスタムして見たいのか」のアドバイスをしないと、ベンダ側は何も設定できません。
+          実装作業はベンダに任せてOKですが、指示が必要です。ITCが主導して要件を定義します。
         </p>
-      </article>
-      <article class="card ch3-card is-ok">
-        <div class="ch3-card-head">
-          <span class="tag">ITCの役割</span>
-          <span class="icon-symbol">checklist_rtl</span>
+        <div class="ga4-roles-flow">
+          <div class="role-box itc">
+            <span class="role-badge">ITC</span>
+            <div class="role-content">
+              <strong>測定の要件定義（設計）</strong><br>
+              「このフォームのエラーを測る」等の仕様を作る
+            </div>
+          </div>
+          <div class="role-connector">
+            <span class="icon-symbol">arrow_downward</span>
+            <span>要件を提示・指示</span>
+          </div>
+          <div class="role-box vendor">
+            <span class="role-badge">ベンダ</span>
+            <div class="role-content">
+              <strong>GTM・GA4の設定実装</strong><br>
+              要件通りにタグやトリガーを正しく実装する
+            </div>
+          </div>
         </div>
-        <h2 class="ch3-card-title">測定の「要件」を握る</h2>
-        <p class="ch3-card-body">
-          「このフォームの入力開始とエラー、送信完了をイベントとして測ってほしい」と明確な要件としてベンダに依頼することが、測定設計の第一歩です。
-        </p>
       </article>
     </div>
   </main>
   <footer class="slide-footer">
-    <div class="callout callout-conclusion is-green">
-      <span class="icon-symbol">check_circle</span>
-      <p class="callout-text">測定の「何をカスタムして測るか」の要件定義こそ、ITCがリードすべき領域です。</p>
-    </div>
     <span class="page-num">00</span>
   </footer>
 </section>
@@ -195,7 +243,7 @@
           <span class="icon-symbol">toc</span>
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px; justify-content: center; height: 100%;">
-          <p class="ch3-card-body" style="margin-bottom: 8px;">フォーム1つでも、次の5ステップに分けて計測します。</p>
+          <p class="ch3-card-body" style="margin-bottom: 8px;">フォーム1つでも、次の5ステップに分けて計測することができます。</p>
           <ul class="ch2-mini-list">
             <li><span class="icon-symbol">arrow_right</span><span><strong>1. 表示</strong>：問い合わせページを開いた（到達）</span></li>
             <li><span class="icon-symbol">arrow_right</span><span><strong>2. 入力開始</strong>：入力欄に初めてフォーカスした</span></li>
@@ -232,7 +280,7 @@
   <footer class="slide-footer">
     <div class="callout callout-conclusion is-green">
       <span class="icon-symbol">check_circle</span>
-      <p class="callout-text">どこで顧客が引っかかっているかによって、打つべき施策は180度変わります。</p>
+      <p class="callout-text">どこで顧客が引っかかっているかによって、打つべき施策は変わります。</p>
     </div>
     <span class="page-num">00</span>
   </footer>
@@ -254,7 +302,7 @@
   <main class="content-area ch3-stack">
     <div class="callout callout-lead is-blue">
       <span class="icon-symbol">table_chart</span>
-      <p class="callout-text">マイクロCVは、企業の成果モデル（MELSA）ごとにほぼパターン化できます。自社のモデルに合わせて要件を決めましょう。</p>
+      <p class="callout-text">マイクロCVは、企業の成果モデル（MELSA）ごとに定石はあります。申請者のモデルに合わせて要件を決めましょう。</p>
     </div>
     
     <table class="data-table ch3-melsa-table" style="width: 100%; border-collapse: collapse; margin-top: 4px;">
@@ -269,7 +317,7 @@
         <tr>
           <td><strong>E：ECモデル</strong></td>
           <td>商品の購入完了</td>
-          <td>商品詳細ページの閲覧、カート投入ボタンの押下、購入手続き画面への到達</td>
+          <td>カート追加ボタンの押下、購入手続き開始、サイズ表やスペック表の展開、お気に入り追加</td>
         </tr>
         <tr>
           <td><strong>L：リード獲得モデル</strong></td>
@@ -277,14 +325,14 @@
           <td>入力フォームへの到達、フォーム入力開始、お役立ち資料のダウンロードボタン押下</td>
         </tr>
         <tr>
-          <td><strong>S：来店促進モデル</strong></td>
-          <td>体験予約、来店予約、クーポン獲得</td>
-          <td>店舗地図（Google Map等）の表示、電話番号リンクのタップ、店舗詳細ページの閲覧</td>
+          <td><strong>S：サポートモデル</strong></td>
+          <td>自己解決（問い合わせ削減）</td>
+          <td>FAQページの閲覧・検索、チャットボットの起動、解説動画の視聴完了</td>
         </tr>
         <tr>
-          <td><strong>A：採用モデル</strong></td>
-          <td>求人への応募完了</td>
-          <td>募集要項ページの閲覧、採用サイトでの社員インタビュー閲覧、応募フォーム到達</td>
+          <td><strong>A：アクティブモデル</strong></td>
+          <td>会員の継続利用、コミュニティ参加</td>
+          <td>お気に入り登録、コミュニティでの投稿・いいね、プロフィールの設定</td>
         </tr>
         <tr>
           <td><strong>M：メディア/認知モデル</strong></td>
@@ -322,59 +370,269 @@
       <p class="callout-text">マイクロCVを見ることで、最終CVの数字だけでは分からない「顧客の本当の心理」が見えてきます。</p>
     </div>
     
-    <div class="ch3-column-layout">
-      <!-- 左：成功事例ビジュアル表現風カード -->
-      <article class="ch3-column-visual">
-        <h2 class="ch3-column-card-title">
-          <span class="icon-symbol">check_circle_outline</span>
-          <span>求職者募集サイトの改善事例</span>
-        </h2>
-        <div class="ch3-column-quote">
-          <p class="ch3-column-quote-text">
-            求人エージェントのサイトで、FAQアコーディオンの開閉数をマイクロCVとして計測したところ、<strong>「面接同行無料」の開閉率が異常に高い</strong>ことが判明しました。
-          </p>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 8px;">
-          <div style="font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 4px;">
-            <span class="icon-symbol" style="font-size: 14px; color: var(--ok);">insights</span>
-            <span><strong>得られた洞察</strong>：「面接への不安」が最大の心理的ブロックになっている</span>
+    <div class="ch3-mcv-layout">
+      <!-- 左：求職者向けスマホモックアップ -->
+      <div class="ch3-phone-mock" aria-label="求職者向けサイト(SP)のFAQモックアップ">
+        <div class="ch3-phone-header">
+          <div class="ch3-phone-logo">
+            <span class="icon-symbol">restaurant</span>
+            <span>飲食転職ナビ</span>
           </div>
-          <div style="font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 4px;">
-            <span class="icon-symbol" style="font-size: 14px; color: var(--accent);">auto_fix_high</span>
-            <span><strong>改善アクション</strong>：サイトのメイン訴求やコンテンツで「面接同行」の安心感を強調</span>
+          <div class="ch3-phone-header-right">MENU ☰</div>
+        </div>
+        <div class="ch3-phone-body">
+          <div class="ch3-phone-hero">
+            <h3>飲食業界専門の安心転職</h3>
+            <p>キャリアアドバイザーがあなたをフルサポート</p>
+          </div>
+          
+          <div class="ch3-phone-section-title">飲食転職ナビの強み</div>
+          
+          <div class="ch3-acc-list">
+            <!-- 1. ホワイト企業しか紹介しません -->
+            <div class="ch3-acc-item">
+              <div class="ch3-acc-head">
+                <span>ホワイト企業しか紹介しません</span>
+                <span class="icon-symbol">expand_more</span>
+              </div>
+            </div>
+            
+            <!-- 2. 飲食業界以外も紹介可能 -->
+            <div class="ch3-acc-item">
+              <div class="ch3-acc-head">
+                <span>飲食業界以外も紹介可能</span>
+                <span class="icon-symbol">expand_more</span>
+              </div>
+            </div>
+            
+            <!-- 3. 面接同行OK (開いた状態 ＆ GA4計測演出) -->
+            <div class="ch3-acc-item is-open">
+              <!-- GA4発火バッジ -->
+              <div class="ch3-ga-tag">
+                <span class="icon-symbol">sensors</span>
+                <span>GA4 Event: strength_click</span>
+              </div>
+              <div class="ch3-acc-head">
+                <span>面接同行OK</span>
+                <span class="icon-symbol">expand_more</span>
+              </div>
+              <div class="ch3-acc-body">
+                当社のアドバイザーが面接会場まで同行し、その場での自己アピールや条件交渉を横で徹底サポート！初めての転職でも全く心配ありません。
+              </div>
+            </div>
+            
+            <!-- 4. 転職費用はかかりません -->
+            <div class="ch3-acc-item">
+              <div class="ch3-acc-head">
+                <span>転職費用はかかりません</span>
+                <span class="icon-symbol">expand_more</span>
+              </div>
+            </div>
+            
+            <!-- 5. 正社員紹介のみ -->
+            <div class="ch3-acc-item">
+              <div class="ch3-acc-head">
+                <span>正社員紹介のみ</span>
+                <span class="icon-symbol">expand_more</span>
+              </div>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
 
-      <!-- 右：学びとメッセージ -->
-      <div class="ch3-column-content">
-        <article class="card ch3-card is-accent" style="padding: 16px;">
-          <div class="ch3-card-head">
-            <span class="tag">気づき</span>
-            <span class="icon-symbol">psychology</span>
+      <!-- 右：GA4データ表示 ＆ 考察 -->
+      <div class="ch3-mcv-data">
+        <!-- グラフカード -->
+        <div class="ch3-graph-card">
+          <div class="ch3-graph-title">
+            <span class="icon-symbol">analytics</span>
+            <span>GA4測定結果：強みアコーディオンのクリック数（割合）</span>
           </div>
-          <h2 class="ch3-card-title">顧客理解を深めるための計測</h2>
-          <p class="ch3-card-body">
-            単に「ボタンを押したか」だけでなく、「どこで迷っているか」をアコーディオンの開閉やページのスクロール深度などで一工夫して測ると、全く新しい発見に繋がります。
-          </p>
-        </article>
-        <article class="card ch3-card is-ok" style="padding: 16px;">
-          <div class="ch3-card-head">
-            <span class="tag">ポイント</span>
-            <span class="icon-symbol">tips_and_updates</span>
+          
+          <div class="ch3-chart">
+            <!-- 面接同行 (勝者) -->
+            <div class="ch3-chart-row is-winner">
+              <span class="ch3-chart-label">面接同行OK</span>
+              <div class="ch3-chart-bar-bg">
+                <div class="ch3-chart-bar" style="width: 45%;"></div>
+              </div>
+              <span class="ch3-chart-val">45%</span>
+            </div>
+            
+            <!-- ホワイト企業 (当初の仮説) -->
+            <div class="ch3-chart-row is-hypothesis">
+              <span class="ch3-chart-label">ホワイト企業しか紹介しません</span>
+              <div class="ch3-chart-bar-bg">
+                <div class="ch3-chart-bar" style="width: 20%;"></div>
+              </div>
+              <span class="ch3-chart-val">20%</span>
+            </div>
+            
+            <!-- 転職費用 -->
+            <div class="ch3-chart-row">
+              <span class="ch3-chart-label">転職費用はかかりません</span>
+              <div class="ch3-chart-bar-bg">
+                <div class="ch3-chart-bar" style="width: 15%;"></div>
+              </div>
+              <span class="ch3-chart-val">15%</span>
+            </div>
+            
+            <!-- 正社員のみ -->
+            <div class="ch3-chart-row">
+              <span class="ch3-chart-label">正社員紹介のみ</span>
+              <div class="ch3-chart-bar-bg">
+                <div class="ch3-chart-bar" style="width: 12%;"></div>
+              </div>
+              <span class="ch3-chart-val">12%</span>
+            </div>
+            
+            <!-- 飲食業界以外 -->
+            <div class="ch3-chart-row">
+              <span class="ch3-chart-label">飲食業界以外も紹介可能</span>
+              <div class="ch3-chart-bar-bg">
+                <div class="ch3-chart-bar" style="width: 8%;"></div>
+              </div>
+              <span class="ch3-chart-val">8%</span>
+            </div>
           </div>
-          <h2 class="ch3-card-title">アイデア次第で洞察が変わる</h2>
-          <p class="ch3-card-body">
-            「何を測れば、ユーザーがどこで悩んでいるか分かるか」という仮説・アイデアこそが、測定設計を価値あるものにする一番のポイントです。
-          </p>
-        </article>
+        </div>
+
+        <!-- インサイトグループ -->
+        <div class="ch3-insight-group">
+          <!-- 仮説とデータのギャップ -->
+          <div class="ch3-insight-item is-gap">
+            <h3 class="ch3-insight-item-title">
+              <span class="icon-symbol">psychology_alt</span>
+              <span>仮説と結果のギャップ</span>
+            </h3>
+            <p class="ch3-insight-body">
+              飲食＝ブラックのイメージから「ホワイト企業紹介」の需要が最大と予測したが、実際は<strong>「面接に1人で行く不安」が最大のボトルネック</strong>と判明。
+            </p>
+          </div>
+          
+          <!-- 改善アクション -->
+          <div class="ch3-insight-item is-action">
+            <h3 class="ch3-insight-item-title">
+              <span class="icon-symbol">trending_up</span>
+              <span>改善アクション</span>
+            </h3>
+            <p class="ch3-insight-body">
+              「ホワイト企業紹介」ではなく<strong>「面接同行で内定まで寄り添う安心感」をLPのメイン訴求に引き上げ</strong>、全体のCVRが大幅に向上！
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <footer class="slide-footer">
+    <span class="page-num">00</span>
+  </footer>
+</section>
+
+<!-- Ch3＆全体まとめ：伴走支援は「OK」 -->
+<section aria-label="Ch3まとめ：伴走支援は「OK」" class="slide v-summary v-summary-enhanced v-ch3 ch3-topic-overview">
+  <div class="top-bar"></div>
+  <header class="slide-header"
+    style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+    <div>
+      <span class="section-badge">Ch3. 測れる化</span>
+      <h1 class="slide-heading">Ch3＆全体まとめ：伴走支援は「OK」</h1>
+    </div>
+
+    <!-- 右端：極小アジェンダ進行度バー -->
+    <div
+      style="display: flex; align-items: center; gap: 8px; background: rgba(5,5,16,0.02); padding: 4px 12px; border-radius: 20px; border: 1px solid var(--line);">
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--subtle); font-weight: 700; opacity: 0.5;">
+        <span>Ch1</span>
+      </div>
+      <span class="icon-symbol" style="color: var(--line); font-size: 12px;">chevron_right</span>
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--subtle); font-weight: 700; opacity: 0.5;">
+        <span>Ch2</span>
+      </div>
+      <span class="icon-symbol" style="color: var(--line); font-size: 12px;">chevron_right</span>
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--accent); font-weight: 700;">
+        <span class="icon-symbol" style="font-size: 12px;">check_circle</span>
+        <span>Ch3</span>
+      </div>
+      <span class="icon-symbol" style="color: var(--line); font-size: 12px;">chevron_right</span>
+      <div
+        style="display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--signal); font-weight: 700; background: rgba(159,52,82,0.08); padding: 2px 8px; border-radius: 12px;">
+        <span
+          style="font-size: 8px; background: var(--signal); color: #fff; padding: 1px 4px; border-radius: 4px;">NEXT</span>
+        <span>演習</span>
+      </div>
+    </div>
+  </header>
+  <main class="content-area">
+    <!-- 上部：Key Takeaway と専門家吹き出し -->
+    <article class="card summary-takeaway-card">
+      <span class="icon-symbol">psychology</span>
+      <div class="takeaway-content">
+        <div class="eyebrow">Key Takeaway</div>
+        <p class="summary-claim">
+          伴走支援のゴールは、<strong>「課題の特定」「施策の一致」「測れる化」</strong>を繋ぎ、クライアント自身が判断できる状態を作ることです。
+        </p>
+      </div>
+    </article>
+
+    <!-- 下部：3カラムのステップカード -->
+    <div class="summary-steps-container">
+      <!-- 01 課題を掴む -->
+      <article class="card summary-step-card is-accent">
+        <span class="icon-symbol step-bg-icon">business_center</span>
+        <div class="step-card-header">
+          <span class="icon-symbol">business_center</span>
+          <h3 class="step-card-title">課題を掴む (Ch1)</h3>
+          <span class="step-card-num">01</span>
+        </div>
+        <p class="step-card-body">
+          成果モデルを定義し、感覚ではなく「集客/理解/行動」のどこがボトルネックかを特定する。
+        </p>
+        <span style="font-size: 10px; color: var(--muted); margin-top: 8px; display: block; font-weight: normal; border-top: 1px dashed var(--line); padding-top: 6px;">
+          💬 「なるほど、やりたいことはコレで、今はここで詰まっているんですね」
+        </span>
+      </article>
+
+      <!-- 02 施策を整理する -->
+      <article class="card summary-step-card is-signal">
+        <span class="icon-symbol step-bg-icon">filter_alt</span>
+        <div class="step-card-header">
+          <span class="icon-symbol">filter_alt</span>
+          <h3 class="step-card-title">施策を一致させる (Ch2)</h3>
+          <span class="step-card-num">02</span>
+        </div>
+        <p class="step-card-body">
+          特定したボトルネックに対し、ターゲットの心理（不安・信頼材料）に合う施策を当てる。
+        </p>
+        <span style="font-size: 10px; color: var(--muted); margin-top: 8px; display: block; font-weight: normal; border-top: 1px dashed var(--line); padding-top: 6px;">
+          💬 「それならこの施策がぴったりです！こっちの方が効果的ですよ」
+        </span>
+      </article>
+
+      <!-- 03 測れる状態にする -->
+      <article class="card summary-step-card is-ok">
+        <span class="icon-symbol step-bg-icon">query_stats</span>
+        <div class="step-card-header">
+          <span class="icon-symbol">query_stats</span>
+          <h3 class="step-card-title">測れる状態にする (Ch3)</h3>
+          <span class="step-card-num">03</span>
+        </div>
+        <p class="step-card-body">
+          施策が効いているか検証するため、最終CVと中間（マイクロCV）の測定設計を整える。
+        </p>
+        <span style="font-size: 10px; color: var(--muted); margin-top: 8px; display: block; font-weight: normal; border-top: 1px dashed var(--line); padding-top: 6px;">
+          💬 「まずはここを数字で可視化して、状況を評価できるようにしましょう！」
+        </span>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
     <div class="callout callout-conclusion is-green">
-      <span class="icon-symbol">check_circle</span>
-      <p class="callout-text">数字を見ることは、顧客の「迷っている声」を聴くことと同じです。</p>
+      <span aria-label="要点" class="icon-symbol">explore</span>
+      <p class="callout-text">この3つが揃えば、伴走支援のコンパスが完成します。次は、これらの知識を活かした「演習」に入ります！</p>
     </div>
     <span class="page-num">00</span>
   </footer>

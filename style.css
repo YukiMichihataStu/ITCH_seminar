@@ -3529,6 +3529,13 @@
       min-height: 0;
     }
 
+    .ch3-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      min-height: 0;
+    }
+
     .ch3-card {
       display: grid;
       grid-template-rows: auto auto 1fr;
@@ -3719,6 +3726,620 @@
       background: var(--accent-soft);
       color: var(--accent);
     }
+
+    /* Chapter 3 GA4現実スライドの図表用スタイル */
+    .ch3-stage-ga4 {
+      --gap: 6px;
+      row-gap: 6px;
+    }
+
+    .ch3-stage-ga4 .ch3-stack {
+      gap: 6px;
+    }
+
+    .ch3-stage-ga4 .ch3-grid-2 {
+      grid-template-columns: 1.62fr 1fr;
+      gap: 12px;
+    }
+
+    .ch3-stage-ga4 .ch3-card {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 12px;
+      height: 100%;
+    }
+
+    .ch3-stage-ga4 .ch3-card-head {
+      margin-bottom: 0px;
+    }
+
+    .ch3-stage-ga4 .ch3-card-title {
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    .ch3-stage-ga4 .ch3-card-body {
+      margin-bottom: 4px;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .ch3-stage-ga4 .callout-lead {
+      padding: 6px 12px;
+    }
+
+    .ga4-concept-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-top: 2px;
+      background: rgba(5,5,16,0.02);
+      padding: 4px 8px;
+      border-radius: var(--radius);
+      border: 1px dashed var(--line);
+    }
+
+    .ga4-concept-flow .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ga4-concept-flow .flow-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      width: 80px;
+      flex-shrink: 0;
+    }
+
+    .ga4-concept-flow .flow-box {
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .ga4-concept-flow .flow-box.is-bad {
+      background: var(--signal-soft);
+      color: var(--signal);
+      border: 1px solid rgba(159, 52, 82, 0.2);
+    }
+
+    .ga4-concept-flow .flow-desc {
+      font-size: 11px;
+      color: var(--muted);
+      flex-grow: 1;
+    }
+
+    .ga4-concept-flow .flow-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--accent);
+      height: 12px;
+      margin: 0;
+    }
+
+    .ga4-concept-flow .flow-arrow .icon-symbol {
+      font-size: 13px;
+    }
+
+    .ga4-concept-flow .flow-box-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-grow: 1;
+    }
+
+    .ga4-concept-flow .flow-sub-box {
+      padding: 4px 6px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-size: 11px;
+      line-height: 1.3;
+      text-align: center;
+      flex: 1;
+      font-weight: 700;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      min-height: 38px;
+      justify-content: flex-start;
+    }
+
+    .ga4-concept-flow .flow-sub-box.is-good {
+      background: var(--ok-soft);
+      color: var(--ok);
+      border-color: rgba(21, 99, 86, 0.2);
+    }
+
+    .ga4-concept-flow .sub-arrow {
+      font-size: 11px;
+      color: var(--subtle);
+    }
+
+    /* 役割フロー用 */
+    .ga4-roles-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .ga4-roles-flow .role-box {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      align-items: center;
+      gap: 8px;
+      background: rgba(5,5,16,0.02);
+      padding: 6px 10px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+    }
+
+    .ga4-roles-flow .role-box.itc {
+      border-left: 4px solid var(--accent);
+      background: rgba(184, 115, 51, 0.02);
+    }
+
+    .ga4-roles-flow .role-box.vendor {
+      border-left: 4px solid var(--muted);
+      background: rgba(5,5,16,0.01);
+    }
+
+    .ga4-roles-flow .role-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 4px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .ga4-roles-flow .itc .role-badge {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .ga4-roles-flow .vendor .role-badge {
+      background: #e2e8f0;
+      color: #4a5568;
+    }
+
+    .ga4-roles-flow .role-content {
+      font-size: 11.5px;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    .ga4-roles-flow .role-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: var(--muted);
+      font-size: 10.5px;
+      font-weight: 700;
+      margin: -2px 0;
+    }
+
+    .ga4-roles-flow .role-connector .icon-symbol {
+      font-size: 14px;
+      color: var(--accent);
+    }
+
+    /* トリガー等の具体例表示用 */
+    .flow-sub-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    
+    .flow-sub-cond {
+      font-size: 9px;
+      color: var(--muted);
+      margin-bottom: 1px;
+    }
+    
+    .flow-sub-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1px;
+      width: 100%;
+      margin-top: 1px;
+    }
+    
+    .flow-sub-list span {
+      font-size: 8.5px;
+      color: var(--muted);
+      line-height: 1.25;
+      text-align: left;
+      white-space: nowrap;
+    }
+    
+    .flow-sub-box.is-good .flow-sub-list span {
+      color: var(--ok);
+    }
+
+    .ga4-concept-flow .flow-box.is-bad {
+      background: var(--signal-soft);
+      color: var(--signal);
+      border: 1px solid rgba(159, 52, 82, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 4px 8px;
+      min-height: 36px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .flow-bad-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--signal);
+    }
+    
+    .flow-bad-example {
+      font-size: 9px;
+      color: var(--muted);
+    }
+
+    /* ==========================================================================
+       🎯 [Ch3] コラム：マイクロコンバージョンによるサイト改善スライド専用スタイル
+       ========================================================================== */
+    .ch3-mcv-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 28px;
+      height: 100%;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    /* スマホ風フレーム */
+    .ch3-phone-mock {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+      height: 100%;
+      min-height: 0;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    /* スマホモックのヘッダー */
+    .ch3-phone-header {
+      background: #2b2c3a;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .ch3-phone-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      color: #fff;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .ch3-phone-logo .icon-symbol {
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    .ch3-phone-header-right {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+    }
+
+    /* スマホモックのボディ */
+    .ch3-phone-body {
+      padding: 14px 16px;
+      background: #ffffff;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ch3-phone-hero {
+      background: rgba(184, 115, 51, 0.05);
+      border: 1px solid rgba(184, 115, 51, 0.1);
+      padding: 8px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .ch3-phone-hero h3 {
+      font-size: 13px;
+      color: var(--accent);
+      margin: 0 0 4px 0;
+    }
+
+    .ch3-phone-hero p {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.3;
+      margin: 0;
+    }
+
+    .ch3-phone-section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 6px;
+      margin-bottom: 4px;
+      border-left: 4px solid var(--accent);
+      padding-left: 6px;
+    }
+
+    /* アコーディオンリスト */
+    .ch3-acc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .ch3-acc-item {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #ffffff;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .ch3-acc-head {
+      padding: 10px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      background: #fcfcfc;
+      cursor: pointer;
+    }
+
+    .ch3-acc-head .icon-symbol {
+      font-size: 15px;
+      color: var(--muted);
+      transition: transform 0.2s;
+    }
+
+    /* 開いた状態 */
+    .ch3-acc-item.is-open {
+      border-color: var(--accent);
+      box-shadow: 0 2px 8px rgba(184, 115, 51, 0.08);
+    }
+
+    .ch3-acc-item.is-open .ch3-acc-head {
+      background: rgba(184, 115, 51, 0.03);
+      color: var(--accent);
+      border-bottom: 1px solid rgba(184, 115, 51, 0.1);
+    }
+
+    .ch3-acc-item.is-open .ch3-acc-head .icon-symbol {
+      transform: rotate(180deg);
+      color: var(--accent);
+    }
+
+    .ch3-acc-body {
+      padding: 10px 12px;
+      font-size: 11px;
+      line-height: 1.45;
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    /* GA4検知イベントの演出バッジ */
+    .ch3-ga-tag {
+      position: absolute;
+      top: -8px;
+      right: 6px;
+      background: var(--ok);
+      color: #fff;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      box-shadow: 0 2px 6px rgba(21, 99, 86, 0.2);
+      z-index: 10;
+      animation: pulse-green 2s infinite;
+    }
+
+    @keyframes pulse-green {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(21, 99, 86, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 4px rgba(21, 99, 86, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(21, 99, 86, 0);
+      }
+    }
+
+    /* GA4データ表示エリア */
+    .ch3-mcv-data {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+    }
+
+    /* GA4グラフカード */
+    .ch3-graph-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ch3-graph-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+    }
+
+    .ch3-graph-title .icon-symbol {
+      color: var(--ok);
+      font-size: 18px;
+    }
+
+    /* 棒グラフ */
+    .ch3-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ch3-chart-row {
+      display: grid;
+      grid-template-columns: 200px 1fr 40px;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ch3-chart-label {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ch3-chart-bar-bg {
+      background: rgba(0,0,0,0.03);
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .ch3-chart-bar {
+      height: 100%;
+      background: #cbd5e1;
+      border-radius: 6px;
+    }
+
+    .ch3-chart-row.is-winner .ch3-chart-label {
+      color: var(--ok);
+      font-weight: 700;
+    }
+
+    .ch3-chart-row.is-winner .ch3-chart-bar {
+      background: var(--ok);
+    }
+
+    .ch3-chart-row.is-hypothesis .ch3-chart-label {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .ch3-chart-row.is-hypothesis .ch3-chart-bar {
+      background: var(--accent);
+    }
+
+    .ch3-chart-val {
+      font-size: 12.5px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .ch3-chart-row.is-winner .ch3-chart-val {
+      color: var(--ok);
+    }
+
+    .ch3-chart-row.is-hypothesis .ch3-chart-val {
+      color: var(--accent);
+    }
+
+    /* 得られた発見＆改善のインサイトカード */
+    .ch3-insight-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .ch3-insight-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ch3-insight-item.is-gap {
+      border-left: 4px solid var(--signal);
+    }
+
+    .ch3-insight-item.is-action {
+      border-left: 4px solid var(--ok);
+    }
+
+    .ch3-insight-item-title {
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 0;
+    }
+
+    .ch3-insight-item.is-gap .ch3-insight-item-title {
+      color: var(--signal);
+    }
+
+    .ch3-insight-item.is-action .ch3-insight-item-title {
+      color: var(--ok);
+    }
+
+    .ch3-insight-item-title .icon-symbol {
+      font-size: 16px;
+    }
+
+    .ch3-insight-body {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--muted);
+      margin: 0;
+    }
+
 
 
 
