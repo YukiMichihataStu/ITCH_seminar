@@ -251,7 +251,6 @@
           <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">広告の基本</span>
           <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">顧客仮説とLP改善</span>
           <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">CVR改善</span>
-          <span style="font-size: 11px; color: var(--signal); background: rgba(159, 52, 82, 0.08); padding: 2px 8px; border-radius: 4px; font-weight: 500;">マイクロCV</span>
         </div>
       </div>
       <div style="width: 32px; height: 32px; background: rgba(159, 52, 82, 0.05); border-radius: 6px; display: flex; align-items: center; justify-content: center;">
@@ -427,11 +426,11 @@
   </footer>
 </section>
 
-<section aria-label="詰まりどころを3つに分ける" class="slide v-normal">
+<section aria-label="ボトルネックを3つに分ける" class="slide v-normal">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch1. 課題を掴む</span>
-    <h1 class="slide-heading">詰まりどころを3つに分ける</h1>
+    <h1 class="slide-heading">ボトルネックどころを3つに分ける</h1>
   </header>
   <main class="content-area" style="display: flex; flex-direction: column; justify-content: space-between;">
     <!-- 上部の情報ブロック -->
@@ -508,11 +507,11 @@
   </footer>
 </section>
 
-<section aria-label="同じ課題でも打ち手は変わる" class="slide v-normal">
+<section aria-label="モデルとボトルネックを整理すれば定石がみえる" class="slide v-normal">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch1. 課題を掴む</span>
-    <h1 class="slide-heading">同じ課題でも打ち手は変わる</h1>
+    <h1 class="slide-heading">モデルとボトルネックを整理すれば定石がみえる</h1>
   </header>
   <main class="content-area"
     style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 14px;">
@@ -638,6 +637,12 @@
     <!-- ボトム注記 -->
   </main>
   <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span aria-label="警告" class="icon-symbol">warning</span>
+      <p class="callout-text">
+        <strong>注意：</strong>定石を知らずにヒアリングに臨むと、<span class="text-highlight">支援パフォーマンス</span>がバラつく原因になります。
+      </p>
+    </div>
     <span class="page-num">10</span>
   </footer>
 </section>
@@ -1208,18 +1213,85 @@
   <span class="page-num">17</span>
 </section>
 
-<section aria-label="詰まりごとに施策を一覧する" class="slide v-normal v-model-table v-ch2 ch2-topic-overview">
+<section aria-label="施策は顧客状態で分ける" class="slide v-normal v-ch2 ch2-topic-overview ch2-stage-awareness ch2-stage-understanding ch2-stage-action">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 施策を整理する</span>
+    <h1 class="slide-heading">施策は顧客状態で分ける</h1>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">route</span>
+      <p class="callout-text">施策は、認知・理解・行動のどこを動かすかで選びます。</p>
+    </div>
+    <div class="ch2-grid-3">
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head">
+          <span class="tag">認知</span>
+          <span class="icon-symbol">campaign</span>
+        </div>
+        <h2 class="ch2-card-title">まだ知らない人に出会う</h2>
+        <p class="ch2-card-body">まだ探していない人に接点を作り、選択肢に入るきっかけを作る。</p>
+        <div class="ch2-ad-mock-mini">
+          <div class="ch2-banner-mock-mini">
+            <span class="icon-symbol">image</span>
+          </div>
+        </div>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>ディスプレイ広告、SNS広告</span></li>
+          <li><span class="icon-symbol">check</span><span>指名検索や再接触の前段</span></li>
+        </ul>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">理解</span>
+          <span class="icon-symbol">groups</span>
+        </div>
+        <h2 class="ch2-card-title">納得できる理由を作る</h2>
+        <p class="ch2-card-body">第三者の信用や具体例で、不安を減らし比較検討を進める。</p>
+        <div class="ch2-ad-mock-mini is-text">
+          <div class="ch2-target-mock">
+            <span class="icon-symbol">handshake</span> 信用を借りて伝える
+          </div>
+        </div>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>アライアンス、紹介導線</span></li>
+          <li><span class="icon-symbol">check</span><span>動画、YouTuberコラボ</span></li>
+        </ul>
+      </article>
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head">
+          <span class="tag">行動</span>
+          <span class="icon-symbol">search</span>
+        </div>
+        <h2 class="ch2-card-title">探している人を取りにいく</h2>
+        <p class="ch2-card-body">困りごとが検索語句に出た人へ、候補としてすぐ届ける。</p>
+        <div class="ch2-ad-mock-mini">
+          <div class="ch2-search-bar-mini">
+            <span class="icon-symbol">search</span> 広島 リフォーム
+          </div>
+        </div>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>検索広告、MEO、SEO</span></li>
+          <li><span class="icon-symbol">check</span><span>問い合わせ・予約に直結する</span></li>
+        </ul>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-yellow">
+      <span class="icon-symbol">priority_high</span>
+      <p class="callout-text">短期成果を狙うなら、まずは行動に近い接点から始める。</p>
+    </div>
+    <span class="page-num">18</span>
+  </footer>
+</section>
+
+<section aria-label="詰まりごとに施策を一覧する" class="slide v-normal v-model-table v-ch2 ch2-topic-overview ch2-stage-awareness ch2-stage-understanding ch2-stage-action">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 施策を整理する</span>
     <h1 class="slide-heading">詰まりごとに施策を一覧する</h1>
-    <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview active">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
-    </div>
   </header>
   <main class="content-area ch2-stack">
     <div class="callout callout-lead is-blue">
@@ -1247,7 +1319,7 @@
           </td>
         </tr>
         <tr>
-          <td>理解・信頼不足</td>
+          <td>理解不足</td>
           <td>LP制作・改修、写真・動画素材撮影、事例・FAQ追加、商品マスタ整備</td>
           <td>選ばれる理由と不安解消の材料を増やす</td>
           <td>
@@ -1257,7 +1329,7 @@
           </td>
         </tr>
         <tr>
-          <td>行動不足</td>
+          <td>行動導線不足</td>
           <td>フォーム改善(EFO)、CTA改修、電話・LINE導線、リターゲティング</td>
           <td>問い合わせ・予約・購入の最後の行動を促す</td>
           <td>
@@ -1286,102 +1358,56 @@
   </main>
   <footer class="slide-footer">
 
-    <span class="page-num">18</span>
-  </footer>
-</section>
-
-<section aria-label="施策は顧客状態で分ける" class="slide v-normal v-ch2 ch2-topic-overview">
-  <div class="top-bar"></div>
-  <header class="slide-header">
-    <span class="section-badge">Ch2. 施策を整理する</span>
-    <h1 class="slide-heading">施策は顧客状態で分ける</h1>
-    <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview active">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
-    </div>
-  </header>
-  <main class="content-area ch2-stack">
-    <div class="callout callout-lead is-blue">
-      <span class="icon-symbol">route</span>
-      <p class="callout-text">施策は、認知・理解・行動のどこを動かすかで選びます。</p>
-    </div>
-    <div class="ch2-grid-3">
-      <article class="card ch2-card is-signal">
-        <div class="ch2-card-head">
-          <span class="tag">認知</span>
-          <span class="icon-symbol">campaign</span>
-        </div>
-        <h2 class="ch2-card-title">まだ知らない人に出会う</h2>
-        <p class="ch2-card-body">まだ探していない人に接点を作り、選択肢に入るきっかけを作る。</p>
-        <div class="ch2-ad-mock-mini">
-          <div class="ch2-banner-mock-mini">
-            <span class="icon-symbol">image</span>
-          </div>
-        </div>
-        <ul class="ch2-mini-list">
-          <li><span class="icon-symbol">check</span><span>ディスプレイ広告、SNS広告</span></li>
-          <li><span class="icon-symbol">check</span><span>指名検索や再接触の前段</span></li>
-        </ul>
-      </article>
-      <article class="card ch2-card is-accent">
-        <div class="ch2-card-head">
-          <span class="tag">理解・信頼</span>
-          <span class="icon-symbol">groups</span>
-        </div>
-        <h2 class="ch2-card-title">納得できる理由を作る</h2>
-        <p class="ch2-card-body">第三者の信用や具体例で、不安を減らし比較検討を進める。</p>
-        <div class="ch2-ad-mock-mini is-text">
-          <div class="ch2-target-mock">
-            <span class="icon-symbol">handshake</span> 信用を借りて伝える
-          </div>
-        </div>
-        <ul class="ch2-mini-list">
-          <li><span class="icon-symbol">check</span><span>アライアンス、紹介導線</span></li>
-          <li><span class="icon-symbol">check</span><span>動画、YouTuberコラボ</span></li>
-        </ul>
-      </article>
-      <article class="card ch2-card is-ok">
-        <div class="ch2-card-head">
-          <span class="tag">行動・刈り取り</span>
-          <span class="icon-symbol">search</span>
-        </div>
-        <h2 class="ch2-card-title">探している人を取りにいく</h2>
-        <p class="ch2-card-body">困りごとが検索語句に出た人へ、候補としてすぐ届ける。</p>
-        <div class="ch2-ad-mock-mini">
-          <div class="ch2-search-bar-mini">
-            <span class="icon-symbol">search</span> 広島 リフォーム
-          </div>
-        </div>
-        <ul class="ch2-mini-list">
-          <li><span class="icon-symbol">check</span><span>検索広告、MEO、SEO</span></li>
-          <li><span class="icon-symbol">check</span><span>問い合わせ・予約に直結する</span></li>
-        </ul>
-      </article>
-    </div>
-  </main>
-  <footer class="slide-footer">
-    <div class="callout callout-conclusion is-yellow">
-      <span class="icon-symbol">priority_high</span>
-      <p class="callout-text">短期成果を狙うなら、まずは刈り取りから始める。</p>
-    </div>
     <span class="page-num">19</span>
   </footer>
 </section>
 
-<section aria-label="検索広告は探している瞬間に出る広告" class="slide v-normal v-ch2 ch2-topic-ads">
+<section aria-label="セクション切り替え：認知" class="slide v-normal v-ch2 ch2-stage-awareness">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. セクション</span>
+    <h1 class="slide-heading">現在地：認知（広告の基本）に入ります</h1>
+  </header>
+  <main class="content-area">
+    <div class="ch2-bridge-layout">
+      <div class="ch2-bridge-steps">
+        <div class="ch2-bridge-step active step-awareness">
+          <span class="step-number-big">01</span>
+          <h2 class="step-title-big">認知：広告の基本</h2>
+          <p class="step-desc-big">まずは知ってもらうための集客。顕在層・潜在層へ届ける広告設計。</p>
+        </div>
+        <div class="ch2-bridge-step">
+          <span class="step-number-big">02</span>
+          <h2 class="step-title-big">理解：顧客仮説とLP改善</h2>
+          <p class="step-desc-big">興味を持った人を逃さない受け皿。選ばれる理由と信頼の設計。</p>
+        </div>
+        <div class="ch2-bridge-step">
+          <span class="step-number-big">03</span>
+          <h2 class="step-title-big">行動：CVR改善</h2>
+          <p class="step-desc-big">最後の行動を後押し。フォームやスマホ対応など導線の最適化。</p>
+        </div>
+      </div>
+      <div class="ch2-bridge-sub-agenda">
+        <span class="sub-item active is-signal">▶ 検索広告 (探している瞬間)</span>
+        <span class="icon-symbol" style="color: var(--line); font-size: 14px;">arrow_forward</span>
+        <span class="sub-item">ディスプレイ・SNS・アライアンス (探す前)</span>
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">20</span>
+  </footer>
+</section>
+
+<section aria-label="検索広告は探している瞬間に出る広告" class="slide v-normal v-ch2 ch2-topic-ads ch2-stage-awareness">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 広告の基本</span>
     <h1 class="slide-heading">検索広告は「探している瞬間」に出る広告</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads active">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-search-screenshot-layout">
@@ -1427,23 +1453,21 @@
   <footer class="slide-footer">
     <div class="callout callout-conclusion is-green">
       <span class="icon-symbol">check_circle</span>
-      <p class="callout-text">検索広告は、今探している人を集める刈り取り施策として扱う。</p>
+      <p class="callout-text">検索広告は、今探している人を行動に近い見込み客として扱う。</p>
     </div>
-    <span class="page-num">20</span>
+    <span class="page-num">21</span>
   </footer>
 </section>
 
-<section aria-label="品質スコアは広告費の効き方を左右する" class="slide v-normal v-ch2 ch2-topic-ads">
+<section aria-label="品質スコアは広告費の効き方を左右する" class="slide v-normal v-ch2 ch2-topic-ads ch2-stage-awareness">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 広告の基本</span>
     <h1 class="slide-heading">品質スコアは広告費の効き方を左右する</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads active">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-score-layout">
@@ -1484,27 +1508,25 @@
       <span class="icon-symbol">check_circle</span>
       <p class="callout-text">点数を上げる作業ではなく、広告費が効きにくい理由を読む。</p>
     </div>
-    <span class="page-num">21</span>
+    <span class="page-num">22</span>
   </footer>
 </section>
 
-<section aria-label="刈り取りは濃い検索語句から狙う" class="slide v-normal v-ch2 ch2-topic-ads">
+<section aria-label="行動に近い検索語句から狙う" class="slide v-normal v-ch2 ch2-topic-ads ch2-stage-awareness">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 広告の基本</span>
-    <h1 class="slide-heading">刈り取りは濃い検索語句から狙う</h1>
+    <h1 class="slide-heading">行動に近い検索語句から狙う</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads active">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-stack">
     <div class="callout callout-lead is-blue">
       <span class="icon-symbol">tune</span>
-      <p class="callout-text">認知は他媒体も使えるため、検索広告は刈り取り寄りに設計します。</p>
+      <p class="callout-text">認知は他媒体も使えるため、検索広告は行動に近い語句から設計します。</p>
     </div>
     <div class="ch2-grid-3">
       <article class="card ch2-card is-ok">
@@ -1556,21 +1578,19 @@
       <span class="icon-symbol">warning</span>
       <p class="callout-text">自社名は守る。競合名への出稿は誤認・商標・関係悪化に注意。</p>
     </div>
-    <span class="page-num">22</span>
+    <span class="page-num">23</span>
   </footer>
 </section>
 
-<section aria-label="SNSとディスプレイは探す前に出会わせる広告" class="slide v-normal v-model-table v-ch2 ch2-topic-ads">
+<section aria-label="SNSとディスプレイは探す前に出会わせる広告" class="slide v-normal v-model-table v-ch2 ch2-topic-ads ch2-stage-awareness">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 広告の基本</span>
     <h1 class="slide-heading">SNS・ディスプレイは「探す前」に出会わせる広告</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads active">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-stack">
@@ -1620,21 +1640,19 @@
       <span class="icon-symbol">info</span>
       <p class="callout-text">検索広告は需要の回収、SNS・ディスプレイは認知や再接触の役割で見る。</p>
     </div>
-    <span class="page-num">23</span>
+    <span class="page-num">24</span>
   </footer>
 </section>
 
-<section aria-label="ディスプレイ広告は複数クリエイティブで試す" class="slide v-normal v-ch2 ch2-topic-ads ch2-creative-test">
+<section aria-label="ディスプレイ広告は複数クリエイティブで試す" class="slide v-normal v-ch2 ch2-topic-ads ch2-stage-awareness ch2-creative-test">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 広告の基本</span>
     <h1 class="slide-heading">広告素材は複数案で試す</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads active">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-stack">
@@ -1696,71 +1714,214 @@
       <span class="icon-symbol">check_circle</span>
       <p class="callout-text">画像・キャッチ違いの3案を試し、反応で勝ち筋を残す。</p>
     </div>
-    <span class="page-num">24</span>
+    <span class="page-num">25</span>
   </footer>
 </section>
 
-<section aria-label="誰にも刺さっていないサインを探す" class="slide v-normal v-ch2 ch2-topic-lp">
+<section aria-label="第三者の文脈で紹介してもらう" class="slide v-normal v-ch2 ch2-topic-ads ch2-stage-awareness ch2-alliance-intro">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">第三者の文脈で紹介してもらう</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">handshake</span>
+      <p class="callout-text">普段見ている媒体や人を通じて、情報収集に近い形で届けます。</p>
+    </div>
+    <div class="ch2-grid-2 ch2-alliance-principles">
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">媒体・記事</span>
+          <span class="icon-symbol">newspaper</span>
+        </div>
+        <h2 class="ch2-card-title">記事風広告</h2>
+        <p class="ch2-card-body">地域媒体や専門サイトで、悩み・選び方・体験を記事として紹介する。</p>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>ローカルWebメディア、取材記事</span></li>
+          <li><span class="icon-symbol">check</span><span>読者の悩みや選び方の文脈に溶け込ませる</span></li>
+        </ul>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head">
+          <span class="tag">動画・インフルエンサー</span>
+          <span class="icon-symbol">smart_display</span>
+        </div>
+        <h2 class="ch2-card-title">YouTuber協業</h2>
+        <p class="ch2-card-body">特定ジャンルの視聴者へ、使用感や比較の文脈で紹介する。</p>
+        <ul class="ch2-mini-list">
+          <li><span class="icon-symbol">check</span><span>専門ブログ、ジャンル特化YouTuber</span></li>
+          <li><span class="icon-symbol">check</span><span>普段から信頼している発信者の体験レビュー</span></li>
+        </ul>
+      </article>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">自社で直接言うより、信頼されている文脈から届くことがあります。</p>
+    </div>
+    <span class="page-num">26</span>
+  </footer>
+</section>
+
+<section aria-label="アライアンス広告は設計して依頼する" class="slide v-normal v-ch2 ch2-topic-ads ch2-stage-awareness ch2-alliance-process">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 広告の基本</span>
+    <h1 class="slide-heading">アライアンス広告は設計して依頼する</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">assignment</span>
+      <p class="callout-text">発注費用以上に打合せの労力が必要なため、事前のすり合わせが成否を分けます。</p>
+    </div>
+    <div class="ch2-grid-4">
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">設計：選び方</span>
+          <span class="icon-symbol">psychology</span>
+        </div>
+        <h2 class="ch2-card-title">誰の話なら信じるか</h2>
+        <p class="ch2-card-body">見込み客が普段見ている媒体や人を選ぶ。ローカルメディアや専門特化メディアが候補。</p>
+      </article>
+      <article class="card ch2-card is-signal">
+        <div class="ch2-card-head">
+          <span class="tag">設計：伝え方</span>
+          <span class="icon-symbol">article</span>
+        </div>
+        <h2 class="ch2-card-title">広告感を薄めて伝える</h2>
+        <p class="ch2-card-body">記事、動画、体験レビュー、比較企画など、情報収集の文脈に沿った構成にする。</p>
+      </article>
+      <article class="card ch2-card is-accent">
+        <div class="ch2-card-head">
+          <span class="tag">依頼：労力</span>
+          <span class="icon-symbol">groups</span>
+        </div>
+        <h2 class="ch2-card-title">発注以上の打合せ労力</h2>
+        <p class="ch2-card-body">制作費などの実費以上に、訴求のすり合わせやNG表現、PR表記の調整など打合せコストがかかる。</p>
+      </article>
+      <article class="card ch2-card is-ok">
+        <div class="ch2-card-head">
+          <span class="tag">依頼：合意</span>
+          <span class="icon-symbol">playlist_add_check</span>
+        </div>
+        <h2 class="ch2-card-title">3点セットで合意する</h2>
+        <p class="ch2-card-body">「掲載先（誰に）」「伝え方（どう）」「計測方法（どう測るか）」をセットで決めて合意する。</p>
+      </article>
+    </div>
+    <div class="ch2-bottom-note">
+      ※ 実際の進行手順：依頼先の選定（STEP1） → 企画・台本の作成（STEP2） → 受け皿LPや計測の準備（STEP3） → 流入・CVなどの効果確認（STEP4）
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">「掲載先・伝え方・計測方法」を3点セットで合意し、お金と時間の無駄打ちを防ぎます。</p>
+    </div>
+    <span class="page-num">27</span>
+  </footer>
+</section>
+
+<section aria-label="セクション切り替え：理解" class="slide v-normal v-ch2 ch2-stage-understanding">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. セクション</span>
+    <h1 class="slide-heading">現在地：理解（顧客仮説とLP改善）に入ります</h1>
+  </header>
+  <main class="content-area">
+    <div class="ch2-bridge-layout">
+      <div class="ch2-bridge-steps">
+        <div class="ch2-bridge-step">
+          <span class="step-number-big">01</span>
+          <h2 class="step-title-big">認知：広告の基本</h2>
+          <p class="step-desc-big">まずは知ってもらうための集客。顕在層・潜在層へ届ける広告設計。</p>
+        </div>
+        <div class="ch2-bridge-step active step-understanding">
+          <span class="step-number-big">02</span>
+          <h2 class="step-title-big">理解：顧客仮説とLP改善</h2>
+          <p class="step-desc-big">興味を持った人を逃さない受け皿。選ばれる理由と信頼の設計。</p>
+        </div>
+        <div class="ch2-bridge-step">
+          <span class="step-number-big">03</span>
+          <h2 class="step-title-big">行動：CVR改善</h2>
+          <p class="step-desc-big">最後の行動を後押し。フォームやスマホ対応など導線の最適化。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">28</span>
+  </footer>
+</section>
+
+<section aria-label="誰にも刺さっていないサインを探す" class="slide v-normal v-ch2 ch2-topic-lp ch2-stage-understanding">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 受け皿改善</span>
     <h1 class="slide-heading">誰にも刺さっていないサインを探す</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-stack">
     <div class="callout callout-lead is-blue">
       <span class="icon-symbol">person_alert</span>
-      <p class="callout-text">正解のペルソナを当てるより、明らかなズレを見つけるのが現実的です。</p>
+      <p class="callout-text">「正解のペルソナ」を当てるのではなく、今のLPが誰にも刺さっていないサインを見つけます。</p>
     </div>
     <div class="ch2-grid-4">
       <article class="card ch2-card is-signal">
-        <div class="ch2-card-head"><span class="tag">前提</span><span class="icon-symbol">target</span></div>
-        <h2 class="ch2-card-title">ターゲット不在</h2>
-        <p class="ch2-card-body">そもそも誰に来てほしいかを決めていない。</p>
+        <div class="ch2-card-head"><span class="tag">前提</span><span class="icon-symbol">checklist</span></div>
+        <h2 class="ch2-card-title">ターゲットが不在</h2>
+        <p class="ch2-card-body">来てほしい相手が曖昧なら、誰に向けた訴求なのか判断基準がブレてしまいます。</p>
       </article>
       <article class="card ch2-card is-accent">
-        <div class="ch2-card-head"><span class="tag">定量</span><span class="icon-symbol">query_stats</span></div>
-        <h2 class="ch2-card-title">数字に出る</h2>
-        <p class="ch2-card-body">直帰率が高い、滞在時間が短い、広告クリックは多いのにCVがない。</p>
+        <div class="ch2-card-head"><span class="tag">数字</span><span class="icon-symbol">query_stats</span></div>
+        <h2 class="ch2-card-title">直帰率が高い・すぐ離脱する</h2>
+        <p class="ch2-card-body">広告から来ているのにCVがゼロなど、期待値とのズレが数字に出ている状態。</p>
       </article>
       <article class="card ch2-card is-ok">
         <div class="ch2-card-head"><span class="tag">FV</span><span class="icon-symbol">web_asset</span></div>
-        <h2 class="ch2-card-title">最初の答えがない</h2>
-        <p class="ch2-card-body">検索キーワードの答えがファーストビューに見当たらない。</p>
+        <h2 class="ch2-card-title">検索語句の答えが最初にない</h2>
+        <p class="ch2-card-body">「安い 引越し」で検索したのに、一番上の画面が「創業50年の実績」になっている。</p>
       </article>
       <article class="card ch2-card is-signal">
-        <div class="ch2-card-head"><span class="tag">定性</span><span class="icon-symbol">format_quote</span></div>
-        <h2 class="ch2-card-title">言葉がふわっとする</h2>
-        <p class="ch2-card-body">「地域No.1」「高品質」など、誰にでも言える表現が並ぶ。</p>
+        <div class="ch2-card-head"><span class="tag">言葉</span><span class="icon-symbol">format_quote</span></div>
+        <h2 class="ch2-card-title">誰にでも言えるフワッとした表現</h2>
+        <p class="ch2-card-body">「地域No.1」「すべてのお客様に」など、ターゲットがボヤけている状態。</p>
       </article>
     </div>
   </main>
   <footer class="slide-footer">
     <div class="callout callout-conclusion is-yellow">
       <span class="icon-symbol">warning</span>
-      <p class="callout-text">このサインを潰すために、「本当は誰に来てほしいのか」を整理します。</p>
+      <p class="callout-text">刺さる相手を決める前に、刺さっていない理由を一つずつ潰します。</p>
     </div>
-    <span class="page-num">25</span>
+    <span class="page-num">29</span>
   </footer>
 </section>
 
-<section aria-label="誰にどう見られるかを決める" class="slide v-normal v-ch2 ch2-topic-lp">
+<section aria-label="誰にどう見られるかを決める" class="slide v-normal v-ch2 ch2-topic-lp ch2-stage-understanding">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 受け皿改善</span>
     <h1 class="slide-heading">誰にどう見られるかを決める</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-stack">
@@ -1795,21 +1956,19 @@
       <span class="icon-symbol">check_circle</span>
       <p class="callout-text">万人受けではなく、決めた相手に自社がどう映るべきかを設計します。</p>
     </div>
-    <span class="page-num">26</span>
+    <span class="page-num">30</span>
   </footer>
 </section>
 
-<section aria-label="同じサービスでも刺さる相手は変えられる" class="slide v-normal v-compare v-ch2 ch2-topic-lp">
+<section aria-label="同じサービスでも刺さる相手は変えられる" class="slide v-normal v-compare v-ch2 ch2-topic-lp ch2-stage-understanding">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 受け皿改善</span>
     <h1 class="slide-heading">同じサービスでも刺さる相手は変えられる</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area">
@@ -1841,21 +2000,19 @@
       <span class="icon-symbol">tips_and_updates</span>
       <p class="callout-text">機能差が小さくても、コミュニケーションで選ばれる理由は作れます。</p>
     </div>
-    <span class="page-num">27</span>
+    <span class="page-num">31</span>
   </footer>
 </section>
 
-<section aria-label="差別化は文脈から外しすぎない" class="slide v-normal v-do-dont v-ch2 ch2-topic-lp">
+<section aria-label="差別化は文脈から外しすぎない" class="slide v-normal v-do-dont v-ch2 ch2-topic-lp ch2-stage-understanding">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 受け皿改善</span>
     <h1 class="slide-heading">差別化は文脈から外しすぎない</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area">
@@ -1881,112 +2038,80 @@
       <span class="icon-symbol">warning</span>
       <p class="callout-text">差別化は必要。ただし、ユーザーが期待する文脈を外しすぎると逆効果です。</p>
     </div>
-    <span class="page-num">28</span>
+    <span class="page-num">32</span>
   </footer>
 </section>
 
-<section aria-label="不安を消すコンテンツを確認する" class="slide v-normal v-model-table v-ch2 ch2-topic-lp">
+<section aria-label="不安と信頼材料を質で確認する" class="slide v-normal v-model-table v-ch2 ch2-topic-lp ch2-stage-understanding">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 受け皿改善</span>
-    <h1 class="slide-heading">不安を消すコンテンツを確認する</h1>
+    <h1 class="slide-heading">不安と信頼材料を質で確認する</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-stack">
     <div class="callout callout-lead is-blue">
       <span class="icon-symbol">playlist_add_check</span>
-      <p class="callout-text">載せること自体ではなく、離脱する言い訳を消せているかを見ます。</p>
+      <p class="callout-text">載せることより、離脱の言い訳を消せているかを見ます。</p>
     </div>
-    <table class="data-table ch2-wide-table">
+    <table class="data-table ch2-proof-table">
+      <colgroup>
+        <col class="proof-kind" />
+        <col class="proof-item" />
+        <col class="proof-anxiety" />
+        <col class="proof-quality" />
+      </colgroup>
       <thead>
         <tr>
+          <th>種類</th>
           <th>確認項目</th>
           <th>消したい不安</th>
-          <th>弱い載せ方</th>
           <th>質の高い載せ方</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          <td>条件</td>
           <td>料金</td>
           <td>高すぎないか、追加請求はないか</td>
-          <td>詳細はお問い合わせください</td>
           <td>目安金額や追加費用の有無がある</td>
         </tr>
         <tr>
+          <td>事例</td>
           <td>導入事例</td>
           <td>自分の悩みも解決できるか</td>
-          <td>ロゴや実績名だけ</td>
           <td>Before / After のストーリーがある</td>
         </tr>
         <tr>
+          <td>手順</td>
           <td>提供の流れ</td>
           <td>しつこく営業されないか</td>
-          <td>作業手順だけ</td>
           <td>相談だけでもOKなど行動ハードルを下げる</td>
         </tr>
         <tr>
+          <td>疑問</td>
           <td>FAQ</td>
           <td>直接聞きにくい疑問がある</td>
-          <td>サイトを見れば分かる質問だけ</td>
           <td>本音の懸念に先回りして答える</td>
         </tr>
-      </tbody>
-    </table>
-  </main>
-  <footer class="slide-footer">
-    <div class="callout callout-conclusion is-green">
-      <span class="icon-symbol">check_circle</span>
-      <p class="callout-text">不安要素を一つずつ潰すと、LP改善は発注仕様に落としやすくなります。</p>
-    </div>
-    <span class="page-num">29</span>
-  </footer>
-</section>
-
-<section aria-label="信頼材料は質まで確認する" class="slide v-normal v-model-table v-ch2 ch2-topic-lp">
-  <div class="top-bar"></div>
-  <header class="slide-header">
-    <span class="section-badge">Ch2. 受け皿改善</span>
-    <h1 class="slide-heading">信頼材料は質まで確認する</h1>
-    <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
-    </div>
-  </header>
-  <main class="content-area ch2-stack">
-    <div class="callout callout-lead is-blue">
-      <span class="icon-symbol">verified_user</span>
-      <p class="callout-text">「とりあえず載せるだけ」はノイズになるため、信頼の根拠になっているかを見ます。</p>
-    </div>
-    <table class="data-table ch2-compact-table">
-      <thead>
         <tr>
-          <th>確認項目</th>
-          <th>消したい不安</th>
-          <th>質の高い載せ方</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
+          <td>約束</td>
           <td>保証・約束</td>
           <td>失敗して損をしたらどうしよう</td>
           <td>無理な営業をしない、返金保証、対応範囲の明示</td>
         </tr>
         <tr>
+          <td>評価</td>
           <td>第三者評価</td>
           <td>自称しているだけではないか</td>
           <td>口コミ、メディア掲載、資格、根拠ある実績</td>
         </tr>
         <tr>
+          <td>人</td>
           <td>会社・スタッフ</td>
           <td>誰が対応するのか、騙されないか</td>
           <td>代表の顔、実店舗、スタッフ、現場の雰囲気が分かる</td>
@@ -1995,101 +2120,144 @@
     </table>
   </main>
   <footer class="slide-footer">
-    <div class="callout callout-conclusion is-yellow">
-      <span class="icon-symbol">warning</span>
-      <p class="callout-text">「地域No.1」など根拠の弱い自称は、信頼ではなく不安を増やす場合があります。</p>
+    <div class="callout callout-conclusion is-yellow callout-bridge">
+      <span class="icon-symbol">question_mark</span>
+      <p class="callout-text">「なるほど。でも、この顧客仮説の話を知らなくても、予算や施策は『HP制作費』等にまとめられるのでは？…」</p>
     </div>
-    <span class="page-num">30</span>
+    <span class="page-num">33</span>
   </footer>
 </section>
 
-<section aria-label="行動導線は抜け漏れを潰す" class="slide v-normal v-ch2 ch2-topic-cvr">
+<section aria-label="なぜ顧客の不安と信頼材料から考えるのか" class="slide v-normal v-ch2 ch2-topic-lp ch2-stage-understanding">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. 受け皿改善</span>
+    <h1 class="slide-heading">なぜ「顧客の不安と信頼材料」から考えるのか？</h1>
+    <div class="ch2-context" aria-label="Ch2内の現在地">
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
+    </div>
+  </header>
+  <main class="content-area ch2-stack">
+    <div class="callout callout-lead is-blue">
+      <span class="icon-symbol">psychology</span>
+      <p class="callout-text">予算の「箱」を作るだけなら顧客仮説は不要です。しかし、この観点がないと「中身がふわっとした無駄な施策」を繰り返してしまいます。</p>
+    </div>
+    
+    <table class="ch2-compare-table">
+      <colgroup>
+        <col style="width: 15%;" />
+        <col style="width: 42.5%;" />
+        <col style="width: 42.5%;" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>観点</th>
+          <th class="col-negative">❌ 顧客仮説なし（とりあえず予算化）</th>
+          <th class="col-positive">⭕ 顧客仮説あり（施策を仕様化）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-label">発注の解像度</td>
+          <td class="col-negative">「とりあえずLPを綺麗にリニューアルして」「なんとなく事例を載せて」</td>
+          <td class="col-positive">「顧客の『本当に効果ある？』という<span class="text-highlight">不安</span>を消すために、施工実績の写真撮影と保証FAQ追加が必要」</td>
+        </tr>
+        <tr>
+          <td class="col-label">着地する予算</td>
+          <td class="col-negative">なんとなく「HP制作費」の一括見積もり。<br>仕様が曖昧なため予算がブレやすい。</td>
+          <td class="col-positive"><strong>【アプローチの具体化】</strong><br>・イ. Webサイト構築費（保証FAQ追加）<br>・ウ. コンテンツ制作費（実績写真撮影）</td>
+        </tr>
+        <tr>
+          <td class="col-label">もたらす結果</td>
+          <td class="col-negative-result">制作会社の言い値で予算がブレる。<br>効果が出ず、同じ失敗を繰り返す。</td>
+          <td class="col-positive-result">施策の解像度が高まり、発注品質が向上。<br>無駄打ちを防ぎ、効果が出る仕様になる。</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="slide-footer">
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">ITCの役割は、ただ予算を組むことではありません。申請者の現状認識から「不安と信頼材料」を整理し、無駄のない「効く施策」の仕様を定義することです。</p>
+    </div>
+    <span class="page-num">34</span>
+  </footer>
+</section>
+
+<section aria-label="セクション切り替え：行動" class="slide v-normal v-ch2 ch2-stage-action">
+  <div class="top-bar"></div>
+  <header class="slide-header">
+    <span class="section-badge">Ch2. セクション</span>
+    <h1 class="slide-heading">現在地：行動（CVR改善）に入ります</h1>
+  </header>
+  <main class="content-area">
+    <div class="ch2-bridge-layout">
+      <div class="ch2-bridge-steps">
+        <div class="ch2-bridge-step">
+          <span class="step-number-big">01</span>
+          <h2 class="step-title-big">認知：広告の基本</h2>
+          <p class="step-desc-big">まずは知ってもらうための集客。顕在層・潜在層へ届ける広告設計。</p>
+        </div>
+        <div class="ch2-bridge-step">
+          <span class="step-number-big">02</span>
+          <h2 class="step-title-big">理解：顧客仮説とLP改善</h2>
+          <p class="step-desc-big">興味を持った人を逃さない受け皿。選ばれる理由と信頼の設計。</p>
+        </div>
+        <div class="ch2-bridge-step active step-action">
+          <span class="step-number-big">03</span>
+          <h2 class="step-title-big">行動：CVR改善</h2>
+          <p class="step-desc-big">最後の行動を後押し。フォームやスマホ対応など導線の最適化。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="slide-footer">
+    <span class="page-num">35</span>
+  </footer>
+</section>
+
+<section aria-label="行動導線は抜け漏れを潰す" class="slide v-normal v-ch2 ch2-topic-cvr ch2-stage-action">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. CVR改善</span>
     <h1 class="slide-heading">行動導線は抜け漏れを潰す</h1>
     <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
-    </div>
-  </header>
-  <main class="content-area ch2-grid-2">
-    <article class="card ch2-card is-accent">
-      <div class="ch2-card-head">
-        <span class="tag">考え方</span>
-        <span class="icon-symbol">touch_app</span>
-      </div>
-      <h2 class="ch2-card-title">ペルソナではなく機能・導線の問題</h2>
-      <p class="ch2-card-body">ターゲットが合っていても、フォームが面倒、ボタンが分かりにくい、スマホで使いづらいと離脱します。</p>
-      <div class="ch2-bottom-note">CVR改善は絶対の正解を当てるより、「ここは問題ない」を一つずつ潰すほうが実務的です。</div>
-    </article>
-    <article class="card ch2-card is-ok">
-      <div class="ch2-card-head">
-        <span class="tag">発注物</span>
-        <span class="icon-symbol">request_quote</span>
-      </div>
-      <h2 class="ch2-card-title">行動面の施策に翻訳する</h2>
-      <ul class="ch2-mini-list">
-        <li><span class="icon-symbol">check</span><span>サイト改修：EFO、CTA、電話導線、スマホ対応</span></li>
-        <li><span class="icon-symbol">check</span><span>リターゲティング広告：一度来た人へ再接触</span></li>
-        <li><span class="icon-symbol">check</span><span>チャットボット・LINE連携：問い合わせハードルを下げる</span></li>
-      </ul>
-    </article>
-  </main>
-  <footer class="slide-footer">
-    <div class="callout callout-conclusion is-green">
-      <span class="icon-symbol">check_circle</span>
-      <p class="callout-text">ペルソナのズレは方針の問題、導線のズレは実装の問題として分けます。</p>
-    </div>
-    <span class="page-num">31</span>
-  </footer>
-</section>
-
-<section aria-label="サイト改修に入れる観点を決める" class="slide v-normal v-ch2 ch2-topic-cvr">
-  <div class="top-bar"></div>
-  <header class="slide-header">
-    <span class="section-badge">Ch2. CVR改善</span>
-    <h1 class="slide-heading">サイト改修に入れる観点を決める</h1>
-    <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
+      <span class="ch2-context-item stage-awareness">認知: 広告の基本</span>
+      <span class="ch2-context-item stage-understanding">理解: 顧客仮説とLP改善</span>
+      <span class="ch2-context-item stage-action">行動: CVR改善</span>
     </div>
   </header>
   <main class="content-area ch2-stack">
     <div class="callout callout-lead is-blue">
-      <span class="icon-symbol">build</span>
-      <p class="callout-text">ターゲットに関係なく、誰が来ても困らない状態を仕様に入れます。</p>
+      <span class="icon-symbol">touch_app</span>
+      <p class="callout-text">リニューアル時に助言すべき導線の抜けを仕様に入れます。</p>
     </div>
     <div class="ch2-grid-3">
       <article class="card ch2-card is-accent">
-        <div class="ch2-card-head"><span class="tag">フォーム</span><span class="icon-symbol">edit_note</span></div>
-        <h2 class="ch2-card-title">入力しやすいか</h2>
-        <p class="ch2-card-body">項目が多すぎないか。スマホで入力しやすいか。</p>
+        <div class="ch2-card-head"><span class="tag">確認</span><span class="icon-symbol">ads_click</span></div>
+        <h2 class="ch2-card-title">次の行動が明確か</h2>
+        <p class="ch2-card-body">問い合わせ、予約、電話など、次に押す場所がすぐ分かるか。</p>
       </article>
       <article class="card ch2-card is-ok">
-        <div class="ch2-card-head"><span class="tag">CTA</span><span class="icon-symbol">ads_click</span></div>
-        <h2 class="ch2-card-title">次の行動が明確か</h2>
-        <p class="ch2-card-body">ボタンが目立つか。何をすればよいか分かるか。</p>
+        <div class="ch2-card-head"><span class="tag">確認</span><span class="icon-symbol">edit_note</span></div>
+        <h2 class="ch2-card-title">入力で止まらないか</h2>
+        <p class="ch2-card-body">項目数、必須項目、エラー表示が行動の負担になっていないか。</p>
       </article>
       <article class="card ch2-card is-signal">
-        <div class="ch2-card-head"><span class="tag">電話導線</span><span class="icon-symbol">call</span></div>
-        <h2 class="ch2-card-title">ワンタップで動けるか</h2>
-        <p class="ch2-card-body">スマホから電話できるか。番号が画像になっていないか。</p>
+        <div class="ch2-card-head"><span class="tag">確認</span><span class="icon-symbol">phone_in_talk</span></div>
+        <h2 class="ch2-card-title">連絡手段が合うか</h2>
+        <p class="ch2-card-body">電話、LINE、フォームなど、相手が使いやすい導線があるか。</p>
       </article>
       <article class="card ch2-card is-accent">
-        <div class="ch2-card-head"><span class="tag">速度</span><span class="icon-symbol">speed</span></div>
+        <div class="ch2-card-head"><span class="tag">確認</span><span class="icon-symbol">speed</span></div>
         <h2 class="ch2-card-title">待たせていないか</h2>
         <p class="ch2-card-body">表示が遅すぎないか。特にスマホで確認する。</p>
       </article>
       <article class="card ch2-card is-ok">
-        <div class="ch2-card-head"><span class="tag">スマホ</span><span class="icon-symbol">smartphone</span></div>
-        <h2 class="ch2-card-title">縮小版になっていないか</h2>
+        <div class="ch2-card-head"><span class="tag">確認</span><span class="icon-symbol">smartphone</span></div>
+        <h2 class="ch2-card-title">スマホで迷わないか</h2>
         <p class="ch2-card-body">PC版の単純縮小で、読みにくい・押しにくい状態を避ける。</p>
       </article>
       <article class="card ch2-card is-signal">
@@ -2100,126 +2268,47 @@
     </div>
   </main>
   <footer class="slide-footer">
-    <div class="callout callout-conclusion is-blue">
-      <span class="icon-symbol">arrow_forward</span>
-      <p class="callout-text">施策を打った後は、最終CVだけでなく途中行動も見ます。</p>
+    <div class="callout callout-conclusion is-green">
+      <span class="icon-symbol">check_circle</span>
+      <p class="callout-text">大規模改修でなくても、小さな導線改善がCVR改善につながります。</p>
     </div>
-    <span class="page-num">32</span>
+    <span class="page-num">36</span>
   </footer>
 </section>
 
-<section aria-label="途中行動を見れば判断が早くなる" class="slide v-normal v-ch2 ch2-topic-micro">
-  <div class="top-bar"></div>
-  <header class="slide-header">
-    <span class="section-badge">Ch2. Ch3への橋渡し</span>
-    <h1 class="slide-heading">途中行動を見れば判断が早くなる</h1>
-    <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
-    </div>
-  </header>
-  <main class="content-area ch2-stack ch2-micro">
-    <div class="callout callout-lead is-blue">
-      <span class="icon-symbol">timeline</span>
-      <p class="callout-text">中小企業ほど最終CVが少ないため、手前の行動を見ないと改善判断が遅れます。</p>
-    </div>
-    <div class="ch2-flow">
-      <article class="card ch2-flow-step">
-        <div class="ch2-flow-label">VISIT</div>
-        <h2 class="ch2-flow-title">LP訪問</h2>
-        <p class="ch2-flow-body">広告、自然検索、SNS別に、まず来ているか。</p>
-      </article>
-      <article class="card ch2-flow-step">
-        <div class="ch2-flow-label">MICRO CV</div>
-        <h2 class="ch2-flow-title">フォーム到達</h2>
-        <p class="ch2-flow-body">FVやCTAから、受け皿に進めているか。</p>
-      </article>
-      <article class="card ch2-flow-step">
-        <div class="ch2-flow-label">MICRO CV</div>
-        <h2 class="ch2-flow-title">入力開始</h2>
-        <p class="ch2-flow-body">項目数や入力負荷を越えて、行動する気になっているか。</p>
-      </article>
-      <article class="card ch2-flow-step">
-        <div class="ch2-flow-label">FINAL CV</div>
-        <h2 class="ch2-flow-title">問い合わせ</h2>
-        <p class="ch2-flow-body">最終成果に至ったか。少数なら手前の数字も見る。</p>
-      </article>
-    </div>
-    <div class="ch2-micro-examples">
-      <div class="ch2-micro-example">
-        <strong>リード獲得</strong>
-        フォーム到達、入力開始、電話タップ、資料DLを見る。
-      </div>
-      <div class="ch2-micro-example">
-        <strong>EC</strong>
-        商品詳細閲覧、カート投入、購入手続き到達を見る。
-      </div>
-      <div class="ch2-micro-example">
-        <strong>来店</strong>
-        地図クリック、電話タップ、予約ページ到達を見る。
-      </div>
-    </div>
-  </main>
-  <footer class="slide-footer">
-    <div class="callout callout-conclusion callout-bridge is-yellow">
-      <span class="icon-symbol">arrow_forward</span>
-      <p class="callout-text">具体的に何を測るか、どう月次で見るかはCh3で扱います。</p>
-    </div>
-    <span class="page-num">33</span>
-  </footer>
-</section>
-
-<section aria-label="Ch2まとめ：施策が効かない時の点検順" class="slide v-summary v-ch2 ch2-topic-overview">
+<section aria-label="Ch2まとめ：施策を整理するチェックリスト" class="slide v-summary v-ch2 ch2-topic-overview ch2-stage-awareness ch2-stage-understanding ch2-stage-action">
   <div class="top-bar"></div>
   <header class="slide-header">
     <span class="section-badge">Ch2. 施策を整理する</span>
-    <h1 class="slide-heading">Ch2まとめ：施策が効かない時の点検順</h1>
-    <div class="ch2-context" aria-label="Ch2内の現在地">
-      <span class="ch2-context-item topic-overview">全体像</span>
-      <span class="ch2-context-item topic-ads">広告の基本</span>
-      <span class="ch2-context-item topic-lp">顧客仮説とLP改善</span>
-      <span class="ch2-context-item topic-cvr">CVR改善</span>
-      <span class="ch2-context-item topic-micro">マイクロCV</span>
-    </div>
+    <h1 class="slide-heading">Ch2まとめ：施策を整理するチェックリスト</h1>
   </header>
   <main class="content-area">
     <article class="card summary-main">
       <div class="eyebrow">Key Takeaway</div>
       <p class="summary-claim">
-        施策選びは、<strong>ボトルネックとの一致</strong>を確認し、<br />
-        その後に実装・受け皿・集客の質へ戻って点検します。
+        施策の無駄打ちを防ぐため、<strong>「認知・理解・行動」</strong>の各フェーズでチェックすべき急所を点検します。
       </p>
     </article>
     <div class="ch2-summary-path">
       <article class="card summary-point">
         <div class="num">01</div>
         <div>
-          <h2 class="item-title">ボトルネックと施策を見る</h2>
-          <p class="body-text">集客、理解・信頼、行動のどこに打ち手を当てているか。</p>
+          <h2 class="item-title">適切な広告配信面の選定（認知）</h2>
+          <p class="body-text">顕在層には検索広告、潜在層にはディスプレイ・SNS広告を使い分けているか。</p>
         </div>
       </article>
       <article class="card summary-point">
         <div class="num">02</div>
         <div>
-          <h2 class="item-title">実装面の抜けを潰す</h2>
-          <p class="body-text">フォーム、CTA、電話導線、速度、スマホ対応を確認する。</p>
+          <h2 class="item-title">不安と信頼材料のチェック（理解）</h2>
+          <p class="body-text">ペルソナ設定を見直し、顧客の不安を解消する材料がLP等に揃っているか。</p>
         </div>
       </article>
       <article class="card summary-point">
         <div class="num">03</div>
         <div>
-          <h2 class="item-title">受け皿と集客の質へ戻る</h2>
-          <p class="body-text">ペルソナに合うか。そもそも正しい人を連れてきているか。</p>
-        </div>
-      </article>
-      <article class="card summary-point">
-        <div class="num">04</div>
-        <div>
-          <h2 class="item-title">期待値を調整する</h2>
-          <p class="body-text">全部確認して妥当なら、根拠を持って「この数字は妥当」と伝える。</p>
+          <h2 class="item-title">行動導線のボトルネック点検（行動）</h2>
+          <p class="body-text">フォームの使いづらさやスマホ表示の遅さなど、CVRを阻害していないか。</p>
         </div>
       </article>
     </div>
@@ -2229,7 +2318,7 @@
       <span class="icon-symbol">arrow_forward</span>
       <p class="callout-text">次は、施策をやりっぱなしにしないための測定設計に進みます。</p>
     </div>
-    <span class="page-num">34</span>
+    <span class="page-num">37</span>
   </footer>
 </section>
   </div>
