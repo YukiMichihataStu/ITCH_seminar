@@ -4424,13 +4424,49 @@
     }
 
     /* 成果モデルテーブルの調整 */
+    .ch3-stage-microcv {
+      row-gap: 4px;
+    }
+    
+    .ch3-stage-microcv .ch3-stack {
+      gap: 4px;
+    }
+
+    .ch3-stage-microcv .callout-lead {
+      padding: 4px 10px;
+    }
+
+    .ch3-stage-microcv .callout-lead .callout-text {
+      font-size: 11px;
+      line-height: 1.25;
+    }
+
     .ch3-melsa-table th, .ch3-melsa-table td {
-      padding: 8px 12px;
-      font-size: 12px;
+      padding: 2px 6px;
+      font-size: 9.5px;
+      line-height: 1.2;
+      vertical-align: top;
     }
     .ch3-melsa-table th {
       background: var(--accent-soft);
       color: var(--accent);
+      padding: 4px 6px;
+    }
+    .ch3-melsa-table ul {
+      margin: 0;
+      padding-left: 12px;
+      line-height: 1.15;
+      font-size: 9px;
+    }
+    .ch3-melsa-table li {
+      margin-bottom: 1px;
+    }
+    .ch3-stage-microcv .callout-conclusion {
+      padding: 4px 10px;
+    }
+    .ch3-stage-microcv .callout-conclusion .callout-text {
+      font-size: 11px;
+      line-height: 1.25;
     }
 
     /* Chapter 3 GA4現実スライドの図表用スタイル */
@@ -5389,15 +5425,15 @@
     }
 
     .appendix-media-table th:nth-child(2) {
-      width: 23%;
+      width: 30%;
     }
 
     .appendix-media-table th:nth-child(3) {
-      width: 31%;
+      width: 23%;
     }
 
     .appendix-media-table th:nth-child(4) {
-      width: 29%;
+      width: 30%;
     }
 
     .appendix-media-table .media-label {
