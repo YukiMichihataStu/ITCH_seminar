@@ -1502,14 +1502,22 @@
     /* Compare */
     .v-compare .content-area {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
     }
 
     .compare-card {
       display: grid;
-      grid-template-rows: auto 1fr;
-      padding: 20px 22px;
+      grid-template-columns: 1.15fr 1.85fr;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 24px;
+    }
+
+    .compare-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .compare-head {
@@ -1517,15 +1525,15 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--line);
     }
 
     .compare-list {
-      display: grid;
-      align-content: center;
-      gap: 10px;
-      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-top: 8px;
       list-style: none;
     }
 
@@ -1534,15 +1542,15 @@
       grid-template-columns: 9px minmax(0, 1fr);
       gap: 9px;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.55;
+      font-size: 12.5px;
+      line-height: 1.45;
     }
 
     .compare-list li::before {
       content: "";
       width: 7px;
       height: 7px;
-      margin-top: 7px;
+      margin-top: 6px;
       border-radius: 50%;
       background: var(--signal);
     }
@@ -2363,11 +2371,304 @@
       width: 43%;
     }
 
+    .ch2-proof-table .proof-ng {
+      color: var(--signal);
+      opacity: 0.85;
+      margin-bottom: 5px;
+      font-size: 9.8px;
+    }
+
+    .ch2-proof-table .proof-ok {
+      color: var(--ok);
+      font-weight: bold;
+      font-size: 10.4px;
+    }
+
     .ch2-flow {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 10px;
       align-items: stretch;
+    }
+
+    .ch2-flow.is-3step {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* ペルソナスライド用（2カラム：左画像、右カードリスト） */
+    .ch2-persona-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 20px;
+      align-items: center;
+      min-height: 0;
+    }
+    .ch2-persona-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .ch2-persona-image img {
+      width: 100%;
+      max-width: 270px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .ch2-persona-list {
+      display: grid;
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .ch2-persona-list .card {
+      padding: 8px 12px;
+      gap: 2px;
+    }
+    .ch2-persona-list .ch2-card-title {
+      font-size: 13.5px;
+      margin-bottom: 2px;
+    }
+    .ch2-persona-list .ch2-card-body {
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    /* フローカード内画像用（ジャーニースライド用） */
+    .ch2-flow-step.has-image {
+      grid-template-rows: auto auto auto 1fr;
+      padding-top: 10px;
+    }
+    .ch2-flow-image {
+      width: 100%;
+      height: 110px;
+      overflow: hidden;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      border: 1px solid rgba(24, 24, 43, 0.08);
+    }
+    .ch2-flow-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ペルソナ用テーブルスタイル */
+    .persona-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      line-height: 1.45;
+      background: #ffffff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .persona-table th, .persona-table td {
+      padding: 6px 10px;
+      border: 1px solid rgba(24, 24, 43, 0.08);
+      text-align: left;
+    }
+    .persona-table th {
+      background: #f4f5f7;
+      font-weight: 600;
+      color: #3b3c4f;
+      width: 25%;
+    }
+    .persona-table td {
+      color: #1c1d24;
+    }
+
+    /* ジャーニー用テーブル（図表）スタイル */
+    .journey-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      line-height: 1.4;
+      background: #ffffff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .journey-table th, .journey-table td {
+      border: 1px solid rgba(24, 24, 43, 0.08);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .journey-table .row-label {
+      background: #f4f5f7;
+      font-weight: 600;
+      color: #3b3c4f;
+      width: 15%;
+      text-align: center;
+    }
+    .journey-step-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 3px;
+    }
+    .journey-step-header img {
+      width: 100%;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid rgba(24, 24, 43, 0.05);
+      margin-bottom: 2px;
+    }
+    .journey-step-header .step-num {
+      font-size: 9px;
+      color: var(--color-primary);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .journey-step-header .step-title {
+      font-size: 11.5px;
+      font-weight: bold;
+      color: #1c1d24;
+    }
+    .journey-table .step-approach {
+      font-weight: bold;
+      color: var(--color-primary);
+      text-align: center;
+      background: rgba(24, 24, 43, 0.01);
+    }
+    .journey-table .highlight-cell {
+      background: rgba(46, 204, 113, 0.03);
+      font-weight: 500;
+      color: #1e7e34;
+    }
+
+    /* ==========================================
+       ✨ プレミアム比較スライド（スクショ画像最大化）
+       ========================================== */
+    .v-compare .content-area.ch2-compare-mega {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      height: 100%;
+      align-items: stretch;
+    }
+
+    .compare-group {
+      display: flex;
+      flex-direction: column;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+
+    .compare-group.is-selected {
+      border: 2px solid var(--ok);
+      box-shadow: 0 4px 18px rgba(31, 118, 103, 0.18);
+      background: #fdfefd;
+    }
+
+    .group-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--line);
+      margin-bottom: 8px;
+    }
+
+    .company-badge {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #ffffff;
+    }
+    .company-badge.is-a { background: var(--accent); }
+    .company-badge.is-b { background: var(--ok); }
+
+    .group-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      flex-grow: 1;
+      margin: 0;
+    }
+
+    .group-tag {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--muted);
+      background: var(--accent-soft);
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+    .compare-group.is-selected .group-tag {
+      color: var(--ok);
+      background: var(--ok-soft);
+    }
+
+    .screenshot-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      justify-items: center;
+      flex-grow: 1;
+      margin-bottom: 8px;
+    }
+
+    .compare-screenshot {
+      width: 100%;
+      max-width: 145px;
+      height: 255px; /* スライド縦幅に最適化された最大高さ */
+      border: 1px solid rgba(24, 24, 43, 0.08);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .compare-screenshot:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .compare-screenshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .compare-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .compare-bullets li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6px;
+      font-size: 11px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .compare-bullets li::before {
+      content: "•";
+      color: var(--signal);
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 1;
+    }
+    .compare-group.is-selected .compare-bullets li::before {
+      color: var(--ok);
     }
 
     .ch2-flow-step {
@@ -2670,4 +2971,755 @@
       color: var(--ok);
       font-weight: 700;
     }
+
+    /* 成果モデル 2+3 レイアウト用 */
+    .model-cards-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .model-cards-row-top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .model-cards-row-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .model-card-large {
+      padding: 24px 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow);
+    }
+    .model-card-large .icon-symbol {
+      font-size: 38px;
+    }
+    .model-card-large .model-letter {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+      font-family: 'Outfit', sans-serif;
+    }
+    .model-card-large .item-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .model-card-large .body-text {
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    .model-card-small {
+      padding: 16px 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.8) !important;
+      box-shadow: var(--shadow);
+    }
+    .model-card-small .icon-symbol {
+      font-size: 28px;
+    }
+    .model-card-small .model-letter {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1;
+      font-family: 'Outfit', sans-serif;
+    }
+    .model-card-small .item-title {
+      font-size: 14.5px;
+      font-weight: 700;
+    }
+    .model-card-small .body-text {
+      font-size: 12.5px;
+      line-height: 1.4;
+    }
+
+    /* ==========================================
+       ✨ プレミアムまとめスライド用スタイル（爆イケ3カラムピラー）
+       ========================================== */
+    .v-summary-enhanced .content-area {
+      display: flex !important;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
+    }
+
+    .summary-takeaway-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 24px !important;
+      background: var(--accent-soft);
+      border: 1.5px solid rgba(50, 30, 134, 0.2) !important;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(50, 30, 134, 0.05);
+    }
+
+    .summary-takeaway-card .icon-symbol {
+      font-size: 32px;
+      color: var(--accent);
+    }
+
+    .summary-takeaway-card .takeaway-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .summary-takeaway-card .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .summary-takeaway-card .summary-claim {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    .summary-steps-container {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+      flex-grow: 1;
+      min-height: 0;
+    }
+
+    .summary-step-card {
+      flex: 1;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      position: relative;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .summary-step-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .summary-step-card.is-accent {
+      border-top: 4px solid var(--accent);
+    }
+    .summary-step-card.is-signal {
+      border-top: 4px solid var(--signal);
+    }
+    .summary-step-card.is-ok {
+      border-top: 4px solid var(--ok);
+    }
+
+    .step-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step-card-header .icon-symbol {
+      font-size: 26px;
+    }
+    .summary-step-card.is-accent .step-card-header .icon-symbol { color: var(--accent); }
+    .summary-step-card.is-signal .step-card-header .icon-symbol { color: var(--signal); }
+    .summary-step-card.is-ok .step-card-header .icon-symbol { color: var(--ok); }
+
+    .step-card-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .step-card-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      opacity: 0.15;
+      position: absolute;
+      right: 0;
+      top: -6px;
+    }
+    .summary-step-card.is-accent .step-card-num { color: var(--accent); }
+    .summary-step-card.is-signal .step-card-num { color: var(--signal); }
+    .summary-step-card.is-ok .step-card-num { color: var(--ok); }
+
+    .step-card-body {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* デカ背景アイコン */
+    .step-bg-icon {
+      position: absolute;
+      right: -10px;
+      bottom: -20px;
+      font-size: 110px;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .summary-step-card.is-accent .step-bg-icon { color: var(--accent); }
+    .summary-step-card.is-signal .step-bg-icon { color: var(--signal); }
+    .summary-step-card.is-ok .step-bg-icon { color: var(--ok); }
+
+    /* コネクタ（矢印） */
+    .step-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--subtle);
+      opacity: 0.35;
+      flex: 0 0 16px;
+    }
+
+    .step-connector .icon-symbol {
+      font-size: 20px;
+    }
+
+    /* ------------------------------------------
+       🎯 [Ch2] 差別化は文脈から外しすぎない スライド専用レイアウト
+       ------------------------------------------ */
+    .diff-layout-main {
+      display: grid;
+      grid-template-columns: 1.7fr 0.8fr; /* 右カラムをスリムにして左側の3枚画像を劇的に大きく見せる */
+      grid-template-rows: auto 1fr; /* 1行目をCallout、2行目のカードを縦いっぱいに引き伸ばす */
+      gap: 6px; /* ギャップを極限まで詰めて縦幅を最大化 */
+      align-items: stretch;
+      height: 100%; /* 親の1fr領域いっぱいに引き伸ばす */
+      min-height: 0;
+    }
+
+    /* イエローのCalloutをこのスライド専用に超スリム化 */
+    .diff-layout-main .callout-lead {
+      grid-column: span 2;
+      margin-bottom: 0;
+      padding: 6px 12px; /* パディングを極小にして高さを稼ぐ */
+      min-height: auto; /* 最小高さの制限を解除 */
+      gap: 8px;
+      grid-template-columns: 20px 1px minmax(0, 1fr); /* コラム幅もコンパクトに */
+    }
+
+    .diff-layout-main .callout-lead .icon-symbol {
+      font-size: 15px; /* アイコンをスマートに */
+    }
+
+    .diff-layout-main .callout-lead .callout-text {
+      font-size: 11px; /* テキストサイズを微調整 */
+      line-height: 1.3;
+    }
+
+    .diff-group {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 4px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 6px 8px; /* パディングを極限まで削ってスクリーンショットの表示面積を最大化 */
+      box-shadow: var(--shadow);
+    }
+
+    .diff-group-title {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12.5px; /* タイトルサイズをわずかにスマートに */
+      font-weight: 700;
+      color: var(--accent);
+      margin: 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .diff-group-title.is-error {
+      color: var(--signal);
+    }
+
+    .diff-group-title .icon-symbol {
+      font-size: 14px;
+    }
+
+    .diff-screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px; /* 横の隙間もタイトにしてスクショ幅を確保 */
+      align-items: center;
+      padding: 0; /* 余計なパディングを徹底排除 */
+    }
+
+    .diff-screenshot-single {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0; /* 余計なパディングを徹底排除 */
+      height: 100%;
+    }
+
+    .screenshot-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin: 0;
+    }
+
+    .screenshot-item img {
+      width: 100%;
+      height: auto;
+      max-height: 210px; /* 【超主役化】170pxからさらに210pxに拡大！アスペクト比を維持しつつ最大化 */
+      object-fit: contain;
+      border-radius: calc(var(--radius) - 4px);
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .screenshot-item img:hover {
+      transform: scale(1.04);
+    }
+
+    .screenshot-item.large-shot img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 210px; /* 右側も210pxに拡大してアスペクト比を保ちつつ巨大表示 */
+      margin: 0 auto;
+    }
+
+    .screenshot-item figcaption {
+      font-size: 9px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .diff-group-desc {
+      font-size: 9px; /* 説明文の文字サイズを9pxにし、説明高さを抑えてスクショに高さを譲る */
+      color: var(--muted);
+      line-height: 1.3;
+      margin: 0;
+      padding-top: 4px;
+      border-top: 1px dashed var(--line);
+    }
+
+    /* ------------------------------------------
+       🎯 [Ch2] ネットは「読む」ではなく「見る」もの スライド専用モックアップ（縦長拡大版）
+       ------------------------------------------ */
+    .mock-lp-full-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      height: 372px; /* 限界まで引き伸ばし */
+      min-height: 0;
+      align-items: stretch;
+      margin-bottom: -10px; /* フッターのマージンに少し割り込む */
+    }
+
+    .mock-lp-box-vertical {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .mock-lp-box-vertical.is-bad {
+      border-top: 4px solid var(--signal);
+      background: rgba(244, 67, 54, 0.01);
+    }
+
+    .mock-lp-box-vertical.is-good {
+      border-top: 4px solid var(--ok);
+      background: rgba(76, 175, 80, 0.01);
+      box-shadow: 0 4px 20px rgba(21, 99, 86, 0.08);
+    }
+
+    .mock-lp-header-vertical {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 14px;
+      background: var(--panel);
+    }
+
+    .mock-lp-header-vertical .mock-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .mock-lp-header-vertical .mock-badge {
+      font-size: 9.5px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .mock-lp-box-vertical.is-bad .mock-badge {
+      background: var(--signal-soft);
+      color: var(--signal);
+    }
+
+    .mock-lp-box-vertical.is-good .mock-badge {
+      background: var(--ok-soft);
+      color: var(--ok);
+    }
+
+    .mock-lp-body-vertical {
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mock-lp-body-vertical.text-heavy-mode {
+      background: #ffffff;
+      padding: 14px;
+      justify-content: flex-start;
+    }
+
+    .mock-lp-body-vertical.image-mode {
+      background: #fafafa;
+      padding: 4px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 悪い例：長文テキストギッシリ */
+    .mock-lp-text-heavy-vertical {
+      color: #3b3c4d;
+      text-align: justify;
+      margin: 0;
+      font-size: 11.5px;
+      line-height: 1.65;
+      height: 100%;
+      overflow: hidden;
+      font-weight: 400;
+    }
+
+    /* 良い例：スマホ画像フレーム */
+    .smartphone-mockup-frame-vertical {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      max-height: 342px; /* スマホモックの縦幅を極限まで拡大 */
+      overflow: hidden;
+    }
+
+    .smartphone-mockup-frame-vertical .mockup-image-vertical {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .smartphone-mockup-frame-vertical .mockup-image-vertical:hover {
+      transform: scale(1.03);
+    }
+
+    /* Chapter 3 styles */
+    .slide.v-ch3 {
+      grid-template-rows: var(--topbar-h) 74px 1fr var(--footer-h);
+      row-gap: 8px;
+    }
+
+    .slide.v-ch3 .slide-header {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      align-content: center;
+      column-gap: 14px;
+      row-gap: 6px;
+    }
+
+    .slide.v-ch3 .section-badge {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      align-self: center;
+      background: rgba(184, 115, 51, 0.1);
+      color: #b87333;
+    }
+
+    .slide.v-ch3 .slide-heading {
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 21px;
+      line-height: 1.18;
+    }
+
+    .ch3-context {
+      grid-column: 2;
+      grid-row: 2;
+      display: flex;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .ch3-context-item {
+      padding: 4px 7px 5px;
+      border-radius: 7px;
+      background: rgba(184, 115, 51, 0.065);
+      color: #b87333;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.1;
+      white-space: nowrap;
+      opacity: 0.68;
+    }
+
+    .ch3-stage-definition .stage-definition,
+    .ch3-stage-ga4 .stage-ga4,
+    .ch3-stage-microcv .stage-microcv,
+    .ch3-stage-column .stage-column {
+      background: rgba(184, 115, 51, 0.18);
+      color: #b87333;
+      opacity: 1;
+      box-shadow: inset 0 0 0 1px rgba(184, 115, 51, 0.15);
+    }
+
+    .ch3-stack {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 14px;
+      height: 100%;
+    }
+
+    .ch3-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      min-height: 0;
+    }
+
+    .ch3-card {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 8px;
+      padding: 16px 18px;
+    }
+
+    .ch3-card.is-accent {
+      border-color: rgba(184, 115, 51, 0.28);
+      background: #ffffff;
+    }
+
+    .ch3-card.is-signal {
+      border-color: rgba(159, 52, 82, 0.28);
+      background: #ffffff;
+    }
+
+    .ch3-card.is-ok {
+      border-color: rgba(21, 99, 86, 0.28);
+      background: #ffffff;
+    }
+
+    .ch3-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .ch3-card .icon-symbol {
+      color: #b87333;
+      font-size: 24px;
+    }
+
+    .ch3-card.is-signal .icon-symbol {
+      color: var(--signal);
+    }
+
+    .ch3-card.is-ok .icon-symbol {
+      color: var(--ok);
+    }
+
+    .ch3-card-title {
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.42;
+    }
+
+    .ch3-card-body {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.56;
+    }
+
+    /* 演習・まとめ用レイアウト */
+    .ch3-exercise-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      height: 100%;
+      min-height: 0;
+    }
+
+    .ch3-exercise-panel {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 12px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+    }
+
+    .ch3-exercise-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .ch3-exercise-title.is-summary {
+      color: var(--ok);
+    }
+
+    .ch3-exercise-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-y: auto;
+    }
+
+    .ch3-step-item {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .ch3-step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .ch3-step-number.is-summary {
+      background: var(--ok-soft);
+      color: var(--ok);
+    }
+
+    .ch3-step-content h3 {
+      font-size: 13.5px;
+      margin-bottom: 2px;
+      color: var(--ink);
+    }
+
+    .ch3-step-content p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* コラムスライド専用レイアウト */
+    .ch3-column-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+      height: 100%;
+      min-height: 0;
+    }
+
+    .ch3-column-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px;
+      background: #fafafa;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      justify-content: center;
+    }
+
+    .ch3-column-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .ch3-column-quote {
+      padding: 14px 18px;
+      background: #ffffff;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .ch3-column-quote-text {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    .ch3-column-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* 成果モデルテーブルの調整 */
+    .ch3-melsa-table th, .ch3-melsa-table td {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+    .ch3-melsa-table th {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+
+
 
